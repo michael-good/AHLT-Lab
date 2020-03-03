@@ -43,13 +43,10 @@ def output_entities(id, entities, output):
 
 
 def nerc(inputdir, outputfile):
-    '''
     if os.path.exists(inputdir):
         inputfiles = os.listdir(inputdir)
     if os.path.exists(outputfile):
         os.remove(outputfile)
-        '''
-    inputfiles = os.listdir(inputdir)
     f = open(outputfile, "a")
     for file in inputfiles:
         tree = parseXML(file, inputdir)
@@ -57,7 +54,6 @@ def nerc(inputdir, outputfile):
             (id, text) = get_sentence_info(sentence)
             token_list = tokenize(text)
             entities = extract_entities(token_list)
-            # print(entities)
             output_entities(id, entities, f)
     f.close()
     evaluate(inputdir, outputfile)
