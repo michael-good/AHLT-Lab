@@ -21,15 +21,32 @@ def tokenize(text):
     return tokens
 
 
+def return_type(text):
+    if text.isupper():
+        type = "brand"
+
+    elif (text.endswith('azole') or text.endswith('ine') or text.endswith('amine') or
+          text.endswith('mycin') or text.endswith('avir')):
+        type = "drug"
+
+    elif text.endswith('phane'):
+        type = "drug_n"
+    else:
+        type = "other"
+
+    return type
+
+
 def extract_entities(token_list):
     list_entities = []
     for element in token_list:
-        type = "drug"
-        entity = {"name": element[0],
-                "offset": str(element[1]) + "-" + str(element[2]),
-                "type": type
-                }
-        list_entities.append(entity)
+        type = return_type(element[0])
+        if type != "other":
+            entity = {"name": element[0],
+                      "offset": str(element[1]) + "-" + str(element[2]),
+                      "type": type
+                      }
+            list_entities.append(entity)
     return list_entities
 
 

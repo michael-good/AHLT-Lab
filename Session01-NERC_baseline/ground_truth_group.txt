@@ -1,0 +1,2945 @@
+Antiarrhythmics | group
+Sedative | group
+hypnotics | group
+Neuroleptic | group
+protease inhibitors | group
+Antimycobacterial | group
+protease inhibitors | group
+antiretroviral agents | group
+HMG-CoA Reductase inhibitors | group
+Protease inhibitor | group
+HIV Antiviral Agents | group
+Antiarrhythmics | group
+antiarrhythmic agents | group
+antiarrhythmics | group
+Anticonvulsants | group
+Calcium Channel Blockers | group
+Dihydropyridine | group
+dihydropyridine calcium channel blockers | group
+HMG-CoA Reductase Inhibitor | group
+HMG-CoA reductase inhibitors | group
+Immunosuppressants | group
+immunosuppressant agents | group
+anesthetics | group
+sympathomimetic amines | group
+macrolide immunosuppressant | group
+calcium channel blocker | group
+immunosuppressive drugs | group
+calcium antagonists | group
+opioids | group
+opioid | group
+opioids | group
+benzodiazepines | group
+barbituates | group
+anticholinergic drugs | group
+tricyclic antidepressants | group
+antiparkinsonian agents | group
+anticoagulants of the coumarin type | group
+sulphonylureas | group
+immuno-suppressant | group
+anion-exchange resins | group
+MAO-inhibitors | group
+ganglion blocking compounds | group
+diuretic | group
+salicylate | group
+CNS-depressant drug | group
+TCAs | group
+Noncardioselective beta-blockers | group
+beta-blocker | group
+cardioselective beta-blocker | group
+Anticoagulants | group
+anticoagulants | group
+diuretics | group
+cardiac glycosides | group
+sedatives | group
+hypnotics | group
+coronary vasodilators | group
+hypoglycemics | group
+NSAIDs | group
+antihyperlipidemics | group
+antigout drugs | group
+contraceptives | group
+bronchodilators | group
+beta blockers | group
+CNS depressants | group
+anticholinergic drugs | group
+MAOIs | group
+AEDs | group
+AED | group
+AED | group
+AEDs | group
+AEDs | group
+AEDs | group
+AEDs | group
+AEDs | group
+Contraceptives | group
+contraceptives | group
+anti-ulcer | group
+antacids | group
+diuretic | group
+diuretics | group
+diuretics | group
+potassium depleting diuretics | group
+macrolide antibiotics | group
+azole antifungal agents | group
+protease inhibitors | group
+serotonin reuptake inhibitors | group
+cannabinoids | group
+estrogens | group
+antacid | group
+contraceptives | group
+ACE inhibitors | group
+anticoagulants | group
+calcium channel blockers | group
+beta blockers | group
+cardiac glycosides | group
+nitrates | group
+sulphonylureas | group
+loop diuretics | group
+potassium sparing diuretics | group
+thiazide diuretics | group
+thiazide diuretics | group
+magnesium sparing diuretics | group
+vitamin D | group
+quinolone | group
+Quinolones | group
+anticoagulants | group
+quinolones | group
+sulfonylurea agent | group
+Multivitamins | group
+antacids | group
+quinolones | group
+quinolone antibiotics | group
+protease inhibitors | group
+contraceptive agents | group
+tricyclic antidepressants | group
+tricyclic antidepressants | group
+tricyclic antidepressants | group
+tricyclic antidepressants | group
+tricyclic antidepressants | group
+tricyclic antidepressants | group
+antidepressants | group
+tricyclic antidepressant | group
+anticholinergic drugs | group
+sympathomimetic drugs | group
+tricyclic antidepressants | group
+tricyclic antidepressants | group
+antidepressants | group
+tricyclic antidepressants | group
+selective serotonin reuptake inhibitors | group
+tricyclic antidepressants | group
+tricyclic antidepressant | group
+tricyclic antidepressants | group
+antidepressants | group
+phenothiazines | group
+Type 1C antiarrhythmics | group
+estrogen | group
+estrogens | group
+benzodiazepines | group
+anticonvulsants | group
+antihistamines | group
+barbiturates | group
+monoamine oxidase inhibitors | group
+narcotics | group
+phenothiazines | group
+psychotropic medications | group
+benzodiazepines | group
+barbiturates | group
+triazolobenzodiazepines | group
+benzodiazepines | group
+macrolide antibiotics | group
+thienobenzodiazepine derivative | group
+second generation (atypical) antipsychotic agent | group
+conventional antipsychotics | group
+opioids | group
+sedatives | group
+phenothiazines | group
+anesthetics | group
+anticholinergic agent | group
+antifungal agents | group
+benzodiazepine class | group
+narcotics | group
+barbiturates | group
+nonbarbiturate hypnotics | group
+antianxiety agents | group
+phenothiazines classes of antipsychotic agents | group
+thioxanthene classes of antipsychotic agents | group
+butyrophenone classes of antipsychotic agents | group
+monoamine oxidase inhibitors | group
+tricyclic antidepressants | group
+anticonvulsant drugs | group
+vitamin D analogues | group
+fat soluble vitamins | group
+vitamin D | group
+vitamin D | group
+Thiazides | group
+Thiazides | group
+thiazides | group
+vitamin D | group
+Digitalis | group
+Vitamin D | group
+digitalis | group
+vitamin D | group
+vitamin D | group
+Corticosteroids | group
+vitamin D analogues | group
+corticosteroids | group
+vitamin D | group
+Vitamin D | group
+vitamin D analogues | group
+antacids | group
+vitamin D | group
+carbonic anhydrase inhibitors | group
+MAO inhibitors | group
+psychotropic drugs | group
+antineoplastic agents | group
+laxative | group
+diuretics | group
+proton pump inhibitors | group
+contraceptives | group
+anticoagulants | group
+platelet inhibitors | group
+NSAIDs | group
+coumarin | group
+vitamin K antagonists | group
+Antithrombotics | group
+glucocorticoid | group
+coumarin | group
+Diuretics | group
+diuretics | group
+diuretic | group
+Potassium-Sparing Diuretics | group
+thiazide diuretics | group
+Potassium-sparing diuretics | group
+Anticoagulants | group
+anticoagulants | group
+ACE inhibitors | group
+diuretic | group
+beta-adrenergic-blocking agents | group
+calcium-channel-blocking agents | group
+diuretics | group
+ACE inhibitors | group
+beta-adrenergic blockers | group
+vasodilators | group
+nonsteroidal anti-inflammatory agents | group
+NSAIDs | group
+salicylates | group
+monoamine oxidase inhibitors | group
+non-selective beta-adrenergic-blocking agents | group
+antidiabetic drugs | group
+thiazides | group
+corticosteroids | group
+thyroid products | group
+sympathomimetics | group
+antidiabetic drugs | group
+Opioids | group
+central nervous system depressants | group
+central nervous system depressants | group
+central nervous system depressants | group
+benzodiazepines | group
+benzodiazepines | group
+angiotensin-converting enzyme inhibitor | group
+diuretics | group
+non-steroidal anti-inflammatory agent | group
+loop diuretics | group
+potassium-sparing diuretics | group
+thiazide diuretics | group
+non-steroidal anti-inflammatory agents | group
+diuretic | group
+potassium-sparing diuretics | group
+cholinesterase inhibitors | group
+Salicylate | group
+salicylate | group
+anticoagulants | group
+diuretic | group
+NSAIDs | group
+Nondepolarizing Muscle Relaxants | group
+nondepolarizing muscle relaxants | group
+muscle relaxants | group
+ACE Inhibitors | group
+ACE inhibitors | group
+Antiepileptic Drugs | group
+antiepileptic drugs | group
+Psychoactive Drugs | group
+psychoactive drugs | group
+Steroids | group
+carbonic anhydrase inhibitor | group
+carbonic anhydrase inhibitors | group
+anticoagulants | group
+platelet inhibitors | group
+NSAIDs | group
+aminoglycosides | group
+anti-neoplastic agents | group
+androgens | group
+anabolic hormones | group
+estrogens | group
+estrogen-containing compounds | group
+glucocorticoids | group
+salicylates | group
+androgens | group
+antithyroid drugs | group
+b-adrenergic blocking agents | group
+dopamine agonists | group
+glucocorticoids | group
+iodine-containing compounds | group
+somatostatin analogs | group
+sulfonamides | group
+sulfonylureas | group
+thiazide diuretics | group
+Anticoagulants | group
+anticoagulants | group
+Antidiabetic Agents | group
+Sulfonylureas | group
+antidiabetic agents | group
+b-Adrenergic Blocking Agents | group
+beta-blocking agents | group
+Cytokines | group
+interferon | group
+interleukin | group
+Cytokines | group
+Digitalis Glycosides | group
+digitalis glycosides | group
+digitalis | group
+thyroid hormone | group
+Tricyclic Antidepressants | group
+tricyclics | group
+Sympathomimetic Agents | group
+Non-selective monoamine oxidase (MAO) inhibitors | group
+non-selective MAO inhibitors | group
+selective MAO inhibitor | group
+Neuroleptic Drugs | group
+neuroleptic drugs | group
+macrolide antibiotics | group
+hydroxymethylglutaryl coenzyme A (HMG-CoA) reductase inhibitors | group
+HMG-CoA reductase inhibitors | group
+Macrolide antibiotics | group
+HMG-CoA reductase inhibitors | group
+xanthine derivatives | group
+b-lactam antibiotics | group
+tricyclic antidepressants | group
+MAOIs | group
+phenothiazines | group
+hypnotic agent | group
+anesthetic solutions | group
+monoamine oxidase inhibitors | group
+tricyclic antidepressants | group
+vasopressor drugs | group
+ergot-type oxytocic drugs | group
+Phenothiazines | group
+butyrophenones | group
+quinolone antibiotics | group
+antidepressants | group
+tricyclic antidepressants | group
+TCAs | group
+phenothiazines | group
+Type 1C antiarrhythmics | group
+TCA | group
+TCA | group
+TCA | group
+antacids | group
+proton pump inhibitors | group
+nondepolarizing agents | group
+antibiotics | group
+aminoglycosides | group
+tetracyclines | group
+polymyxins | group
+magnesium | group
+anesthetics | group
+nondepolarizing neuromuscular blocking agents | group
+antithrombotic agent | group
+contraceptives | group
+opiate | group
+Antiarrhythmics | group
+Anticonvulsants | group
+Antifungals | group
+Calcium channel blockers | group
+Ergot alkaloids | group
+Immunosuppressants | group
+Opiate agonists | group
+Antithrombotics | group
+antiretroviral | group
+antiestrogen | group
+digitalis preparations | group
+beta-adrenergic blocking agents | group
+beta blockers | group
+beta blockers | group
+anticoagulants | group
+diuretics | group
+nonsteroidal anti-inflammatory drugs | group
+NSAIDs | group
+ACE inhibitors | group
+ACE inhibitors | group
+NSAIDs | group
+Angiotensin Converting Enzyme (ACE) inhibitors | group
+ACE-inhibitors | group
+NSAIDs | group
+thiazides | group
+antibiotics | group
+anticonvulsants | group
+antifungals | group
+protease inhibitors | group
+histamine H2 receptor antagonist | group
+antihypertensive | group
+beta-blockers | group
+antihypertensive | group
+tricyclic antidepressants | group
+bacteriostatic antibiotic | group
+barbiturates | group
+MAOIs | group
+antiretroviral agents | group
+protease inhibitors | group
+macrolide antibiotics | group
+azole antifungals | group
+thiazide diuretics | group
+barbiturates | group
+narcotics | group
+Antidiabetic drugs | group
+antidiabetic drug | group
+antihypertensive drugs | group
+resins | group
+anionic exchange resins | group
+resins | group
+Corticosteroids | group
+Skeletal muscle relaxants | group
+muscle relaxant | group
+diuretics | group
+Diuretic agents | group
+Non-steroidal Anti-inflammatory Drugs | group
+non-steroidal anti-inflammatory agent | group
+loop diuretics | group
+potassium-sparing diuretics | group
+thiazide diuretics | group
+non-steroidal anti-inflammatory agents | group
+diuretic | group
+opioid | group
+selective opioid agonists | group
+opioid | group
+mu-selective opioids | group
+delta(1)-selective opioids | group
+kappa-selective opioids | group
+H1 Blockers | group
+H2 Blockers | group
+H1 blockers | group
+H2 blockers | group
+opiates | group
+opioid | group
+opioid analgesics | group
+opioid | group
+anticoagulants | group
+benzodiazepines | group
+antihistamines | group
+estrogens | group
+H2-antagonists | group
+phenothiazines | group
+salicylates | group
+succinimides | group
+sulfonamides | group
+tricyclic antidepressants | group
+anticoagulants | group
+corticosteroids | group
+coumarin | group
+estrogens | group
+contraceptives | group
+vitamin D | group
+coumarin | group
+ergot-type medications | group
+Selective serotonin reuptake inhibitors | group
+SSRIs | group
+5-HT1 agonists | group
+SSRI | group
+synthetic 3-hydroxy-3-methylglutaryl coenzyme A (HMGCoA) reductase inhibitor | group
+HMGCoA reductase inhibitors | group
+tricyclic antidepressants | group
+barbiturates | group
+sedatives | group
+barbiturates | group
+sedating drugs | group
+Narcotic analgesics | group
+Tricyclic antidepressants | group
+tricyclic antidepressants | group
+Beta blockers | group
+digitalis | group
+calcium channel blockers | group
+beta-blockers | group
+anesthetics | group
+HIV protease inhibitors | group
+fibrates | group
+HMG-CoA reductase inhibitor class | group
+Coumarin Anticoagulant | group
+HMG-CoA reductase inhibitor | group
+coumarin anticoagulant | group
+anticoagulants | group
+coumarin anticoagulants | group
+anticoagulants | group
+Hypoglycemic Agents | group
+quinolones | group
+quinolone | group
+Quinolones | group
+Antacids | group
+quinolones | group
+quinolones | group
+multivitamins | group
+Quinolones | group
+anticoagulants | group
+quinolone class antimicrobial | group
+nonsteroidal anti-inflammatory drug | group
+nonsteroidal anti-inflammatory agents | group
+quinolones | group
+anticoagulant | group
+Uricosuric Agents | group
+uricosuric agents | group
+uricosuric agents | group
+uricosuric agents | group
+Thiazide Diuretics | group
+thiazide diuretics | group
+thiazide diuretics | group
+thiazide diuretics | group
+Cytotoxic Agents | group
+cytotoxic agents | group
+antiarrhythmics | group
+diuretics | group
+Antacids | group
+antacids | group
+antacid | group
+H2 Blockers | group
+Proton Pump Inhibitors | group
+H2 blockers | group
+proton pump inhibitors | group
+H2 blockers | group
+proton pump inhibitors | group
+antacids | group
+H2 blockers | group
+proton pump inhibitors | group
+ergot alkaloids | group
+antibiotic | group
+diuretic | group
+vaccines | group
+Androgens | group
+anticoagulant | group
+androgens | group
+androgens | group
+NSAIDs | group
+antacid | group
+corticosteroids | group
+corticosteroids | group
+diuretics | group
+Antibiotics | group
+Macrolide antibiotics | group
+corticosteroid | group
+Anticholinesterases | group
+anticholinesterase agents | group
+corticosteroids | group
+anticholinesterase agents | group
+corticosteroid | group
+Anticoagulants | group
+corticosteroids | group
+Antidiabetics | group
+corticosteroids | group
+antidiabetic agents | group
+corticosteroids | group
+corticosteroids | group
+Digitalis glycosides | group
+digitalis glycosides | group
+corticosteroids | group
+corticosteroid | group
+Estrogens | group
+contraceptives | group
+Estrogens | group
+corticosteroids | group
+barbiturates | group
+corticosteroids | group
+corticosteroid | group
+macrolide antibiotics | group
+corticosteroids | group
+corticosteroids | group
+corticosteroid | group
+Nonsteroidal anti-inflammatory agents | group
+NSAIDS | group
+nonsteroidal antiinflammatory agents | group
+corticosteroids | group
+corticosteroids | group
+salicylates | group
+corticosteroids | group
+Corticosteroids | group
+Vaccines | group
+corticosteroid | group
+live vaccines | group
+inactivated vaccines | group
+Corticosteroids | group
+live attenuated vaccines | group
+vaccines | group
+corticosteroid | group
+immunosuppressive | group
+immunosuppressive | group
+Nitrates | group
+nitrates | group
+Beta-blocking Agents | group
+beta-blocking agents | group
+Hypoglycemics | group
+hypoglycemic agents | group
+anti-arrhythmic agents | group
+cardiac glycosides | group
+tricyclic anti-depressants | group
+Anti-arrhythmics | group
+tricyclic anti-depressants | group
+Cardiac glycosides | group
+b-blocking drug | group
+digitalis preparations | group
+antibiotics | group
+aminoglycosides | group
+polymyxins | group
+antibiotics | group
+aminoglycosides | group
+polymyxins | group
+muscle relaxants | group
+narcotic analgesics | group
+anesthetics | group
+phenothiazines | group
+tranquilizers | group
+sedative-hypnotics | group
+CNS depressants | group
+aminoglycoside antibiotics | group
+salicylates | group
+salicylate | group
+diuretics | group
+antihypertensive drugs | group
+ganglionic adrenergic blocking drugs | group
+peripheral adrenergic blocking drugs | group
+NSAIDs | group
+anti-helminthic | group
+iron supplement | group
+Catecholamine-depleting drugs | group
+beta-blocking agents | group
+catecholamine depletors | group
+beta-adrenergic antagonists | group
+alpha-adrenergic stimulants | group
+beta-blockers | group
+beta-adrenoceptor blocking agents | group
+nonsteroidal anti-inflammatory drugs | group
+contraceptives | group
+nitrosourea | group
+nitrosoureas | group
+nitrosourea | group
+nitrosourea | group
+nitrosourea | group
+nitrates | group
+corticosteroids | group
+cephalosporins | group
+aminoglycoside antibiotics | group
+Cephalosporins | group
+thyroid hormone | group
+corticosteroids | group
+sex steroids | group
+NSAIDs | group
+NSAIDs | group
+NSAIDs | group
+ACE inhibitors | group
+NSAIDs | group
+ACE inhibitors | group
+NSAIDs | group
+ACE inhibitors | group
+NSAIDs | group
+thiazides | group
+NSAIDs | group
+NSAID | group
+NSAIDs | group
+NSAIDs | group
+Antacids | group
+antacid | group
+dopamine antagonists | group
+butyrophenones | group
+phenothiazines | group
+ergot alkaloids | group
+antihypertensive drugs | group
+CNS depressant drugs | group
+anesthetics | group
+multivitamins | group
+sulfonamides | group
+thiazide diuretics | group
+central nervous system depressants | group
+benzodiazepines | group
+narcotics | group
+anesthetics | group
+muscle relaxants | group
+cyclic antidepressants | group
+benzodiazepine | group
+benzodiazepine | group
+benzodiazepines | group
+benzodiazepines | group
+long-acting benzodiazepine | group
+long-acting benzodiazepines | group
+short-acting benzodiazepines | group
+benzodiazepines | group
+benzodiazepine | group
+sedative | group
+tricyclic antidepressants | group
+TCAs | group
+TCA | group
+TCA | group
+antidepressants | group
+phenothiazines | group
+selective serotonin reuptake inhibitors | group
+SSRIs | group
+SSRI | group
+TCA | group
+SSRI | group
+T.A. | group
+SSRIs | group
+tricyclic antidepressants | group
+tricyclic antidepressant | group
+tricyclic antidepressant | group
+TCA | group
+TCA | group
+anticholinergic | group
+sympathomimetic drugs | group
+antidepressant drugs | group
+psychotropic agents | group
+tranquilizers | group
+sedative | group
+hypnotics | group
+benzodiazepines | group
+major tranquilizers | group
+tricyclic antidepressants | group
+tricyclic antidepressants | group
+tricyclic antidepressants | group
+tricyclic antidepressant | group
+tricyclic antidepressants | group
+Estrogen | group
+CNS depressants | group
+antihistamines | group
+anticholinergics | group
+antihistamines | group
+monoamine oxidase (MAO) inhibitors | group
+antihistamines | group
+antihistamines | group
+barbiturates | group
+anticholinesterases | group
+monoamine oxidase (MAO) inhibitors | group
+narcotic analgesic | group
+anesthetics | group
+tranquilizers | group
+sedative-hypnotics | group
+CNS depressants | group
+aminoglycoside | group
+cephalosporins | group
+quinolones | group
+anticoagulant | group
+central nervous system depressants | group
+sedatives | group
+hypnotics | group
+opioids | group
+anesthetics | group
+barbiturates | group
+tricyclic antidepressants | group
+phenothiazines | group
+tranquilizers | group
+skeletal muscle relaxants | group
+antihistamines | group
+MAO inhibitors | group
+MAO inhibitors | group
+Mixed Agonist/Antagonist Opioid Analgesics | group
+Agonist/antagonist analgesics | group
+pure agonist opioid analgesic | group
+opioid | group
+mixed agonist/antagonist analgesics | group
+Benzodiazepines | group
+analgesic drugs | group
+benzodiazepine | group
+sulfonylureas | group
+nonsteroidal anti-inflammatory agents | group
+salicylates | group
+sulfonamides | group
+coumarins | group
+monoamine oxidase inhibitors | group
+beta adrenergic blocking agents | group
+thiazides | group
+diuretics | group
+corticosteroids | group
+thyroid products | group
+estrogens | group
+contraceptives | group
+calcium channel blocking drugs | group
+fluoroquinolone antibiotic | group
+hypoglycemic agents | group
+carbonic anhydrase inhibitors | group
+folic acid antagonists | group
+antidepressants | group
+barbiturates | group
+corticosteroids | group
+Opioid analgesics | group
+Antihypertensive | group
+ganglionic blocking agents | group
+estrogen | group
+contraceptives | group
+estrogen | group
+vasodilators | group
+calcium channel blockers | group
+organic nitrates | group
+macrolide antibiotics | group
+macrolides | group
+Antacids | group
+H 2 receptor antagonists | group
+antacids | group
+H 2 -receptor antagonists | group
+Anticoagulants | group
+anticoagulants | group
+aminoglycoside antibiotics | group
+cephalosporin antibiotics | group
+antacid | group
+antihistamines | group
+CNS depressants | group
+barbiturates | group
+tranquilizers | group
+antihistamines | group
+CNS depressant drugs | group
+Monoamine oxidase (MAO) inhibitors | group
+antihistamines | group
+androgens | group
+estrogens | group
+progestins | group
+glucocorticoids | group
+contraceptives | group
+phenothiazines | group
+dopamine antagonists | group
+Anticoagulants | group
+platelet aggregation inhibitors | group
+nonsteroidal anti-inflammatory drugs | group
+NSAIDs | group
+potassium-sparing diuretics | group
+antihypertensive agents | group
+non-steroidal anti-inflammatory drug | group
+beta blocker | group
+beta-adrenergic blocking agents | group
+calcium channel blockers | group
+antihistamines | group
+H1-blocking agents | group
+tricyclic antidepressants | group
+phenothiazines | group
+anticonvulsant | group
+anticonvulsant | group
+live typhoid vaccines | group
+anticoagulants | group
+anion exchange resin | group
+beta-blockers | group
+digitalis preparations | group
+resin | group
+Bile acid binding resins | group
+Monoamine Oxidase Inhibitors | group
+serotonin reuptake inhibitor drug | group
+monoamine oxidase inhibitors | group
+MAOI | group
+MAOI | group
+MAOIs | group
+MAOI | group
+MAOI | group
+Benzodiazepines | group
+Benzodiazepines | group
+benzodiazepines | group
+anticoagulants | group
+anticoagulant | group
+antihypertensive drugs | group
+ganglionic peripheral adrenergic blocking drugs | group
+digitalis | group
+hypoglycemic agents | group
+b-lactams | group
+azole antifungals | group
+protease inhibitors | group
+glucocorticoids | group
+contraceptives | group
+protease inhibitors | group
+anticonvulsants | group
+anti-malarial drugs | group
+centrally acting drugs | group
+anticonvulsant agents | group
+anaesthetic agents | group
+MAO inhibitors | group
+antihistamines | group
+antihistamines | group
+tricyclic antidepressants | group
+barbiturates | group
+central nervous system depressants | group
+sympathomimetic drugs | group
+monoamine oxidase inhibitors | group
+sympathomimetics | group
+Beta-adrenergic blocking agents | group
+sympathomimetics | group
+digitalis | group
+Antacids | group
+warfarin-type anticoagulants | group
+tricyclic antidepressants | group
+warfarin anticoagulants | group
+anticoagulant | group
+central nervous system (CNS) depressants | group
+MAO inhibitors | group
+anticholinergic | group
+sympathomimetic drugs | group
+tricyclic antidepressants | group
+tricyclic antidepressants | group
+tricyclic antidepressants | group
+barbiturates | group
+tricyclic antidepressants | group
+TCAs | group
+TCA | group
+TCA | group
+antidepressants | group
+phenothiazines | group
+Type 1C antiarrhythmics | group
+selective serotonin reuptake inhibitors | group
+SSRIs | group
+TCA | group
+SSRI | group
+TCA | group
+SSRI | group
+TCAs | group
+SSRIs | group
+TCA | group
+tricyclic antidepressant class | group
+tricyclic antidepressant agent | group
+tricyclic antidepressant agent | group
+TCA | group
+tricyclic antidepressant class | group
+carbonic anhydrase inhibitors | group
+salicylate | group
+polyene antibiotics | group
+polyene antibiotics | group
+beta-adrenergic blocking agents | group
+calcium channel blocking agents | group
+angiotensin converting enzyme inhibitors | group
+digitalis | group
+methylxanthines | group
+methylxanthines | group
+corticosteroids | group
+corticosteroids | group
+corticosteroids | group
+antacids | group
+digitalis glycosides | group
+anxiolytics | group
+hypnotics | group
+sedatives | group
+benzodiazepines | group
+non-opioid analgesics | group
+antidepressants | group
+benzodiazepines | group
+psychotropic drugs | group
+benzodiazepines | group
+psychotropics | group
+benzodiazepine | group
+psychotropic drug | group
+antihypertensive drugs | group
+tricyclic antidepressants | group
+antidepressants | group
+selective serotonin reuptake inhibitors | group
+antidepressants | group
+phenothiazines | group
+Type 1C antiarrhythmics | group
+photosensitizing agents | group
+thiazide diuretics | group
+sulfonylureas | group
+phenothiazines | group
+sulfonamides | group
+tetracyclines | group
+CNS depressants | group
+barbiturates | group
+opiates | group
+sedatives | group
+anesthetics | group
+Alpha-agonists | group
+beta-blockers | group
+anti-hypertensives | group
+cardiac glycosides | group
+Tricyclic antidepressants | group
+tricyclic antidepressants | group
+corticosteroids | group
+corticosteroid | group
+corticosteroids | group
+corticosteroid | group
+Corticosteroids | group
+salicylate | group
+salicylate | group
+cortico-steroids | group
+corticosteroids | group
+anticoagulants | group
+anticoagulants | group
+corticosteroids | group
+bronchodilators | group
+corticosteroids | group
+antidiabetic products | group
+ACE inhibitors | group
+fibrates | group
+monoamine oxidase (MAO) inhibitors | group
+salicylates | group
+somatostatin analog | group
+sulfonamide antibiotics | group
+corticosteroids | group
+diuretics | group
+sympathomimetic agents | group
+phenothiazine derivatives | group
+thyroid hormones | group
+estrogens | group
+progestogens | group
+contraceptives | group
+Beta-blockers | group
+beta-blockers | group
+Insulins | group
+insulins | group
+insulins | group
+tetracyclines | group
+anticoagulant | group
+anticoagulant | group
+tetracyclines | group
+penicillin | group
+tetracyclines | group
+antacids | group
+Barbiturates | group
+contraceptives | group
+Central Nervous System Depressants | group
+central nervous system depressants | group
+opioids | group
+sedatives | group
+hypnotics | group
+tranquilizers | group
+benzodiazepines | group
+anesthetics | group
+phenothiazines | group
+skeletal muscle relaxants | group
+MAO Inhibitors | group
+MAOI | group
+MAO inhibitors | group
+opioid analgesics | group
+antifungal drug | group
+Anticoagulants | group
+cephalosporin antibiotics | group
+Beta-adrenergic Blocking Agents | group
+beta-blocking agents | group
+Nitrates | group
+nitrates | group
+Digitalis | group
+Coumarin Anticoagulants | group
+coumarin anticoagulants | group
+calcium-entry blockers | group
+calcium-entry blocking agents | group
+calcium-entry antagonists | group
+anticonvulsants | group
+folic acid antagonists | group
+highly active antiretroviral | group
+highly active antiretroviral | group
+antiretroviral | group
+Antiretroviral | group
+reverse transcriptase inhibitors | group
+protease inhibitor | group
+antiretroviral drugs | group
+antineoplastic drugs | group
+vitamin | group
+anticonvulsant medications | group
+diuretic | group
+sulfonylurea | group
+Hormonal Contraceptives | group
+combined oral contraceptives | group
+progestational contraceptives | group
+Tetracyclines | group
+tetracyclines | group
+Vitamin A | group
+retinoids | group
+vitamin A | group
+retinoids | group
+anticoagulants of the coumarin type | group
+retinoids | group
+retinoid | group
+AED | group
+dihydropyridine calcium antagonists | group
+contraceptives | group
+Antiepileptic drugs | group
+AEDs | group
+AED | group
+AED | group
+AED | group
+AED | group
+contraceptives | group
+contraceptive | group
+hormonal contraceptives | group
+contraceptives | group
+contraceptives | group
+Calcium Antagonist | group
+gold medication | group
+Gold | group
+MAO inhibitors | group
+antihypertensive drugs | group
+Beta-blockers | group
+NSAIDs | group
+barbiturates | group
+tranquilizers | group
+MAO inhibitors | group
+beta-adrenergic blocking agents | group
+adrenergic bronchodilators | group
+phenothiazines | group
+Antacids | group
+Antacids | group
+tricyclic antidepressants | group
+TCAs | group
+TCA | group
+TCA | group
+antidepressants | group
+phenothiazines | group
+Type 1C antiarrhythmics | group
+serotonin reuptake inhibitors | group
+SSRIs | group
+SSRI | group
+TCA | group
+SSRI | group
+TCAs | group
+SSRIs | group
+tricyclic antidepressants | group
+tricyclic antidepressant | group
+TCA | group
+TCA | group
+cephalosporin antibiotics | group
+cephalosporin antibiotics | group
+adrenergic | group
+serotonergic agents | group
+Adrenergic Agents | group
+sympathomimetic agents | group
+vasopressor | group
+dopaminergic agents | group
+adrenergic agents | group
+Serotonergic Agents | group
+serotonergic agents | group
+serotonergic agents | group
+antidepressants | group
+selective serotonin reuptake inhibitors | group
+SSRIs | group
+serotonergic agents | group
+serotonergic agents | group
+diuretics | group
+aminoglycoside | group
+cephalosporin antibiotics | group
+anticoagulant | group
+non- steroidal antiinflammatory agent | group
+loop diuretics | group
+potassium- sparing diuretics | group
+thiazide diuretics | group
+non- steroidal anti- inflammatory agents | group
+diuretic | group
+aminoglycosides | group
+aminoglycoside antibiotics | group
+cephalosporins | group
+diuretics | group
+glucocorticoids | group
+retinoids | group
+Antacids | group
+antacids | group
+vitamins | group
+H2 Blockers | group
+Proton Pump Inhibitors | group
+PPIs | group
+H2 blockers | group
+PPIs | group
+Nonsteroidal Antiinflammatory Drug | group
+NSAIDs | group
+nonsteroidal anti-inflammatory drugs | group
+NSAID | group
+nonsteroidal anti-inflammatory drugs | group
+NSAIDs | group
+NSAIDs | group
+bisphosphonates | group
+NSAIDs | group
+Bisphosphonates | group
+beta-blockers | group
+digitalis | group
+Beta Blockers | group
+beta-blockers | group
+Digitalis | group
+Anesthetics | group
+anesthetics | group
+calcium channel blockers | group
+anesthetics | group
+calcium channel blockers | group
+Benzodiazepines | group
+anticholinergic | group
+narcotic analgesics | group
+phenothiazines | group
+antipsychotics | group
+tricyclic antidepressants | group
+antiarrhythmics | group
+antihistamines | group
+tetracyclines | group
+anticoagulant | group
+anticoagulant | group
+tetracycline class | group
+antibiotics | group
+penicillins | group
+tetracyclines | group
+contraceptives | group
+contraceptives | group
+sulfonylureas | group
+nonsteroidal anti-inflammatory agents | group
+azoles | group
+salicylates | group
+sulfonamides | group
+coumarins | group
+monoamine oxidase inhibitors | group
+beta adrenergic blocking agents | group
+salicylate | group
+thiazides | group
+diuretics | group
+corticosteroids | group
+phenothiazines | group
+thyroid products | group
+estrogens | group
+contraceptives | group
+sympathomimetics | group
+calcium channel blocking drugs | group
+hypoglycemic agents | group
+synthetic steroidal estrogen | group
+synthetic steroidal progestogen | group
+dialysis solutions | group
+cardiac glycosides | group
+Antibiotics | group
+antibiotics | group
+antibiotics | group
+antidepressants | group
+antipsychotics | group
+cholinesterase inhibitors | group
+sulfonamides | group
+anticoagulant agents | group
+Thrombolytic agents | group
+thrombolytic agents | group
+antiplatelet agents | group
+thrombolytics | group
+anticoagulants | group
+Beta-Blockers | group
+adrenergic beta-receptor blockers | group
+calcium blockers | group
+digitalis preparations | group
+benzodiazepines | group
+anxiolytic | group
+hypnotic drugs | group
+benzodiazepine | group
+3-hydroxy-1,4-benzodiazepine | group
+ACE Inhibitors | group
+Angiotensin II Receptor Antagonists | group
+ACE inhibitors | group
+angiotensin II receptor antagonists | group
+ACEI | group
+ARB | group
+ACEI | group
+ARB | group
+ACE Inhibitors | group
+Angiotensin II Receptor Antagonists | group
+ACE inhibitors | group
+angiotensin II receptor antagonists | group
+ACE inhibitor | group
+Nonsteroidal Anti-Inflammatory Drugs | group
+NSAIDs | group
+NSAID | group
+potassium-sparing antihypertensives | group
+NSAIDs | group
+NSAIDs | group
+resin | group
+phenylbutazone | group
+thiazide diuretics | group
+estrogens | group
+progestins | group
+digitalis | group
+resin | group
+resin | group
+digitalis | group
+resin | group
+resin | group
+fat soluble vitamins | group
+resin | group
+fat-soluble vitamins | group
+RESIN | group
+RESIN | group
+anticoagulant | group
+beta-adrenergic receptor blocking agent | group
+beta-blockers | group
+beta-blocker | group
+calcium antagonists | group
+beta-adrenergic blocking agents | group
+beta-adrenergic blocking agents | group
+calcium antagonist | group
+calcium antagonist | group
+dihydropyridine derivative | group
+beta-blockers | group
+beta-blockers | group
+beta-blockers | group
+analgesics | group
+angiotensin-converting enzyme (ACE) inhibitors | group
+anticonvulsants | group
+benzodiazepines | group
+beta blockers | group
+calcium-channel blockers | group
+nitrates | group
+diuretics | group
+H2 antagonists | group
+HMG-CoA reductase inhibitors | group
+prostaglandin synthetase inhibitors | group
+NSAIDs | group
+quinolone anti-infectives | group
+penicillins | group
+Potassium-depleting diuretics | group
+digitalis | group
+digitalis | group
+macrolide antibiotics | group
+digitalis | group
+Antacids | group
+Thyroid | group
+sympathomimetics | group
+beta-adrenergic blockers | group
+calcium channel blockers | group
+phenothiazines | group
+butyrophenones | group
+thioxanthines | group
+azole antifungals | group
+macrolide antibiotics | group
+HIV protease inhibitors | group
+benzodiazepines | group
+benzodiazepines | group
+benzodiazepines | group
+antibiotic agents | group
+antimicrobial agents | group
+antibiotics | group
+antibiotics | group
+anticholinesterase | group
+anesthetics | group
+antiarrhythmic agents | group
+contraceptive product | group
+estrogen | group
+contraceptive | group
+quinolones | group
+quinolone antimicrobial | group
+Quinolones | group
+antacid | group
+antacids | group
+multivitamin preparations | group
+antiarrhythmic drugs | group
+tricyclic antidepressants | group
+anticholinergic agents | group
+Anticholinergic agents | group
+glucocorticoids | group
+glucocorticoids | group
+psychostimulants | group
+glucocorticoids | group
+NSAIDs | group
+thrombolytics | group
+Ergot | group
+ergot-type medications | group
+5-HT1 agonists | group
+5-HT1 agonists | group
+Selective serotonin reuptake inhibitors | group
+SSRIs | group
+SSRI | group
+contraceptive | group
+Antiepileptic Drugs | group
+AEDs | group
+AEDs | group
+AEDs | group
+AEDs | group
+AEDs | group
+AEDs | group
+AEDs | group
+Contraceptives | group
+contraceptive | group
+contraceptive | group
+antibiotics | group
+aminoglycosides | group
+polymyxin | group
+cephalosporins | group
+aminoglycosides | group
+aminoglycosides | group
+non-steroidal anti-inflammatory | group
+anticholinergics | group
+phenothiazines | group
+antiparkinson drugs | group
+tricyclic antidepressants | group
+contraceptives | group
+ACE inhibitors | group
+angiotensin II receptor antagonists | group
+psychotropic drugs | group
+narcotics | group
+analgesics | group
+antiemetics | group
+sedatives | group
+tranquilizers | group
+aminoglycosides | group
+cytotoxic | group
+antineoplastic agents | group
+antineoplastic agents | group
+glucocorticoids | group
+Beta-blockers | group
+antihypertensives | group
+Iodinated Contrast Media | group
+radiographic iodinated contrast media | group
+beta-blockers | group
+tricyclic antidepressants | group
+TCAs | group
+TCA | group
+antidepressants | group
+phenothiazines | group
+Type 1C antiarrhythmics | group
+selective serotonin reuptake inhibitors | group
+SSRIs | group
+SSRI | group
+TCA | group
+SSRI | group
+TCAs | group
+SSRIs | group
+tricyclic antidepressants | group
+tricyclic antidepressant | group
+tricyclic antidepressant | group
+TCA | group
+TCA | group
+selective serotonin reuptake inhibitors | group
+SSRIs | group
+MAO Inhibitors | group
+MAO inhibitors | group
+MAO inhibitors | group
+MAO inhibitor | group
+tricyclic antidepressants | group
+tricyclic antidepressant | group
+tricyclic antidepressant | group
+tricyclic antidepressants | group
+tricyclic antidepressant | group
+Calcium channel blocking agents | group
+calcium channel blockers | group
+Beta-adrenergic blocking agents | group
+beta-adrenergic blocking agents | group
+Digitalis | group
+catecholamines | group
+catecholamines | group
+thiazides | group
+diuretics | group
+corticosteroids | group
+phenothiazines | group
+thyroid products | group
+estrogens | group
+contraceptives | group
+sympathomimetics | group
+calcium channel-blocking drugs | group
+sulfonylureas | group
+Intestinal adsorbents | group
+digestive enzyme preparations | group
+Monoamine oxidase inhibitors | group
+MAOI | group
+MAOI | group
+Tricyclic antidepressants | group
+Tricyclic antidepressants | group
+antiepileptic drugs | group
+barbiturates | group
+tetracyclines | group
+hormonal contraceptives | group
+contraceptive | group
+combined hormonal contraceptives | group
+contraceptives | group
+non-depolarising muscle relaxant | group
+aminoglycosides | group
+antiarrhythmic agent | group
+sympathomimetics | group
+tricyclic antidepressants | group
+Antibiotics | group
+Anticholinergics | group
+anticholinergic compounds | group
+belladonna alkaloids | group
+Anticoagulants | group
+anticoagulants | group
+anticoagulant | group
+Antidepressants | group
+Antifungals | group
+H2 Receptor Antagonists | group
+Protease Inhibitors | group
+antiarrhythmics | group
+tricyclic antidepressants | group
+tetracyclic antidepressants | group
+antipsychotic medications | group
+thiazide diuretics | group
+peripherally restricted opioid antagonist | group
+opioid | group
+immunosuppressants | group
+Vitamin A | group
+vitamin A | group
+vitamin supplements | group
+vitamin A | group
+Tetracyclines | group
+tetracyclines | group
+tetracyclines | group
+estrogen | group
+hormonal contraceptives | group
+combined oral contraceptives | group
+hormonal contraceptives | group
+Systemic Corticosteroids | group
+Systemic corticosteroids | group
+systemic corticosteroids | group
+hormonal contraceptives | group
+combined hormonal contraceptives | group
+cephalosporins | group
+aminoglycoside antibiotics | group
+beta adrenergic antagonists | group
+imidazole compounds | group
+coumarin | group
+imidazole drugs | group
+coumarin drugs | group
+imidazole | group
+hypoglycemic agents | group
+imidazole | group
+aminoglycosides | group
+polymyxins | group
+coumarin | group
+anticoagulants | group
+tricyclic antidepressants | group
+beta-receptor agonist drugs | group
+beta-agonist bronchodilator drugs | group
+calcium antagonist | group
+beta-blockers | group
+Uricosuric Agents | group
+Corticosteroids | group
+Pyrazolone Derivatives | group
+salicylate | group
+Antacids | group
+antacids | group
+benzodiazepines | group
+barbiturates | group
+benzodiazepines | group
+phenothiazines | group
+barbiturates | group
+MAO inhibitors | group
+antidepressants | group
+antibiotics | group
+MAO inhibitors | group
+antibiotics | group
+MAO inhibitors | group
+MAO inhibitor | group
+MAO inhibitors | group
+MAO inhibitors | group
+non-selective MAO inhibitor | group
+MAO inhibitor | group
+tricyclic antidepressant | group
+blood thinner | group
+antidepressants | group
+antihistamines | group
+estrogens | group
+muscle relaxants | group
+anesthetics | group
+protease inhibitors | group
+macrolide antibiotics | group
+calcium channel antagonists | group
+oxytocic drugs | group
+oxytocic agents | group
+hypotensive drugs | group
+ganglionic blocking agents | group
+anesthetics | group
+blood thinner | group
+decongestant drugs | group
+NSAIDs | group
+narcotic analgesic | group
+anesthetics | group
+phenothiazines | group
+tranquilizers | group
+sedative-hypnotics | group
+tricyclic antidepressants | group
+CNS depressants | group
+CNS depressant drugs | group
+Antihistamines | group
+monoamine oxidase inhibitors | group
+MAOIs | group
+serotoninergic agents | group
+MAO inhibitor | group
+MAO inhibitor | group
+MAO inhibitor | group
+selective serotonin reuptake inhibitors | group
+SSRIs | group
+serotoninergic agents | group
+barbiturates | group
+narcotics | group
+anesthetic agents | group
+erection-supporting medication | group
+erection-supporting medication | group
+long-acting nitrates | group
+short-acting nitrates | group
+beta-receptor blockers | group
+calcium antagonists | group
+thiazide diuretics | group
+loop diuretics | group
+ACE inhibitors | group
+MAO inhibitors | group
+antihistamines | group
+Antihistamines | group
+CNS depressants | group
+hypnotics | group
+sedatives | group
+tranquilizers | group
+antianxiety agents | group
+Aminoglycosides | group
+aminoglycoside | group
+aminoglycoside | group
+non-depolarizing muscle relaxants | group
+Anticoagulants | group
+anticoagulants | group
+selective Ca(2+) channel blockers | group
+thiazide diuretics | group
+beta-blocking agent | group
+nonsteroidal anti-inflammatory drugs | group
+Analgesic | group
+anti-inflammatory | group
+Antibiotics | group
+Antihistamines | group
+chlorpheniramine | group
+Corticosteroids | group
+antacids | group
+Hypoglycemics | group
+Sedatives | group
+tranquilizers | group
+CNS depressants | group
+antihistamines | group
+anticholinergics | group
+antihistamines | group
+monoamine oxidase (MAO) inhibitors | group
+antihistamines | group
+antihistamines | group
+anticonvulsant agents | group
+adrenergic drugs | group
+methylxanthines | group
+steroids | group
+diuretics | group
+adrenergic agonists | group
+non-potassium sparing diuretics | group
+loop diuretics | group
+thiazide diuretics | group
+beta-agonists | group
+beta-agonist | group
+beta-agonists | group
+non-potassium sparing diuretics | group
+beta2-agonists | group
+monoamine oxidase inhibitors | group
+tricyclic antidepressants | group
+adrenergic agonists | group
+methylxanthines | group
+Beta-adrenergic receptor antagonists | group
+beta-blockers | group
+Beta-blockers | group
+beta-agonists | group
+beta-blockers | group
+beta-blockers | group
+cardioselective beta-blockers | group
+non-nucleoside reverse transcriptase inhibitors | group
+antiretroviral | group
+non-nucleoside reverse transcriptase inhibitor | group
+NNRTI | group
+antiretroviral | group
+protease inhibitor | group
+PI | group
+NNRTI | group
+PI | group
+PI | group
+PI | group
+PI | group
+NNRTI | group
+NNRTIs | group
+NNRTIs | group
+antibacterial drug | group
+anticoagulants | group
+Platelet inhibitors | group
+Digitalis | group
+tetracyclines | group
+antihistamines | group
+ACTH | group
+adrenocortical steroid | group
+ACTH | group
+ACTH | group
+hypoglycemics | group
+antidiabetic agents | group
+antidiabetic medication | group
+beta-blocker | group
+beta-adrenergic blocking agents | group
+calcium antagonists | group
+beta-adrenergic blocking agents | group
+digitalis | group
+calcium antagonist | group
+Phenothiazine-related compounds | group
+beta-adrenergic blocking agents | group
+atypical antipsychotic | group
+uricosuric medication | group
+antifungal agents | group
+OCs | group
+macrolide antibiotics | group
+MAO inhibitors | group
+CNS depressants | group
+barbiturates | group
+opiates | group
+sedatives | group
+anesthetics | group
+Tricyclic antidepressants | group
+tricyclic antidepressants | group
+neuroleptic | group
+beta-blockers | group
+antihypertensives | group
+cardiac glycosides | group
+Antineoplastic agents | group
+Antineoplastic agents | group
+Corticosteroids | group
+ACTH | group
+Digitalis glycosides | group
+digitalis | group
+Imidazoles | group
+imidazoles | group
+imidazoles | group
+aminoglycosides | group
+Skeletal muscle relaxants | group
+skeletal muscle relaxants | group
+ACE inhibitors | group
+fibrates | group
+MAO inhibitors | group
+salicylates | group
+somatostatin analog | group
+sulfonamide antibiotics | group
+corticosteroids | group
+diuretics | group
+sympathomimetic agents | group
+phenothiazine derivatives | group
+thyroid hormones | group
+estrogens | group
+progestogens | group
+contraceptives | group
+Beta-blockers | group
+beta-blockers | group
+Monoamine oxidase (MAO) inhibitors | group
+antithyroid agents | group
+Antithyroid agents | group
+anticoagulants | group
+anticoagulant | group
+psychoactive drugs | group
+CNS depressants | group
+barbiturates | group
+narcotic analgesics | group
+Antacids | group
+antacids | group
+antacid | group
+Quinolone Antibiotic | group
+antacids | group
+quinolone antibiotics | group
+antacids | group
+quinolone | group
+Antiretroviral Drugs | group
+Broad-Spectrum Antibiotics | group
+Broad-spectrum antibiotics | group
+vitamin K | group
+Cephalosporins | group
+Cephalosporins | group
+cephalosporins | group
+vitamin K | group
+vitamin K | group
+vitamin K | group
+vitamin K | group
+vitamin K | group
+vitamin K | group
+vitamin K | group
+Salicylates | group
+Salicylates | group
+Vitamin K | group
+antihistaminics | group
+antihistaminics | group
+analgesic agents | group
+analgesic adjuvants | group
+antihistaminics | group
+antihistaminic | group
+antihistaminics | group
+antihistaminics | group
+glitazones | group
+thiazolidinediones | group
+antidiabetic agents | group
+glitazones | group
+Short-Acting beta2-agonists | group
+bronchodilators | group
+sympathomimetic agents | group
+Monoamine Oxidase Inhibitors | group
+Tricyclic Antidepressants | group
+monoamine oxidase inhibitors | group
+tricyclic antidepressants | group
+Corticosteroids | group
+Methylxanthines | group
+Diuretics | group
+xanthine derivatives | group
+steroids | group
+diuretics | group
+beta2-agonists. | group
+digitalis | group
+phenothiazines | group
+antihistamines | group
+tricyclic antidepressants | group
+beta2-agonist | group
+short-acting, inhaled beta2-agonists | group
+short-acting, inhaled beta2-agonists | group
+corticosteroids | group
+short-acting  beta2-agonists | group
+protease inhibitors | group
+corticosteroids | group
+H2 antagonists | group
+bronchodilators | group
+anticoagulants | group
+blood thinner | group
+barbiturates | group
+central nervous system (CNS) depressants | group
+barbiturates | group
+barbiturates | group
+contraceptives | group
+estrogens | group
+barbiturates | group
+contraceptives | group
+vasoconstrictor drugs | group
+neuromuscular blocking agents | group
+Anticholinesterases | group
+anesthetics | group
+anesthetics | group
+beta-blockers | group
+calcium channel blockers | group
+diuretics | group
+diuretic | group
+diuretic | group
+diuretic | group
+ACE inhibitors | group
+diuretics | group
+ACE inhibitor | group
+diuretic | group
+Non-steroidal Anti-inflammatory Agents | group
+non-steroidal anti-inflammatory drugs | group
+NSAIDs | group
+ACE inhibitors | group
+NSAIDs | group
+ACE inhibitors | group
+nitrates | group
+thiazide-type diuretics | group
+potassium-sparing diuretics | group
+ACE inhibitors | group
+ACE inhibitor | group
+rauwolfia alkaloid | group
+MAO inhibitors | group
+opioid | group
+antacid preparations | group
+antacid preparations | group
+anticoagulants | group
+anticoagulant | group
+fibrate | group
+fibrate | group
+fibrates | group
+fibrates | group
+fibrates | group
+sympathomimetic amines | group
+monoamine oxidase inhibitors | group
+CNS stimulants | group
+Amphetamines | group
+antihypertensives | group
+Amphetamines | group
+tricyclic antidepressants | group
+amphetamines | group
+amphetamines | group
+CNS depressants | group
+MAO inhibitors | group
+tricyclic antidepressants | group
+phenothiazines | group
+azole antifungals | group
+protease inhibitors | group
+HIV Protease Inhibitors | group
+Nitrates | group
+nitrates | group
+nitrates | group
+nitrates | group
+Alpha-blockers | group
+alpha-blockers | group
+alpha-blocker | group
+Antipsychotic drugs | group
+phenothiazines | group
+tricyclic antidepressants | group
+CNS depressants | group
+barbiturates | group
+tranquilizers | group
+opioids | group
+anesthetics | group
+volatile inhalation anesthetics | group
+bacteriostatic antibiotic | group
+non-steroidal anti-inflammatory drugs | group
+beta-blocking agents | group
+myocardial depressants | group
+calcium antagonists | group
+phenylalkylamine | group
+benzothiazepine | group
+antiarrhythmic agents | group
+thiazide diuretics | group
+beta-blockers | group
+ACE-inhibitors | group
+NSAIDs | group
+ACE-inhibitors | group
+NSAIDs | group
+ACE-inhibitors | group
+Antacids | group
+antacids | group
+antacids | group
+NSAIDs | group
+NSAIDs | group
+NSAID | group
+Diuretics | group
+thiazides | group
+NSAIDs | group
+NSAIDs | group
+NSAID | group
+NSAIDs | group
+NSAIDs | group
+benzodiazepines | group
+psychotropic medications | group
+anticonvulsants | group
+antihistaminics | group
+contraceptives | group
+benzodiazepines | group
+benzodiazepines | group
+benzodiazepines | group
+macrolide antibiotics | group
+benzodiazepines | group
+Anticoagulants | group
+anticoagulants | group
+Anticoagulants | group
+vitamin K antagonists | group
+vitamin K antagonists | group
+vitamin K antagonists | group
+Cholinesterase Inhibitors | group
+cholinesterase inhibitors | group
+anticoagulant | group
+loop diuretics | group
+diuretics | group
+antihypertensive agents | group
+vasodilators | group
+antiplatelet agents | group
+anticoagulants | group
+anticoagulants | group
+diuretics | group
+anticoagulants | group
+vasodilators | group
+diuretic | group
+antihypertensive agents | group
+diuretics | group
+Non-steroidal Anti-inflammatory Agents | group
+nonsteroidal anti-inflammatory drugs | group
+NSAIDs | group
+ACE inhibitors | group
+NSAIDs | group
+ACE inhibitors | group
+beta adrenergic-blocking agents | group
+nitrates | group
+calcium-blocking agents | group
+digitalis | group
+thiazide-type diuretics | group
+Potassium-sparing diuretics | group
+ACE inhibitors | group
+Beta-Blockers | group
+beta-blockers | group
+digitalis | group
+antihypertensive agents | group
+alpha-blockers | group
+calcium channel-blockers | group
+ACE inhibitors | group
+diuretics | group
+thiazide | group
+anticoagulants | group
+central nervous system depressants | group
+interleukin-1 antagonist | group
+TNF-blocking agent | group
+TNF-blocking agents | group
+centrally acting drugs | group
+antihypertensive agents | group
+calcium channel blockers | group
+antihypertensive compounds | group
+MAO inhibitor | group
+psychotropic agents | group
+tricyclics | group
+amphetamines | group
+barbiturates | group
+salicylates | group
+diuretics | group
+corticosteroids | group
+thyroid hormone | group
+corticosteroids | group
+sex steroids | group
+Hormonal Contraceptives | group
+Contraceptives | group
+hormonal contraceptive | group
+hormonal contraceptives | group
+hypoglycemic agents | group
+hypoglycemic agents | group
+Statins | group
+statins | group
+statin | group
+statins | group
+statin | group
+central nervous system stimulants | group
+phenothiazines | group
+emetic | group
+vasodilators | group
+calcium channel blockers | group
+nitrates | group
+antipsychotic agents | group
+CNS depressants | group
+anesthetics | group
+opiates | group
+Antihistamines | group
+antidiabetic drugs | group
+diuretics | group
+digitalis | group
+Beta-adrenergic blocking agents | group
+Beta-adrenergic blocking agents | group
+Antidepressants | group
+tricyclic | group
+anticholinergic agents | group
+digitalis glycosides | group
+methylxanthines | group
+quinolone class | group
+Non-steroidal anti-inflammatory agents | group
+nonsteroidal anti-inflammatory drug | group
+antacids | group
+Quinolones | group
+quinolones | group
+antacids | group
+multivitamins | group
+quinolone | group
+Antacids | group
+methylxanthines | group
+Quinolones | group
+Ergot-Containing Drugs | group
+ergot-type medications | group
+Monoamine Oxidase Inhibitors | group
+5-HT1B/1D Agonists | group
+5-HT1B/1D agonists | group
+Selective Serotonin Reuptake Inhibitors | group
+SSRIs | group
+SSRIs | group
+5-HT1 agonists | group
+SSRI | group
+anticholinergic drugs | group
+antiarrhythmic agents | group
+antihistamines | group
+antipsychotic agents | group
+phenothiazines | group
+benzodiazepines | group
+MAO inhibitors | group
+narcotic analgesics | group
+nitrates | group
+nitrites | group
+sympathomimetic agents | group
+tricyclic antidepressants | group
+Anticholinergics | group
+antiglaucoma agents | group
+Anticholinergic drugs | group
+Anticholinergic agents | group
+Anticholinergic drugs | group
+antacids | group
+anticholinergic agents | group
+anticholinergic drugs | group
+Immunosuppressive drugs | group
+immunosuppressive drugs | group
+immunosuppressive drugs | group
+corticosteroids | group
+antibiotics | group
+immunosuppressive drugs | group
+Acellular vaccines | group
+live vaccines | group
+live-attenuated vaccines | group
+CNS depressants | group
+antihistamines | group
+anticholinergics | group
+antihistamines | group
+monoamine oxidase (MAO) inhibitors | group
+antihistamines | group
+antihistamines | group
+sympathomimetic bronchodilators | group
+methylxanthines | group
+steroids | group
+Anticholinergic agents | group
+anticholinergic medications | group
+anticholinergic | group
+5-HT3 antiemetics | group
+CENTRAL NERVOUS SYSTEM DEPRESSANTS | group
+NARCOTICS | group
+NON-NARCOTIC ANALGESICS | group
+BARBITURATES | group
+central nervous system depressants | group
+CNS depressant drugs | group
+NSAIDs | group
+NSAIDs | group
+Barbiturates | group
+contraceptives | group
+antibiotics | group
+corticosteroids | group
+anticoagulants | group
+beta blockers | group
+Acidifying agents | group
+Gastrointestinal acidifying agents | group
+amphetamines | group
+Urinary acidifying agents | group
+amphetamines | group
+Adrenergic blockers | group
+Adrenergic blockers | group
+amphetamines | group
+thiazides | group
+amphetamines | group
+Antidepressants | group
+tricyclic | group
+Amphetamines | group
+tricyclic | group
+sympathomimetic agents | group
+tricyclics | group
+MAO inhibitors | group
+MAOI antidepressants | group
+amphetamine | group
+amphetamines | group
+Antihistamines | group
+Amphetamines | group
+antihistamines | group
+Antihypertensives | group
+Amphetamines | group
+antihypertensives | group
+amphetamines | group
+amphetamine | group
+Amphetamines | group
+amphetamines | group
+amphetamines | group
+Amphetamines | group
+amphetamines | group
+acidifying agents | group
+Amphetamines | group
+Amphetamines | group
+Amphetamines | group
+amphetamine | group
+Veratrum alkaloids | group
+Amphetamines | group
+veratrum alkaloids | group
+Amphetamines | group
+corticosteroid | group
+Amphetamines | group
+NSAIDs | group
+corticosteroids | group
+TNF blocking agents | group
+NSAIDs | group
+corticosteroids | group
+TNF blocking agents | group
+TNF antagonist | group
+TNF antagonists | group
+TNF antagonists | group
+antibiotics | group
+antibiotics | group
+antibiotics | group
+oxytocics | group
+corticosteroid | group
+Antiretroviral | group
+Contraceptives | group
+contraceptives | group
+antacids | group
+H2-Receptor Antagonists | group
+H2 receptor antagonists | group
+b-lactam antibiotics | group
+Cephalosporins | group
+sulfonylurea | group
+nonsteroidal anti-inflammatory agents | group
+salicylates | group
+sulfonamides | group
+coumarins | group
+monoamine oxidase inhibitors | group
+beta adrenergic blocking agents | group
+thiazides | group
+diuretics | group
+corticosteroids | group
+phenothiazines | group
+estrogens | group
+contraceptives | group
+sympathomimetics | group
+calcium channel blocking drugs | group
+barbiturates | group
+barbiturates | group
+hypoglycemic agents | group
+atypical neuroleptic | group
+ACE inhibitors | group
+chemotherapeutic agents | group
+anticonvulsant | group
+anticonvulsant | group
+Antiarrhythmics | group
+Ergot Derivatives | group
+ergot | group
+Antimycobacterial Agents | group
+antiretroviral | group
+protease inhibitor | group
+HMG-CoA Reductase Inhibitors | group
+Sedatives | group
+Hypnotics | group
+calcium channel blockers | group
+ergot derivatives | group
+antihypertensive medications | group
+beta-adrenergic blocking agent | group
+beta-blocker | group
+antidepressants of the MAO inhibitor class | group
+salicylate | group
+nonsteroidal anti-inflammatory drug | group
+NSAID | group
+monoamine oxidase inhibitor | group
+MAOI | group
+beta-blocker | group
+diuretic | group
+steroid medicine | group
+phenothiazine | group
+Angiotensln Converting Enzyme Inhibitors | group
+angiotensin converting enzyme inhibitors | group
+CNS depressants | group
+antihistamines | group
+anticholinergics | group
+antihistamines | group
+monoamine oxidase (MAO) inhibitors | group
+aminoglycoside | group
+antibiotics | group
+penicillins | group
+cephalosporins | group
+aminoglycoside | group
+penicillin | group
+aminoglycoside | group
+aminoglycoside | group
+Antacids | group
+antacid | group
+Anticoagulants | group
+nonsteroidal anti-inflammatory drugs | group
+anti-coagulants | group
+anticoagulants | group
+nonsteroidal anti-inflammatory drugs | group
+Beta-adrenergic Blocking Agents | group
+beta-blocker | group
+Diuretics | group
+nonsteroidal anti-inflammatory drugs | group
+nonsteroidal anti-inflammatory drugs | group
+thiazide diuretics | group
+potassium-sparing diuretics | group
+diuretics | group
+Hypoglycemic Agents | group
+hypoglycemic agents | group
+barbiturates | group
+tetracyclines | group
+steroids | group
+nitric oxide donor compounds | group
+anticoagulant | group
+organophosphorous compound | group
+central nervous system depressants | group
+antituberculous drugs | group
+antimuscarinics | group
+phenothiazines | group
+monoamine oxidase (MAO) inhibitors | group
+tricyclic antidepressants | group
+antihistamines | group
+Antacids | group
+antacids | group
+quinolone | group
+quinolones | group
+Quinolones | group
+Quinolones | group
+anticoagulant | group
+Antacids | group
+multivitamins | group
+quinolones | group
+quinolones | group
+thrombolytics | group
+coumarin derivatives | group
+vitamin K antagonists | group
+calcium channel blockers | group
+low molecular weight heparins | group
+Vasoconstrictors | group
+peripheral vasoconstrictors | group
+Beta Blockers | group
+Macrolide Antibiotics | group
+ergot alkaloid class | group
+antibiotics | group
+macrolide class | group
+antibiotics | group
+SSRIs | group
+5-HT1 agonists | group
+SSRIs | group
+SSRIs | group
+Contraceptives | group
+contraceptives | group
+azole antifungal | group
+HMG-CoA reductase inhibitors | group
+immunosuppressive drugs | group
+coumarin | group
+coumarin | group
+azole antifungal agents | group
+azole antifungal agents | group
+hypoglycemic agents | group
+hypoglycemic agents | group
+dihydropyridine calcium channel blockers | group
+interleukin-1 antagonist | group
+TNFa-blocking agents | group
+nonsteroidal anti-inflammatory agents | group
+corticosteroids | group
+narcotics | group
+antibiotics | group
+antivirals | group
+corticosteroids | group
+nonsteroidal anti-inflammatory agents | group
+corticosteroids | group
+immunosuppressants | group
+immunosuppressants | group
+corticosteroids | group
+antibiotics | group
+beta-adrenergic receptor blocking agents | group
+Anesthetics | group
+anesthetics | group
+Antidiabetic drugs | group
+antidiabetic drug | group
+beta-blockers | group
+opiate | group
+CNS depressants | group
+hypnotics | group
+sedatives | group
+tranquilizers | group
+MAO inhibitors | group
+antihistamines | group
+adrenal corticosteroids | group
+potassium-depleting diuretics | group
+benzothiadiazines | group
+Digitalis glycosides | group
+digitalis | group
+anticoagulants | group
+anticoagulant | group
+Antidiabetic drugs | group
+antidiabetic drug | group
+salicylate | group
+steroids | group
+salicylate | group
+salicylate | group
+Barbiturates | group
+steroid | group
+steroid | group
+Anabolic steroids | group
+androgens | group
+Vaccines | group
+Estrogen | group
+corticosteroids | group
+estrogen | group
+corticosteroid | group
+estrogen | group
+Corticosteroids | group
+antibiotics | group
+bronchodilators | group
+vitamins | group
+corticosteroids | group
+analgesics | group
+vasopressors | group
+monoamine oxidase (MAO) inhibitors | group
+sympathomimetic drugs | group
+halogenated hydrocarbon general anesthetics | group
+beta-adrenergic blocking drug | group
+digitalis | group
+glycosides | group
+sympathomimetic drugs | group
+Diuretic agents | group
+antacids | group
+quinolones | group
+quinolones | group
+sulfonylurea | group
+Histamine H2-receptor antagonists | group
+Histamine H2-receptor antagonists | group
+quinolone | group
+antacids | group
+antacids | group
+Non-steroidal anti-inflammatory drugs | group
+quinolones | group
+quinolones | group
+Quinolones | group
+anticoagulant | group
+anticholinesterase drugs | group
+acidifying agents | group
+alkalinizing agents | group
+CNS depressants | group
+sympathomimetic agents | group
+neuromuscular blocking agents | group
+antibiotics | group
+aminoglycosides | group
+tetracyclines | group
+bacitracin | group
+polymyxins | group
+anesthetics | group
+nondepolarizing neuromuscular blocking agents | group
+proton pump inhibitors | group
+proton pump inhibitors | group
+antacids | group
+Phenothiazines | group
+phenothiazine | group
+antibiotics | group
+vasopressors | group
+cardiac glycosides | group
+diuretics | group
+lung surfactant | group
+pulmonary surfactant | group
+solvent | group
+lung surfactant | group
+HMG-CoA Reductase Inhibitors | group
+Inhibitors of HMG-CoA reductase | group
+HMG-CoA reductase inhibitors | group
+HMG-CoA reductase inhibitors | group
+central nervous system depressants | group
+barbiturates | group
+tranquilizers | group
+antihistamines | group
+central nervous system depressant | group
+opioids | group
+nasal vasoconstrictor | group
+nasal vasoconstrictor | group
+MAO inhibitors | group
+MAO inhibitors | group
+barbiturates | group
+CNS depressants | group
+Tricyclic antidepressants | group
+Tricyclic antidepressants | group
+sympathomimetic | group
+monoamine oxidase inhibiting drugs | group
+muscle relaxants | group
+muscle relaxant drugs | group
+anesthetic solutions | group
+monoamine oxidase inhibitors | group
+tricyclic antidepressants | group
+phenothiazines | group
+vasopressor drugs | group
+ergot-type oxytocic drugs | group
+sulfonamides | group
+sulfonamide drug | group
+anticoagulants | group
+nitrites | group
+Anesthetics | group
+Sedatives | group
+Hypnotics | group
+Opioids | group
+anesthetics | group
+sedatives | group
+hypnotics | group
+opioids | group
+anesthetic | group
+sedative | group
+hypnotic | group
+opioid | group
+Neuromuscular Blockers | group
+progestin | group
+anticonvulsants | group
+barbiturates | group
+antituberculosis drug | group
+antibiotics | group
+thiazide diuretics | group
+diuretic | group
+Anticoagulants | group
+Thyroid hormones | group
+anticoagulants | group
+anticoagulants | group
+thyroid | group
+anticoagulant | group
+Hypoglycemics | group
+hypoglycemic | group
+thyroid preparations | group
+hypoglycemics | group
+thyroid hormones | group
+thyroid hormones | group
+Estrogen | group
+Contraceptives | group
+Estrogens | group
+estrogens | group
+thyroid | group
+thyroid | group
+estrogens | group
+estrogen | group
+contraceptives | group
+Tricyclic Antidepressants | group
+thyroid products | group
+tricyclic antidepressants | group
+Thyroid hormone | group
+Digitalis | group
+Thyroid preparations | group
+digitalis | group
+digitalis | group
+thyroid preparation | group
+anesthetic | group
+Vasopressor | group
+thyroid preparations | group
+thyroid hormone | group
+androgens | group
+corticosteroids | group
+estrogens | group
+contraceptives | group
+estrogens | group
+iodine | group
+salicylates | group
+estrogens | group
+estrogen | group
+contraceptives | group
+androgen | group
+corticosteroid | group
+salicylates | group
+iodine | group
+thyroid hormone | group
+Antiretroviral Agents | group
+antiretroviral medications | group
+antiretroviral medication | group
+contraceptives | group
+antiretroviral | group
+Aminoglycosides | group
+aminoglycosides | group
+Antacid Products | group
+antacid products | group
+antacids | group
+Antacids | group
+antacids | group
+antacids | group
+antacid | group
+quinolones | group
+quinolones | group
+quinolone class | group
+Quinolones | group
+anticoagulant | group
+Anticonvulsants | group
+anticonvulsant | group
+beta-adrenergic receptor blockers | group
+calcium channel antagonists | group
+angiotensin converting enzyme inhibitors | group
+nitrates | group
+anticoagulants | group
+thrombolytics | group
+anti platelet agents | group
+diagnostic monoclonal antibodies | group
+therapeutic monoclonal antibodies | group
+beta blocker | group
+calcium channel blocker | group
+fat-soluble vitamins | group
+vitamin D preparations | group
+thiazide diuretics | group
+Antidiabetic drug | group
+anesthetics | group
+antihypertensive drugs | group
+phenothiazines | group
+antiepileptic drugs | group
+Contraceptive | group
+Antacid | group
+antiepileptic drugs | group
+MAO inhibitors | group
+diuretic agents | group
+Tricyclic antidepressants | group
+beta-adrenergic blocking agents | group
+alpha-adrenergic blocking agents | group
+alpha-adrenergic blocking agents | group
+Butyrophenones | group
+phenothiazines | group
+halogenated hydrocarbon anesthetics | group
+catecholamines | group
+catecholamines | group
+halogenated hydrocarbon anesthetics | group
+vasopressor | group
+oxytocic drugs | group
+anticonvulsant | group
+broad-spectrum antibiotics | group
+contraceptives | group
+anticoagulants | group
+anticoagulant | group
+anticoagulant | group
+anticoagulant | group
+anticoagulants | group
+vitamin K | group
+anticoagulant | group
+anticoagulant | group
+anticoagulant | group
+adrenocortical steroids | group
+antacids | group
+antihistamines | group
+barbiturates | group
+vitamin K | group
+diuretics | group
+contraceptives | group
+anticoagulant | group
+adrenocortical steroids | group
+antacids | group
+antihistamines | group
+barbiturates | group
+vitamin K | group
+diuretics | group
+contraceptives | group
+anticoagulant | group
+anabolic steroids | group
+antibiotics | group
+diuretics | group
+influenza virus vaccine | group
+anesthetics | group
+monoamine oxidase inhibitors | group
+prolonged narcotics | group
+pyrazolones | group
+salicylates | group
+sulfonamides | group
+thyroid drugs | group
+anticoagulant | group
+anabolic steroids | group
+antibiotics | group
+influenza virus vaccine | group
+anesthetics | group
+monoamine oxidase inhibitors | group
+prolonged narcotics | group
+pyrazolones | group
+salicylates | group
+sulfonamides | group
+thyroid drugs | group
+anticoagulants | group
+hypoglycemic agents | group
+anticoagulants | group
+anticonvulsant | group
+anticoagulant | group
+antineoplastic agents | group
+non-steroidal anti-inflammatory drugs | group
+anticoagulants | group
+antiplatelet medication | group
+anticoagulant medication | group
+indanedione anticoagulants | group
+aminoglycoside antibiotics | group
+diuretics | group
+Antihypertensives | group
+antihypertensive drugs | group
+Anticoagulants | group
+5-HT3 antagonists | group
+Corticosteroids | group
+contraceptives | group
+contraceptive | group
+contraceptives | group
+contraceptives | group
+benzodiazepines | group
+antiarrhythmics | group
+Protease Inhibitors | group
+Protease inhibitors | group
+protease inhibitor | group
+Histamine H2 antagonists | group
+digitalis | group
+antibodies | group
+neuromuscular blocking agents | group
+sedatives | group
+anticoagulant | group
+coumarin | group
+Barbiturates | group
+coumarin drugs | group
+anticoagulant agents | group
+anticoagulant | group
+CNS depressant drugs | group
+barbiturates | group
+tranquilizers | group
+opioids | group
+anesthetics | group
+CNS depressant drugs | group
+digitalis | group
+digitalis | group
+angiotensin-converting enzyme inhibitors | group
+barbiturates | group
+benzodiazepines | group
+nonsteroidal anti-inflammatory | group
+aminoglycosides | group
+non-steroidal anti-inflammatory agents | group
+Diuretic | group
+diuretics | group
+diuretic | group
+diuretic | group
+vasodilators | group
+nitrates | group
+antihypertensive agents | group
+diuretics | group
+thiazides | group
+diuretics | group
+ganglionic blocking agents | group
+adrenergic neuron blocking agents | group
+Beta-adrenergic blocking drugs | group
+Potassium-sparing diuretics | group
+nonsteroidal anti-inflammatory agents | group
+ACE inhibitor | group
+diuretic | group
+Cardiac Glycosides | group
+Loop Diuretics | group
+anesthetics | group
+sedatives | group
+antianxiety drugs | group
+hypnotics | group
+opiate analgesics | group
+beta blocking agents | group
+beta blockers | group
+hydantoin antiepileptic | group
+coumarin anticoagulant | group
+coumarin | group
+coumarin anticoagulants | group
+coumarin anticoagulants | group
+coumarin anticoagulants | group
+coumarin anticoagulants | group
+thiazide diuretic | group
+calcium channel blockers | group
+beta2 agonists | group
+H2-antagonists | group
+monoamine oxidase inhibitors | group
+Dopamine D2 receptor antagonists | group
+phenothiazines | group
+butyrophenones | group
+Antacids | group
+H 2 -receptor antagonists | group
+antacid | group
+cephalosporins | group
+vasodilators | group
+antihypertensive agents | group
+anticoagulants | group
+anticoagulants | group
+diuretics | group
+cardiac glycosides | group
+calcium channel blockers | group
+analgesics | group
+antipyretics | group
+nonsteroidal antiinflammatories | group
+corticosteroids | group
+MAO inhibitors | group
+steroid | group
+steroid | group
+steroid | group
+tricyclic antidepressants | group
+salicylates | group
+hydantoins | group
+sulfonamides | group
+sulfonylureas | group
+coumarin-type anticoagulants | group
+loop diuretics | group
+steroid | group
+steroid | group
+steroid | group
+salicylate | group
+Antacids | group
+Anticoagulants | group
+anticoagulants of the warfarin type | group
+NSAIDs | group
+NSAIDs | group
+NSAIDs | group
+anticoagulant | group
+NSAIDs | group
+NSAID | group
+Hypoglycemics | group
+hypoglycemic agents | group
+hypoglycemic agents | group
+hypoglycemic agents | group
+Diuretics | group
+NSAIDs | group
+diuretics | group
+potassium-sparing diuretics | group
+gold | group
+HIV Protease Inhibitors | group
+HIV protease inhibitors | group
+agents with b-blocking properties | group
+monoamine oxidase inhibitors | group
+agents with b-blocking properties | group
+agents with b-blocking properties | group
+b-blocking agent | group
+Calcium Channel Blockers | group
+agents with b-blocking properties | group
+calcium channel blockers | group
+Hypoglycemics | group
+Agents with b-blocking properties | group
+hypoglycemics | group
+hypoglycemics | group
+neuroleptics | group
+neuroleptics | group
+neuroleptics | group
+neuroleptics | group
+Antacid | group
+antacid | group
+Coumarin Anticoagulants | group
+coumarin-derivative anticoagulants | group
+coumarin-derivative anticoagulants | group
+psychotropic medications | group
+Monoamine Oxidase Inhibitors | group
+MAOIs | group
+NSAIDs | group
+psychotropic drugs | group
+NSAID | group
+selective serotonin reuptake inhibitor | group
+SSRI | group
+SSRI | group
+tricyclic antidepressant | group
+beta-adrenergic blocker | group
+Antacids | group
+antacid | group
+antacids | group
+topoisomerase-targeting antitumor drugs | group
+oxytocic agents | group
+oxytocic agents | group
+Antacids | group
+Uricosuric drugs | group
+antibacterial | group
+antibiotics | group
+Central nervous system depressant | group
+antidepressants | group
+antihistamines | group
+antipsychotics | group
+beta-blockers | group
+muscle relaxants | group
+narcotics | group
+sedatives | group
+tranquilizers | group
+Coumarin-Type Anticoagulants | group
+coumarin-type anticoagulants | group
+nonsteroidal anti-inflammatory agents | group
+coumarin-type anticoagulants | group
+anticoagulants | group
+nonsteroidal anti-inflammatory agents | group
+nonsteroidal anti-inflammatory drugs | group
+thiazides | group
+diuretic | group
+anticholinesterase agents | group
+narcotic analgesics | group
+antipsychotics | group
+antianxiety agents | group
+CNS depressants | group
+MAO inhibitors | group
+tricyclic antidepressants | group
+antidepressant | group
+anticholinergics | group
+warfarin-type anticoagulant | group
+barbiturates | group
+contraceptives | group
+anticoagulants | group
+barbiturates | group
+corticosteroids | group
+corticosteroids | group
+Androgens | group
+anticoagulant | group
+androgens | group
+androgens | group
+Anabolic steroids | group
+Androgens | group
+Antithyroid agents | group
+Estrogens | group
+contraceptives | group
+estrogen | group
+anti-infectives | group
+Phenothiazines | group
+Vitamin K | group
+Anticoagulants | group
+blood thinner | group
+Antidiabetics | group
+antidiabetics | group
+antidiabetics | group
+coumarin anticoagulant | group
+coumarin anticoagulants | group
+anticoagulant | group
+cephalosporins | group
+cephalosporin | group
+cephalosporins | group
+calcium channel blocker | group
+ACE inhibitors | group
+vasodilators | group
+ACE inhibitors | group
+anticholinergic drugs | group
+anticholinergic drugs | group
+decongestants | group
+anesthetics | group
+sympathomimetic amine | group
+tricyclic antidepressants | group
+CNS depressant drugs | group
+barbiturates | group
+tricyclic antidepressants | group
+TCAs | group
+TCA | group
+TCA | group
+antidepressants | group
+phenothiazines | group
+Type 1C antiarrhythmics | group
+selective serotonin reuptake inhibitors | group
+SSRIs | group
+SSRI | group
+TCA | group
+SSRI | group
+SSRIs | group
+tricyclic antidepressants | group
+tricyclic antidepressant | group
+tricyclic antidepressant | group
+TCA | group
+TCA | group
+ACE inhibitors | group
+NSAIDs | group
+Angiotensin Converting Enzyme (ACE) inhibitors | group
+ACE inhibitor | group
+ACE inhibitor | group
+ACE inhibitors | group
+NSAIDs | group
+thiazides | group
+NSAIDs | group
+Contraceptives | group
+antacid | group
+antacid products | group
+antacids | group
+anticholinergics | group
+emetic | group
+antacids | group
+H2-antagonists | group
+proton pump inhibitors | group
+Anticoagulants | group
+coumarins | group
+anticoagulants | group
+anticoagulants | group
+Antacids | group
+antacids | group
+antacids | group
+antacids | group
+Nonsteroidal anti-inflammatory drugs | group
+nonsteroial anti-inflammatory drugs | group
+NSAIDs | group
+Nonsteroidal Anti-Inflammatory Drugs | group
+NSAIDs | group
+Salicylate | group
+progestin-only oral contraceptives | group
+POC | group
+POCs | group
+POCs | group
+POCs | group
+estrogen | group
+contraceptives | group
+estrogen | group
+Antihistamines | group
+Benzodiazepines | group
+Anti-Migraine | group
+Antifungal | group
+macrolide antibiotics | group
+opiate | group
+contraceptives | group
+contraceptives | group
+protease inhibitor | group
+Anticoagulants | group
+Anticonvulsants | group
+anticonvulsant | group
+anticonvulsant | group
+Antifungals | group
+imidazole antifungals | group
+triazole antifungals | group
+Anti-HIV protease inhibitors | group
+Non-nucleoside reverse transcriptase inhibitors | group
+NNRTIs | group
+aluminum/magnesium hydroxide antacids | group
+NRTIs | group
+NRTIs | group
+aminoglycosides | group
+curare-like compounds | group
+botulinum neurotoxin | group
+botulinum toxin | group
+botulinum toxin | group
+ACE-inhibitors | group
+NSAIDs | group
+ACE-inhibitors | group
+ACE-inhibitors | group
+NSAIDs | group
+thiazides | group
+Anticonvulsants | group
+anticonvulsants | group
+Contraceptives | group
+contraceptive | group
+contraceptive | group
+antidepressants | group
+antidepressant drugs | group
+hypoglycemic agents | group
+antidepressant agents | group
+antidepressants | group
+antipsychotic drug | group
+antiparkinsonian drug | group
+tricyclic antidepressant | group
+anti-depressants | group
+anti-anxiety drugs | group
+beta-blockers | group
+narcotic | group
+antihistamines | group
