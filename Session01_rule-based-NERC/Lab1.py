@@ -23,20 +23,25 @@ def tokenize(text):
 
 def return_type(previous, text):
     type = "other"
-    if len(text) <= 3:
-        type = "other"
-    elif text.isupper():
+
+    if (text.isupper() or "aspirin" in text.lower() or "PEGA" in text or text.startswith("SP") or "XX" in text or
+        "IVA" in text):
         type = "brand"
 
-    elif (text.endswith('azole') or text.endswith('ine') or text.endswith('amine') or
-          text.endswith('mycin') or text.endswith('avir') or text.endswith('ide') or text.endswith('olam')):
-        type = "drug"
-
-    elif text.endswith('phane'):
+    elif text.endswith('phane') or text[0].isdigit() or "MC" in text or "gain" in text:
         type = "drug_n"
 
-    elif "thiazide" in text:
+    elif "thiazide" in text or text.startswith("anti") or "cont" in text or "ure" in text or "ids" in text:
         type = "group"
+
+    elif (text.endswith('azole') or text.endswith('ine') or text.endswith('amine') or
+          text.endswith('mycin') or text.endswith('avir') or text.endswith('ide') or text.endswith('olam') or
+          "hydr" in text or "in" in text or text.startswith("amph") or "cyclo" in text or "ole" in text or
+          "ano" in text or "ium" in text):
+        type = "drug"
+
+    if len(text) <= 4:
+        type = "other"
 
     return type
 
