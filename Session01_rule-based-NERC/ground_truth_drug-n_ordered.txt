@@ -1,0 +1,413 @@
+
+(-)-erythro-fluorocitrate | drug_n
+(-)-erythro-fluorocitrate | drug_n
+(-)-erythro-fluorocitrate | drug_n
+(-)-erythro-fluorocitrate | drug_n
+(-)-erythro-fluorocitrate | drug_n
+(-)-erythro-fluorocitrate | drug_n
+(-)-erythro-fluorocitrate | drug_n
+1,3-difluoro-2-propanol | drug_n
+1,3-difluoro-2-propanol | drug_n
+1,3-difluoro-2-propanol | drug_n
+1,3-difluoro-2-propanol | drug_n
+1,3-difluoro-2-propanol | drug_n
+1,3-difluoro-2-propanol | drug_n
+1,3-difluoro-2-propanol | drug_n
+1,3-difluoro-2-propanol | drug_n
+1,3-difluoroacetone | drug_n
+1,3-difluoroacetone | drug_n
+1,3-difluoroacetone | drug_n
+1,3-difluoroacetone | drug_n
+1,3-difluoroacetone | drug_n
+1,3-difluoroacetone | drug_n
+1,3-difluoroacetone | drug_n
+1,3-difluoroacetone | drug_n
+1-methyl-4-phenyl-1,2,5,6-tetrahydropyridine | drug_n
+3-hydroxy levobupivacaine | drug_n
+3-hydroxydesloratadine | drug_n
+3-Hydroxydesloratadine | drug_n
+3-Hydroxydesloratadine | drug_n
+4-hydroxy-estazolam | drug_n
+4-hydroxyatomoxetine | drug_n
+4-hydroxytolbutamide | drug_n
+4-hydroxytolbutamide | drug_n
+5-DFCR | drug_n
+5-DFUR | drug_n
+5-FU | drug_n
+5-oxo-desethylzaleplon glucuronide | drug_n
+5-oxo-desethylzaleplon | drug_n
+6-beta-naltrexol | drug_n
+6-deoxy penciclovir | drug_n
+6MNA | drug_n
+6MNA | drug_n
+6MNA | drug_n
+8-cyclopentyl-1,3-dipropylxanthine | drug_n
+8-phenyltheophylline | drug_n
+16,16-dimethylprostaglandin E2 | drug_n
+16,16-dimethylprostaglandin E2 | drug_n
+18-MC | drug_n
+18-MC | drug_n
+18-MC | drug_n
+18-MC | drug_n
+18-MC | drug_n
+18-MC | drug_n
+18-MC | drug_n
+18-MC | drug_n
+18-MC | drug_n
+18-MC | drug_n
+18-MC | drug_n
+18-MC | drug_n
+18-MC | drug_n
+18-MC | drug_n
+18-MC | drug_n
+18-MC | drug_n
+18-Methoxycoronaridine | drug_n
+25-O-desacetyl metabolites | drug_n
+25-O-desacetylrifabutin | drug_n
+25-O-desacetylrifabutin | drug_n
+acetaldehyde | drug_n
+acetaldehyde | drug_n
+acetaldehyde | drug_n
+alcohols | drug_n
+amizyl | drug_n
+angiotensin 1 | drug_n
+angiotensin 2 | drug_n
+angiotensin | drug_n
+angiotensin | drug_n
+angiotensins | drug_n
+AOM | drug_n
+AOM | drug_n
+Arecoline | drug_n
+arsenate | drug_n
+arsenate | drug_n
+arsenate | drug_n
+arsenate | drug_n
+arsenate | drug_n
+As(V) | drug_n
+As(V) | drug_n
+As(V) | drug_n
+As(V) | drug_n
+As(V) | drug_n
+As(V) | drug_n
+As(V) | drug_n
+As(V) | drug_n
+azoxymethane | drug_n
+azoxymethane | drug_n
+bentoquatam | drug_n
+benzyl alcohol | drug_n
+Benzyl alcohol | drug_n
+bombesin | drug_n
+bombesin | drug_n
+bombesin | drug_n
+Bombesin | drug_n
+bombesin | drug_n
+bombesin | drug_n
+buforin II | drug_n
+buforin II | drug_n
+Buforin II | drug_n
+Buforin II | drug_n
+carbamate insecticide | drug_n
+carbamazepine 10, 11 epoxide | drug_n
+carboxymethylcellulose-cysteine | drug_n
+carboxytolbutamide | drug_n
+carboxytolbutamide | drug_n
+CGS21680 | drug_n
+CGS 21680 | drug_n
+Clostridium difficile toxin A | drug_n
+Clostridium difficile toxin A | drug_n
+clozapine N-oxide | drug_n
+CMC-Cys | drug_n
+CMC-Cys | drug_n
+CMC-Cys | drug_n
+contortrostatin | drug_n
+contortrostatin | drug_n
+contortrostatin | drug_n
+contortrostatin | drug_n
+contortrostatin | drug_n
+contortrostatin | drug_n
+contortrostatin | drug_n
+coumaphos | drug_n
+coumaphos | drug_n
+coumaphos | drug_n
+coumaphos | drug_n
+coumaphos | drug_n
+coumaphos | drug_n
+coumaphos | drug_n
+CPA | drug_n
+CPA | drug_n
+Cytochalasin D | drug_n
+Cytochalasin D | drug_n
+cytochalasin D | drug_n
+D-Ala2-metenkephalinamide | drug_n
+dapsone hydroxylamine | drug_n
+dapsone hydroxylamine | drug_n
+DCG-IV | drug_n
+DCG-IV | drug_n
+DCG-IV | drug_n
+DCG-IV | drug_n
+dehydro-aripiprazole | drug_n
+dehydroaripiprazole | drug_n
+dehydroaripiprazole | drug_n
+desacetyldiltiazem | drug_n
+desbutyl levobupivacaine | drug_n
+descarboethoxyloratadine | drug_n
+desmethylastemizole | drug_n
+desmethylastermizole | drug_n
+desmethyldiltiazem | drug_n
+DHA | drug_n
+Diethyl pyrocarbonate | drug_n
+diethyl pyrocarbonate | drug_n
+diethyl pyrocarbonate | drug_n
+diethyl pyrocarbonate | drug_n
+dmPGE2 | drug_n
+dmPGE2 | drug_n
+dmPGE2 | drug_n
+dmPGE2 | drug_n
+dmPGE2 | drug_n
+dmPGE2 | drug_n
+dmPGE2 | drug_n
+dmPGE2 | drug_n
+dmPGE2 | drug_n
+dmPGE2 | drug_n
+doxorubicinol | drug_n
+DPCPX | drug_n
+DPCPX | drug_n
+echistatin | drug_n
+echistatin | drug_n
+Echistatin | drug_n
+EGF | drug_n
+EGF | drug_n
+EGF | drug_n
+EGF | drug_n
+EGF | drug_n
+EGF | drug_n
+endotoxin | drug_n
+endotoxin | drug_n
+endotoxin | drug_n
+endotoxin | drug_n
+endotoxin | drug_n
+endotoxin | drug_n
+endotoxin | drug_n
+endotoxin | drug_n
+endotoxin | drug_n
+endotoxin | drug_n
+endotoxin | drug_n
+enkephalins | drug_n
+enkephalins | drug_n
+enkephalins | drug_n
+FBAL | drug_n
+filipin | drug_n
+filipin | drug_n
+filipin | drug_n
+filipin | drug_n
+filipin | drug_n
+flavoridin | drug_n
+flavoridin | drug_n
+Flavoridin | drug_n
+Ganoderma lucidum extract | drug_n
+ginsenosides | drug_n
+ginsenosides | drug_n
+ginsenosides | drug_n
+ginsenosides | drug_n
+ginsenosides | drug_n
+ginsenosides | drug_n
+ginsenosides | drug_n
+ginsenosides | drug_n
+GL | drug_n
+GL | drug_n
+GL | drug_n
+GL | drug_n
+GL | drug_n
+gliftor | drug_n
+Gliftor | drug_n
+heroin | drug_n
+heroin | drug_n
+heroin | drug_n
+heroin | drug_n
+heroin | drug_n
+heroin | drug_n
+hydrodolasetron | drug_n
+hydrodolasetron | drug_n
+hydrodolasetron | drug_n
+hydrodolasetron | drug_n
+hydrodolasetron | drug_n
+hydroxyitraconazole | drug_n
+hydroxylamine | drug_n
+hydroxylated fenoprofen | drug_n
+ibogaine | drug_n
+ibogaine | drug_n
+ibogaine | drug_n
+ibogaine | drug_n
+ibogaine | drug_n
+ibogaine | drug_n
+ibogaine | drug_n
+ibogaine | drug_n
+ibogaine | drug_n
+Ibogaine | drug_n
+Ibogaine | drug_n
+Ibogaine | drug_n
+ibogaine | drug_n
+ibogaine | drug_n
+ibogaine | drug_n
+ibogaine | drug_n
+ibogaine | drug_n
+Indocyanine green | drug_n
+inositol 1,4,5-trisphosphate | drug_n
+InsP(3) | drug_n
+InsP(3) | drug_n
+InsP(3) | drug_n
+InsP(3) | drug_n
+InsP(3) | drug_n
+InsP(3) | drug_n
+Jacalin | drug_n
+jacalin | drug_n
+jacalin | drug_n
+jacalin | drug_n
+Jacalin | drug_n
+L-CCG-1 | drug_n
+L-CCG-1 | drug_n
+L-CCG-1 | drug_n
+L-CCG-1 | drug_n
+L-NAME | drug_n
+lead | drug_n
+Leukocyte transfusions | drug_n
+leukocyte transfusions | drug_n
+methanol | drug_n
+MHD | drug_n
+MHD | drug_n
+MHD | drug_n
+MHD | drug_n
+MHD | drug_n
+MHD | drug_n
+MHD | drug_n
+MHD | drug_n
+MHD | drug_n
+MHD | drug_n
+MHD | drug_n
+MHD | drug_n
+Mineral Oil | drug_n
+mineral oil | drug_n
+Misonidazole | drug_n
+misonidazole | drug_n
+Misonidazole | drug_n
+Misonidazole | drug_n
+Misonidazole | drug_n
+misonidazole | drug_n
+MPTP | drug_n
+MPTP | drug_n
+MPTP | drug_n
+MPTP | drug_n
+N6-cyclopentyladenosine | drug_n
+N-desmethylclozapine | drug_n
+N-desmethyldiazepam | drug_n
+N-desmethyldiazepam | drug_n
+N-methyllevallorphan | drug_n
+N-methyllevallorphan | drug_n
+NaCMC | drug_n
+NaCMC | drug_n
+NaCMC | drug_n
+NaCMC | drug_n
+NaCMC | drug_n
+NaCMC | drug_n
+NaCMC | drug_n
+NaCMC | drug_n
+neurotensin | drug_n
+neurotensin | drug_n
+neurotensin | drug_n
+neurotensin | drug_n
+neurotensin | drug_n
+norbuprenorphine | drug_n
+norfluoxetine | drug_n
+nortriptyline | drug_n
+olprinone | drug_n
+omega-agatoxin IVA | drug_n
+omega-agatoxin IVA | drug_n
+omega-agatoxin VIA | drug_n
+omega-conotoxin GVIA | drug_n
+omega-conotoxin GVIA | drug_n
+omega-conotoxin GVIA | drug_n
+organophosphate insecticide | drug_n
+PABA | drug_n
+palytoxin | drug_n
+Palytoxin | drug_n
+para-aminobenzoic acid | drug_n
+paraxanthine | drug_n
+PCP | drug_n
+PCP | drug_n
+PCP | drug_n
+PCP | drug_n
+PCP | drug_n
+PCP | drug_n
+PCP | drug_n
+perchlorate | drug_n
+perchlorate | drug_n
+perchlorate | drug_n
+phenazepam | drug_n
+phencyclidine | drug_n
+phencyclidine | drug_n
+phenibut | drug_n
+phenyltoloxamine | drug_n
+phenyramidol | drug_n
+phenyramidol | drug_n
+phosphate | drug_n
+picrotoxin | drug_n
+picrotoxin | drug_n
+picrotoxin | drug_n
+PTX | drug_n
+PTX | drug_n
+PTX | drug_n
+PTX | drug_n
+PTX | drug_n
+PTX | drug_n
+PTX | drug_n
+PTX | drug_n
+reseveratrol | drug_n
+resveratrol | drug_n
+Resveratrol | drug_n
+resveratrol | drug_n
+Resveratrol | drug_n
+resveratrol | drug_n
+resveratrol | drug_n
+resveratrol | drug_n
+resveratrol | drug_n
+RR | drug_n
+RR | drug_n
+RR | drug_n
+RR | drug_n
+RR | drug_n
+RR | drug_n
+RR | drug_n
+ruthenium red | drug_n
+ruthenium red | drug_n
+SCH-23390 | drug_n
+SN38 | drug_n
+SN38 | drug_n
+sodium carboxymethylcellulose | drug_n
+sodium dodecyl sulfate | drug_n
+sodium perchlorate | drug_n
+sodium perchlorate | drug_n
+thimerosal | drug_n
+Thiolated carboxymethylcellulose | drug_n
+TML | drug_n
+TML | drug_n
+toxin A | drug_n
+toxin A | drug_n
+toxin A | drug_n
+toxin A | drug_n
+toxin A | drug_n
+toxin A | drug_n
+toxin A | drug_n
+toxin A | drug_n
+toxin A | drug_n
+transferrin | drug_n
+transferrin | drug_n
+trichlorfon | drug_n
+trichlorfon | drug_n
+trichlorfon | drug_n
+trimethyl lead | drug_n
+tuftsin | drug_n
+tuftsin | drug_n
+tuftsin | drug_n
+tuftsin | drug_n
+Type II pyrethroid | drug_n
+Zimelidine | drug_n
