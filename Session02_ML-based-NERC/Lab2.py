@@ -1,9 +1,6 @@
 from xml.dom.minidom import parse
 from nltk.tokenize import WhitespaceTokenizer
 import os, sys
-from random import random, seed
-
-
 
 def parseXML(file, inputdir):
     dom = parse(inputdir + file)
@@ -22,13 +19,31 @@ def tokenize(text):
 
 def extract_features(s):
     features = []
-    for word in s:
-        #extract features
-        #for now will put random to 0 or 1
-        f1 = round(random())
-        f2 = round(random())
-        f3 = round(random())
-        features.append([f1, f2, f3])
+    for ind, word in enumerate(s):
+        feat = []
+        # print(word, ind)
+        feat.append('form='+ word[0])
+
+        if len(word[0])>4:
+            feat.append('suf4='+ word[0][-4:])
+        else:
+            feat.append('suf4='+ word[0])
+
+        if ind==len(s)-1:
+            feat.append('next=_EoS_')
+        else:
+            feat.append('next='+ s[ind+1][0])
+
+        if ind==0:
+            feat.append('prev=_BoS_')
+        else:
+            feat.append('prev='+ s[ind-1][0])
+
+        if (not word[0].isalpha() and not word[0].isdigit()):
+            feat.append('punct')
+
+        feat.append('len='+ str(word[2]-word[1]))
+        features.append(feat)
 
     return features
 
@@ -42,7 +57,6 @@ def output_features(id, s, ents):
         sys.stdout.write('\n')
 
 def main():
-    seed(1)
     inputdir = "./data/Train/"
     # outputfile = "./task9.1_lluis_3.txt"
     if os.path.exists(inputdir):
