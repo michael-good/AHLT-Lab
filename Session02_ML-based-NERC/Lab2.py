@@ -21,29 +21,50 @@ def extract_features(s):
     features = []
     for ind, word in enumerate(s):
         feat = []
-        # print(word, ind)
+        # word itself
         feat.append('form='+ word[0])
 
+        # last 4 letters
         if len(word[0])>4:
             feat.append('suf4='+ word[0][-4:])
         else:
             feat.append('suf4='+ word[0])
 
+        # next word
         if ind==len(s)-1:
             feat.append('next=_EoS_')
         else:
             feat.append('next='+ s[ind+1][0])
 
+        # previous word
         if ind==0:
             feat.append('prev=_BoS_')
         else:
             feat.append('prev='+ s[ind-1][0])
 
+        # if punctuation
         if (not word[0].isalpha() and not word[0].isdigit()):
             feat.append('punct')
 
+        # length of the word
         feat.append('len='+ str(word[2]-word[1]))
+
+        #if capitalized or all capitalized
+        upper=0
+        letter=0
+        for let in word[0]:
+            if let.isalpha():
+                letter+=1
+            if let.isupper():
+                upper+=1
+        if upper > 0:
+            if upper == letter:
+                feat.append('allCapitalized')
+            else:
+                feat.append('capitalized')
+
         features.append(feat)
+
 
     return features
 
