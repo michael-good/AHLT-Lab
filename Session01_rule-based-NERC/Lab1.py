@@ -25,7 +25,7 @@ def return_type(text, prev):
     type = "other"
 
     if (text.isupper() or "aspirin" in text.lower() or "PEGA" in text or text.startswith("SP") or "XX" in text or
-        "IVA" in text):
+        "IVA" in text or text.startswith('Acc')):
         type = "brand"
 
     elif (text.endswith('phane') or "MC" in text or "gaine" in text or
@@ -40,8 +40,11 @@ def return_type(text, prev):
     elif (text.endswith('azole') or text.endswith('ine') or text.endswith('amine') or
           text.endswith('mycin') or text.endswith('avir') or text.endswith('ide') or text.endswith('olam') or
           text.startswith('z') or
-          "hydr" in text or "in" in text or text.startswith("amph") or "cyclo" in text or "ole" in text or
-          "ano" in text or "ium" in text):
+          "hydr" in text or text.startswith("amph") or "cyclo" in text or "ole" in text or
+          "ano" in text or "ium" in text or 'phen' in text or 'yl' in text or 'hol' in text or
+          'carb' in text.lower() or 'chlor' in text.lower() or 'ofen' in text.lower() or
+          text.endswith('il') or text.startswith('cef') or text.lower().endswith('cin') or
+          text.lower().endswith('tin')):
         type = "drug"
 
     # if it has the prefix word, it returns a special case
@@ -61,6 +64,8 @@ def check_edges_letter(element):
         if not str(element[-1]).isdigit():
           if not str(element[-1]).isalpha(): #check if last item is a letter or number
             if not str(element[-1])=='%':
+                return 'end'
+        elif str(element[-1])==']' or str(element[-1])==')':
                 return 'end'
         elif not str(element[0]).isdigit():
           if not str(element[0]).isalpha(): #check if last item is a letter or number
