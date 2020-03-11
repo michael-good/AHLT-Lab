@@ -24,8 +24,8 @@ def tokenize(text):
 def return_type(text, prev):
     type = "other"
 
-    if (text.isupper() or "aspirin" in text.lower() or "PEGA" in text or text.startswith("SP") or "XX" in text or
-        "IVA" in text or text.startswith('Acc')):
+    if (text.isupper() or text.startswith("SP") or text.startswith('Acc')
+        or "aspirin" in text.lower() or "PEGA" in text or "XX" in text or "IVA" in text ):
         type = "brand"
 
     elif (text.endswith('phane') or "MC" in text or "gaine" in text or
@@ -33,18 +33,18 @@ def return_type(text, prev):
            (len(text)>10 and ((text[0].isdigit() and text[1]==',' and text[2].isdigit()))) ): #1,3
         type = "drug_n"
 
-    elif ("thiazide" in text or text.startswith("anti") or "cont" in text or "ure" in text or "ids" in text or
-         text.startswith('beta-block') or text.startswith('Beta-block') or text.startswith('Beta-Block') ):
+    elif (text.startswith("anti") or text.startswith('beta-block') or
+         text.startswith('Beta-block') or text.startswith('Beta-Block') or
+         "thiazide" in text or "cont" in text or "ure" in text or "ids" in text ):
         type = "group"
 
     elif (text.endswith('azole') or text.endswith('ine') or text.endswith('amine') or
           text.endswith('mycin') or text.endswith('avir') or text.endswith('ide') or text.endswith('olam') or
-          text.startswith('z') or
-          "hydr" in text or text.startswith("amph") or "cyclo" in text or "ole" in text or
-          "ano" in text or "ium" in text or 'phen' in text or 'yl' in text or 'hol' in text or
-          'carb' in text.lower() or 'chlor' in text.lower() or 'ofen' in text.lower() or
-          text.endswith('il') or text.startswith('cef') or text.lower().endswith('cin') or
-          text.lower().endswith('tin')):
+          text.endswith('il') or text.lower().endswith('cin') or text.lower().endswith('tin') or
+          text.startswith('z') or text.startswith('cef') or text.startswith("amph") or
+          "hydr" in text or  "cyclo" in text or "ole" in text or "ano" in text or
+          "ium" in text or 'phen' in text or 'yl' in text or 'hol' in text or
+          'carb' in text.lower() or 'chlor' in text.lower() or 'ofen' in text.lower() ):
         type = "drug"
 
     # if it has the prefix word, it returns a special case
@@ -58,18 +58,21 @@ def return_type(text, prev):
         type = "other"
 
     return type
+
 def check_edges_letter(element):
     type(element)
     if len(element)>1:
         if not str(element[-1]).isdigit():
           if not str(element[-1]).isalpha(): #check if last item is a letter or number
-            if not str(element[-1])=='%':
+            if not str(element[-1]) == '%':
                 return 'end'
-        elif str(element[-1])==']' or str(element[-1])==')':
+        elif str(element[-1]) == ']' or str(element[-1]) == ')':
                 return 'end'
         elif not str(element[0]).isdigit():
           if not str(element[0]).isalpha(): #check if last item is a letter or number
-            if not str(element[-1])=='-':
+            if not str(element[-1]) == '-':
+                return 'start'
+        elif str(element[0]) == '[' or str(element[0]) == '(':
                 return 'start'
     return 'none'
 
@@ -89,7 +92,6 @@ def extract_entities(token_list):
             y = list(element) #convert to a list
             y[0] = y[0][0:-1] #change value since tuple are immutable
             element = tuple(y) #convert back to tuple
-        # check if last letter is a number or alphabet
         while check_edges_letter(element[0]) == 'start':
             y = list(element)
             y[0] = y[0][1:]
