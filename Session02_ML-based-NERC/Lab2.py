@@ -1,6 +1,7 @@
 from xml.dom.minidom import parse
-from nltk.tokenize import WhitespaceTokenizer
 import os, sys
+from nltk.tokenize import TreebankWordTokenizer as twt
+import pycrfsuite
 
 def parseXML(file, inputdir):
     dom = parse(inputdir + file)
@@ -10,11 +11,10 @@ def get_sentence_info(sentence):
     return sentence.getAttribute("id"), sentence.getAttribute("text")
 
 def tokenize(text):
-    span_generator = WhitespaceTokenizer().span_tokenize(text)
-    token_generator = WhitespaceTokenizer().tokenize(text)
-
-    tokens = [(token, span[0], span[1]) for token, span in zip(token_generator, span_generator)]
-
+    span_generator = twt().span_tokenize(text)
+    tokens = []
+    for s in span_generator:
+        tokens.append((text[s[0]:s[1]], s[0], s[1]))
     return tokens
 
 def extract_features(s):
@@ -65,7 +65,6 @@ def extract_features(s):
 
         features.append(feat)
 
-
     return features
 
 def output_features(id, s, ents):
@@ -77,21 +76,66 @@ def output_features(id, s, ents):
             sys.stdout.write('\t'+ str(feat))
         sys.stdout.write('\n')
 
+def train(traindata, labels):
+    trainer = pycrfsuite.Trainer(verbose=False)
+    i=0
+    for xseq, yseq in zip(traindata, labels):
+        trainer.append(xseq, yseq)
+
+    trainer.set_params({
+        'c1': 1.0,   # coefficient for L1 penalty
+        'c2': 1e-3,  # coefficient for L2 penalty
+        'max_iterations': 50,  # stop earlier
+        # include transitions that are possible, but not observed
+        'feature.possible_transitions': True
+    })
+
+    trainer = pycrfsuite.CRF(
+        algorithm='lbfgs',
+        c1=0.1, # coefficient for L1 penalty
+        c2=0.1, # coefficient for L2 penalty
+        max_iterations=100, # stop earlier
+        all_possible_transitions=True) # include transitions that are possible, but not observed
+
+    trainer.train('lab2_model_trained.crfsuite')
+    trainer.logparser.last_iteration
+
+
 def main():
-    inputdir = "./data/Train/"
-    # outputfile = "./task9.1_lluis_3.txt"
-    if os.path.exists(inputdir):
-        inputfiles = os.listdir(inputdir)
-    # f = open(outputfile, "a")
-    for file in inputfiles:
-        tree = parseXML(file, inputdir)
+    # TRAIN
+    traindir = "./data/Train/"
+    if os.path.exists(traindir):
+        trainfiles = os.listdir(traindir)
+    traindata = [] #where all the features are saved
+    for file in trainfiles:
+        # print(traindir+file)
+        tree = parseXML(file, traindir)
         for sentence in tree:
             (id, text) = get_sentence_info(sentence)
             token_list = tokenize(text)
             features = extract_features(token_list)
+            traindata.append(features)
             output_features(id, token_list, features)
+    # NOSE DON SURTEN ELS LABELS
+    train(traindata, labels)
+
+    # #PREDICT
+    # testdir = "./data/Devel/"
+    # outputfile = "./task9.2_lluis_1.txt"
+    # if os.path.exists(testdir):
+    #     testfiles = os.listdir(testdir)
+    # f = open(outputfile, "a")
+    # for file in testfiles:
+    #     print(testdir+file)
+    #     tree = parseXML(file, testdir)
+    #     for sentence in tree:
+    #         (id, text) = get_sentence_info(sentence)
+    #         token_list = tokenize(text)
+    #         features = extract_features(token_list)
+    #         y_pred = crf.predict(features)
+    #         output_entities(id, token_list, y_pred, f)
     # f.close()
-    # evaluate(inputdir, outputfile)
+    # evaluate(testdir, outputfile)
 
 if __name__ == "__main__":
     main()

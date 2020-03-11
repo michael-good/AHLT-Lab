@@ -1,5 +1,5 @@
 from xml.dom.minidom import parse
-from nltk.tokenize import WhitespaceTokenizer
+from nltk.tokenize import TreebankWordTokenizer as twt
 import os
 
 
@@ -13,11 +13,10 @@ def get_sentence_info(sentence):
 
 
 def tokenize(text):
-    span_generator = WhitespaceTokenizer().span_tokenize(text)
-    token_generator = WhitespaceTokenizer().tokenize(text)
-
-    tokens = [(token, span[0], span[1]) for token, span in zip(token_generator, span_generator)]
-
+    span_generator = twt().span_tokenize(text)
+    tokens = []
+    for s in span_generator:
+        tokens.append((text[s[0]:s[1]], s[0], s[1]))
     return tokens
 
 
@@ -59,22 +58,6 @@ def return_type(text, prev):
 
     return type
 
-def check_edges_letter(element):
-    type(element)
-    if len(element)>1:
-        if not str(element[-1]).isdigit():
-          if not str(element[-1]).isalpha(): #check if last item is a letter or number
-            if not str(element[-1]) == '%':
-                return 'end'
-        elif str(element[-1]) == ']' or str(element[-1]) == ')':
-                return 'end'
-        elif not str(element[0]).isdigit():
-          if not str(element[0]).isalpha(): #check if last item is a letter or number
-            if not str(element[-1]) == '-':
-                return 'start'
-        elif str(element[0]) == '[' or str(element[0]) == '(':
-                return 'start'
-    return 'none'
 
 def extract_entities(token_list):
     previous = False
@@ -85,18 +68,6 @@ def extract_entities(token_list):
               "type": ''
               }
     for index, element in enumerate(token_list):
-
-        modified=False
-        # check if last letter is a number or alphabet
-        while check_edges_letter(element[0]) == 'end':
-            y = list(element) #convert to a list
-            y[0] = y[0][0:-1] #change value since tuple are immutable
-            element = tuple(y) #convert back to tuple
-        while check_edges_letter(element[0]) == 'start':
-            y = list(element)
-            y[0] = y[0][1:]
-            element = tuple(y)
-
         type = return_type(element[0], previous)
 
         if previous == True or type=='future': #the revious word was type='previous'
@@ -124,13 +95,13 @@ def extract_entities(token_list):
     return list_entities
 
 
-def evaluate(inputdir, outputfile):
-    os.system("java -jar eval/evaluateNER.jar " + inputdir + " " + outputfile)
-
-
 def output_entities(id, entities, output):
     for element in entities:
         output.write(id+'|'+element["offset"]+'|'+element["name"]+'|'+element["type"]+'\n')
+
+
+def evaluate(inputdir, outputfile):
+    os.system("java -jar eval/evaluateNER.jar " + inputdir + " " + outputfile)
 
 
 def nerc(inputdir, outputfile):
