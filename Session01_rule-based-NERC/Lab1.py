@@ -72,7 +72,7 @@ def extract_entities(token_list):
 
         if previous == True or type=='future': #the revious word was type='previous'
             entity = {"name": auxiliar['name']+' '+element[0],
-                      "offset": auxiliar['offset'] + "-" + str(element[2]),
+                      "offset": auxiliar['offset'] + "-" + str(element[2]-1),
                       "type": 'group'
                       }
             list_entities.append(entity)
@@ -83,7 +83,7 @@ def extract_entities(token_list):
 
         elif type != "other":
             entity = {"name": element[0],
-                      "offset": str(element[1]) + "-" + str(element[2]),
+                      "offset": str(element[1]) + "-" + str(element[2]-1),
                       "type": type
                       }
             list_entities.append(entity)
@@ -122,8 +122,8 @@ def nerc(inputdir, outputfile):
 
 
 def main():
-    inputdir = "./data/Train/"
-    outputfile = "./task9.1_lluis_3.txt"
+    inputdir = "./data/Devel/"
+    outputfile = "./task9.1_lluis_5.txt"
     nerc(inputdir, outputfile)
 
 
