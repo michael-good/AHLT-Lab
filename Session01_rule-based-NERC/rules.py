@@ -11,20 +11,31 @@ def return_type(text, ind, tlist):
             type = "drug_n"
 
     # if it has the prefix word, it returns a special case
+    elif ( len(tlist)-ind >2 and (
+        text.lower().startswith('central') and tlist[ind+1][0].lower().startswith('nervous') and tlist[ind+2][0].lower().startswith('system') )):
+        # text.lower().startswith('beFsdgsgsg') )):
+            type = 4
+    elif ( len(tlist)-ind >2 and (
+        text.lower().startswith('beta-adre') or
+        (text.lower().startswith('hmg') or text.lower().startswith('monoamine')) and tlist[ind+2][0].lower().startswith('inh') or
+        text.lower().startswith('calcium') and tlist[ind+2][0].lower().startswith('blocke') or
+        text.lower().startswith('cns') and tlist[ind+1][0].lower().startswith('blocke') and tlist[ind+1][0].lower().startswith('blocke') or
+        text.lower().startswith('cns') and tlist[ind+2][0].lower().startswith('drugs') )):
+        # text.lower().startswith('beFsdgsgsg') )):
+            type = 3
     elif ( len(tlist)-ind >1 and (
         text.lower().startswith('beta') and 'blocke' in tlist[ind+1][0].lower() or
         text.lower().startswith('psycho') or
         (text.lower().startswith('cepha') or text.lower().startswith('macro')) and 'antibiotics' in tlist[ind+1][0].lower() or
         (text.lower().startswith('prot') or text.lower().startswith('ace') or text.lower().startswith('mao')) and tlist[ind+1][0].lower().startswith('inh') or
-        text.lower().startswith('thiazide') and tlist[ind+1][0].lower().startswith('diu') )):
+        text.lower().startswith('cardiac') and tlist[ind+1][0].lower().startswith('glyco') or
+        text.lower().startswith('cns') and tlist[ind+1][0].lower().startswith('depres') or
+        text.lower().startswith('hormonal') and tlist[ind+1][0].lower().startswith('contrac') or
+        text.lower().startswith('cou') and tlist[ind+1][0].lower().startswith('anti') or
+        text.lower().startswith('digi') and (tlist[ind+1][0].lower().startswith('gly') or tlist[ind+1][0].lower().startswith('prep')) or
+        (text.lower().startswith('pota') or text.lower().startswith('loop') or text.lower().startswith('thiazide')) and tlist[ind+1][0].lower().startswith('diu') )):
         # text.lower().startswith('fdgsdgsdg') )):
             type = 2
-    elif ( len(tlist)-ind >2 and (
-        text.lower().startswith('beta-adre') or
-        (text.lower().startswith('hmg') or text.lower().startswith('monoamine')) and tlist[ind+2][0].lower().startswith('inh') or
-        (text.lower().startswith('hmg') or text.lower().startswith('monoamine')) and tlist[ind+2][0].lower().startswith('inh') )):
-        # text.lower().startswith('beFsdgsgsg') )):
-            type = 3
 
     elif (
         text.endswith('zides') or
@@ -38,8 +49,13 @@ def return_type(text, ind, tlist):
         text.lower().startswith('sulfo') or
         text.startswith('TCA') or
         text.lower().startswith('thiaz') or
-        text.lower().startswith('benzo') ):
-         # "fjksdgksd" in text.lower() ):
+        text.lower().startswith('benzo') or
+        text.lower().startswith('barb') or
+        text.lower().startswith('contracept') or
+        text.lower().startswith('cortico') or
+        text.lower().startswith('digitalis') or
+        text.lower().startswith('diu') ):
+        # "fjksdgksd" in text.lower() ):
             type = "group"
 
     elif (
