@@ -94,6 +94,7 @@ def return_type(text, index, token_list):
             text.isupper() or
             text.startswith('SPR') or
             text.startswith('Acc') or
+            text.lower().startswith('equ') or
             'aspirin' in text.lower() or
             'PEGA' in text or
             'XX' in text or
@@ -115,6 +116,8 @@ def return_type(text, index, token_list):
             text.startswith('z') or
             text.startswith('cef') or
             text.startswith('amph') or
+            text.lower().startswith('epin') or
+            text.lower().startswith('eryth') or
             'hydr' in text or
             'cyclo' in text or
             'ole' in text or
