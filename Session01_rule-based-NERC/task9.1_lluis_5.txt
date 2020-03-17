@@ -1369,6 +1369,7 @@ DDI-DrugBank.d485.s27|58-67|Nevirapine|drug
 DDI-DrugBank.d485.s27|111-133| hormonal contraceptives|group
 DDI-DrugBank.d485.s28|21-33|contraceptive|group
 DDI-DrugBank.d485.s29|12-22|delavirdine|drug
+DDI-DrugBank.d485.s30|20-28|efavirenz|drug
 DDI-DrugBank.d485.s31|14-20|Ethinyl|drug
 DDI-DrugBank.d485.s32|0-18| Protease inhibitors|group
 DDI-DrugBank.d485.s32|21-30|Amprenavir|drug
@@ -1484,6 +1485,7 @@ DDI-DrugBank.d53.s7|92-103|atorvastatin|drug
 DDI-DrugBank.d53.s7|106-118|carbamazepine|drug
 DDI-DrugBank.d53.s7|121-130|cetirizine|drug
 DDI-DrugBank.d53.s7|133-142|didanosine|drug
+DDI-DrugBank.d53.s7|145-153|efavirenz|drug
 DDI-DrugBank.d53.s7|156-166|fluconazole|drug
 DDI-DrugBank.d53.s7|169-177|indinavir|drug
 DDI-DrugBank.d53.s7|180-188|midazolam|drug
@@ -1493,6 +1495,7 @@ DDI-DrugBank.d53.s7|214-225|theophylline|drug
 DDI-DrugBank.d53.s7|251-259|triazolam|drug
 DDI-DrugBank.d53.s7|262-290|trimethoprim/sulfamethoxazole|drug
 DDI-DrugBank.d53.s7|295-304|zidovudine|drug
+DDI-DrugBank.d53.s8|23-31|efavirenz|drug
 DDI-DrugBank.d53.s8|36-46|fluconazole|drug
 DDI-DrugBank.d53.s8|95-106|azithromycin|drug
 DDI-DrugBank.d53.s9|56-67|azithromycin|drug

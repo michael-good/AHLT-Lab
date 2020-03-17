@@ -6,11 +6,11 @@ from rules import return_type
 
 def parse_xml(file, inputdir):
     dom = parse(inputdir + file)
-    return dom.getElementsByTagName("sentence")
+    return dom.getElementsByTagName('sentence')
 
 
 def get_sentence_info(sentence):
-    return sentence.getAttribute("id"), sentence.getAttribute("text")
+    return sentence.getAttribute('id'), sentence.getAttribute('text')
 
 
 def tokenize(text):
@@ -40,19 +40,19 @@ def extract_entities(token_list):
             name_group = name_group + ' ' + element[0]
             previous_type -= 1
         elif isinstance(previous_type, int) and previous_type == 1:
-            entity = {"name": name_group + ' ' + element[0],
-                      "offset": off + "-" + str(element[2]),
-                      "type": type_aux
+            entity = {'name': name_group + ' ' + element[0],
+                      'offset': off + '-' + str(element[2]),
+                      'type': type_aux
                       }
             name_group = ''
             previous_type = 'n'
             type_aux_saved = False
             list_entities.append(entity)
 
-        elif type_element != "other":
-            entity = {"name": element[0],
-                      "offset": str(element[1]) + "-" + str(element[2]),
-                      "type": type_element
+        elif type_element != 'other':
+            entity = {'name': element[0],
+                      'offset': str(element[1]) + '-' + str(element[2]),
+                      'type': type_element
                       }
             list_entities.append(entity)
 
@@ -61,11 +61,11 @@ def extract_entities(token_list):
 
 def output_entities(id_, entities, output):
     for element in entities:
-        output.write(id_ + '|' + element["offset"] + '|' + element["name"] + '|' + element["type"] + '\n')
+        output.write(id_ + '|' + element['offset'] + '|' + element['name'] + '|' + element['type'] + '\n')
 
 
 def evaluate(input_dir, output_file):
-    os.system("java -jar eval/evaluateNER.jar " + input_dir + " " + output_file)
+    os.system('java -jar eval/evaluateNER.jar ' + input_dir + ' ' + output_file)
 
 
 def nerc(input_dir, output_file):
@@ -73,7 +73,7 @@ def nerc(input_dir, output_file):
         input_files = os.listdir(input_dir)
     if os.path.exists(output_file):
         os.remove(output_file)
-    f = open(output_file, "a")
+    f = open(output_file, 'a')
     for file in input_files:
         tree = parse_xml(file, input_dir)
         for sentence in tree:
@@ -86,10 +86,10 @@ def nerc(input_dir, output_file):
 
 
 def main():
-    input_dir = "./data/Devel/"
-    output_file = "./task9.1_lluis_5.txt"
+    input_dir = './data/Devel/'
+    output_file = './task9.1_lluis_5.txt'
     nerc(input_dir, output_file)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
