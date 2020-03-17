@@ -25,26 +25,30 @@ def extract_entities(token_list):
     #demands as implementation first
     previoustype = 'n'
     namegroup = ''
-
+    typeaux = 'n'
+    typeauxsaved = False
     for index, element in enumerate(token_list):
-        typeel = return_type(element[0], index, token_list)
+        typeel, aux = return_type(element[0], index, token_list)
 
         #to return groups of words
         if isinstance(typeel, int) and typeel!=1 :
             off = str(element[1])
             namegroup = namegroup+' '+element[0]
             previoustype = typeel-1
+            if typeauxsaved == False:
+                typeaux = aux
+                typeauxsaved=True
         elif isinstance(previoustype, int) and previoustype!=1 :
             namegroup = namegroup+' '+element[0]
             previoustype-=1
         elif isinstance(previoustype, int) and previoustype == 1:
             entity = {"name": namegroup+' '+element[0],
                       "offset": off + "-" + str(element[2]),
-                      "type": 'group'
+                      "type": typeaux
                       }
-            # print(entity)
             namegroup = ''
             previoustype = 'n'
+            typeauxsaved=False
             list_entities.append(entity)
 
         elif typeel != "other":
@@ -84,7 +88,8 @@ def nerc(inputdir, outputfile):
 
 
 def main():
-    inputdir = "./data/Train/"
+    # inputdir = "./data/Train/"
+    inputdir = "./data/Devel/"
     outputfile = "./task9.1_lluis_5.txt"
     nerc(inputdir, outputfile)
 
