@@ -3,7 +3,8 @@ from nltk.tokenize import TreebankWordTokenizer as twt
 import os
 from rules import return_type
 
-def parseXML(file, inputdir):
+
+def parse_xml(file, inputdir):
     dom = parse(inputdir + file)
     return dom.getElementsByTagName("sentence")
 
@@ -16,82 +17,78 @@ def tokenize(text):
     span_generator = twt().span_tokenize(text)
     tokens = []
     for s in span_generator:
-        tokens.append((text[s[0]:s[1]], s[0], s[1]-1))
+        tokens.append((text[s[0]:s[1]], s[0], s[1] - 1))
     return tokens
 
-def extract_entities(token_list):
-    previous = False
-    list_entities = []
-    #demands as implementation first
-    previoustype = 'n'
-    namegroup = ''
-    typeaux = 'n'
-    typeauxsaved = False
-    for index, element in enumerate(token_list):
-        typeel, aux = return_type(element[0], index, token_list)
 
-        #to return groups of words
-        if isinstance(typeel, int) and typeel!=1 :
+def extract_entities(token_list):
+    list_entities = []
+    previous_type = 'n'
+    name_group = ''
+    type_aux = 'n'
+    type_aux_saved = False
+    for index, element in enumerate(token_list):
+        type_element, aux = return_type(element[0], index, token_list)
+        if isinstance(type_element, int) and type_element != 1:
             off = str(element[1])
-            namegroup = namegroup+' '+element[0]
-            previoustype = typeel-1
-            if typeauxsaved == False:
-                typeaux = aux
-                typeauxsaved=True
-        elif isinstance(previoustype, int) and previoustype!=1 :
-            namegroup = namegroup+' '+element[0]
-            previoustype-=1
-        elif isinstance(previoustype, int) and previoustype == 1:
-            entity = {"name": namegroup+' '+element[0],
+            name_group = name_group + ' ' + element[0]
+            previous_type = type_element - 1
+            if not type_aux_saved:
+                type_aux = aux
+                type_aux_saved = True
+        elif isinstance(previous_type, int) and previous_type != 1:
+            name_group = name_group + ' ' + element[0]
+            previous_type -= 1
+        elif isinstance(previous_type, int) and previous_type == 1:
+            entity = {"name": name_group + ' ' + element[0],
                       "offset": off + "-" + str(element[2]),
-                      "type": typeaux
+                      "type": type_aux
                       }
-            namegroup = ''
-            previoustype = 'n'
-            typeauxsaved=False
+            name_group = ''
+            previous_type = 'n'
+            type_aux_saved = False
             list_entities.append(entity)
 
-        elif typeel != "other":
+        elif type_element != "other":
             entity = {"name": element[0],
                       "offset": str(element[1]) + "-" + str(element[2]),
-                      "type": typeel
+                      "type": type_element
                       }
             list_entities.append(entity)
 
     return list_entities
 
 
-def output_entities(id, entities, output):
+def output_entities(id_, entities, output):
     for element in entities:
-        output.write(id+'|'+element["offset"]+'|'+element["name"]+'|'+element["type"]+'\n')
+        output.write(id_ + '|' + element["offset"] + '|' + element["name"] + '|' + element["type"] + '\n')
 
 
-def evaluate(inputdir, outputfile):
-    os.system("java -jar eval/evaluateNER.jar " + inputdir + " " + outputfile)
+def evaluate(input_dir, output_file):
+    os.system("java -jar eval/evaluateNER.jar " + input_dir + " " + output_file)
 
 
-def nerc(inputdir, outputfile):
-    if os.path.exists(inputdir):
-        inputfiles = os.listdir(inputdir)
-    if os.path.exists(outputfile):
-        os.remove(outputfile)
-    f = open(outputfile, "a")
-    for file in inputfiles:
-        tree = parseXML(file, inputdir)
+def nerc(input_dir, output_file):
+    if os.path.exists(input_dir):
+        input_files = os.listdir(input_dir)
+    if os.path.exists(output_file):
+        os.remove(output_file)
+    f = open(output_file, "a")
+    for file in input_files:
+        tree = parse_xml(file, input_dir)
         for sentence in tree:
-            (id, text) = get_sentence_info(sentence)
+            (id_, text) = get_sentence_info(sentence)
             token_list = tokenize(text)
             entities = extract_entities(token_list)
-            output_entities(id, entities, f)
+            output_entities(id_, entities, f)
     f.close()
-    evaluate(inputdir, outputfile)
+    evaluate(input_dir, output_file)
 
 
 def main():
-    # inputdir = "./data/Train/"
-    inputdir = "./data/Devel/"
-    outputfile = "./task9.1_lluis_5.txt"
-    nerc(inputdir, outputfile)
+    input_dir = "./data/Devel/"
+    output_file = "./task9.1_lluis_5.txt"
+    nerc(input_dir, output_file)
 
 
 if __name__ == "__main__":

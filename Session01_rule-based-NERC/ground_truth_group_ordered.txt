@@ -345,7 +345,7 @@ Anti-arrhythmics | group
 anti-coagulants | group
 anti-depressants | group
 anti-helminthic | group
-Anti-HIV protease inhibitors | group
+Anti-HIV proteasfe inhibitors | group
 anti-hypertensives | group
 anti-infectives | group
 anti-inflammatory | group
