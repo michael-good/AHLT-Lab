@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Session01_rule-based-NERC" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Session02_ML-based-NERC" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.6 (Lab)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
