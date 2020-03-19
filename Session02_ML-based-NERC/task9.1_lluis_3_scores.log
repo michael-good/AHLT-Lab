@@ -1,0 +1,52 @@
+SCORES FOR THE GROUP: lluis RUN=3
+
+Strict matching (boundaries + type)
+cor	inc	par	mis	spu	total	prec	recall	F1
+0	8428	0	4566	2218	12994	0	0	0
+
+
+
+Exact matching
+cor	inc	par	mis	spu	total	prec	recall	F1
+0	8428	0	4566	2218	12994	0	0	0
+
+
+
+Partial matching
+cor	inc	par	mis	spu	total	prec	recall	F1
+0	0	8428	4566	2218	12994	0	0.32	0
+
+
+
+type matching
+cor	inc	par	mis	spu	total	prec	recall	F1
+7613	815	0	4566	2218	12994	0.72	0.59	0.64
+
+
+
+SCORES FOR ENTITY TYPE
+Exact matching on drug
+cor	inc	par	mis	spu	total	prec	recall	F1
+0	5415	0	2965	862	8380	0	0	0
+
+
+Exact matching on brand
+cor	inc	par	mis	spu	total	prec	recall	F1
+0	797	0	460	91	1257	0	0	0
+
+
+Exact matching on group
+cor	inc	par	mis	spu	total	prec	recall	F1
+0	1344	0	1601	447	2945	0	0	0
+
+
+Exact matching on drug_n
+cor	inc	par	mis	spu	total	prec	recall	F1
+0	60	0	352	3	412	0	0	0
+
+
+MACRO-AVERAGE MEASURES:
+P	R	F1
+0	0	0
+________________________________________________________________________
+
