@@ -151,33 +151,60 @@ def output_entities(id_, token_list, pred, foutput):
     wait = False #while it's waiting will not print the elements
     name = ''
     off_start = '0'
+    element = {'name':'', 'offset':'', 'type':''}
     for ind, token in enumerate(token_list):
-        print(token, pred[ind])
-        if pred[ind]=='O':
+        # print(token, ind, len(token_list), ind==len(token_list)-1, pred[ind])
+
+        # print(pred[ind][0])
+        # print(pred[ind]=='O')
+        # print(pred[ind].startswith('O'))
+        # print(pred[ind].startswith('B'))
+        # print(pred[ind].startswith('I'))
+        if pred[ind]=='O': #if it's a O element, we do nothing
             wait = True
-        elif( (pred[ind].startswith('B') and pred[ind+1].startswith('O')) or
-                (pred[ind].startswith('B') and pred[ind+1].startswith('B')) ):
-            element = {'name': token[0],
-                      'offset': str(token[1]) + '-' + str(token[2]),
-                      'type': pred[ind].split('-')[1] #without B or I
-                      }
+        elif ind == len(token_list)-1: #if it's the last element of the sentence
+            if pred[ind].startswith('B'):
+                element = {'name': token[0],
+                          'offset': str(token[1]) + '-' + str(token[2]),
+                          'type': pred[ind].split('-')[1] #without B or I
+                          }
+            elif pred[ind].startswith('I'):
+                element = {'name': name+' '+token[0],
+                          'offset': off_start + '-' + str(token[2]),
+                          'type': pred[ind].split('-')[1]
+                          }
+            else: #only to check
+                print('There\'s something wrong')
             wait = False
-        elif pred[ind].startswith('B') and pred[ind+1].startswith('I'):
-            name = token[0]
-            off_start = str(token[1])
-            wait = True
-        elif( (pred[ind].startswith('I') and pred[ind+1].startswith('O')) or
-            (pred[ind].startswith('I') and pred[ind+1].startswith('B')) ):
-            element = {'name': name+' '+token[0],
-                      'offset': off_start + '-' + str(token[2]),
-                      'type': pred[ind].split('-')[1]
-                      }
-            wait = False
-        elif pred[ind].startswith('I') and pred[ind+1].startswith('I'):
-            name = name+' '+token[0]
-            wait = True
         else:
-            print('There have been some erroooooooooooooooooooooor')
+            if( (pred[ind].startswith('B') and pred[ind+1].startswith('O')) or
+                    (pred[ind].startswith('B') and pred[ind+1].startswith('B')) ):
+                element = {'name': token[0],
+                          'offset': str(token[1]) + '-' + str(token[2]),
+                          'type': pred[ind].split('-')[1] #without B or I
+                          }
+                wait = False
+            elif pred[ind].startswith('B') and pred[ind+1].startswith('I'):
+                name = token[0]
+                off_start = str(token[1])
+                wait = True
+            elif( (pred[ind].startswith('I') and pred[ind+1].startswith('O')) or
+                (pred[ind].startswith('I') and pred[ind+1].startswith('B')) ):
+                element = {'name': name+' '+token[0],
+                          'offset': off_start + '-' + str(token[2]),
+                          'type': pred[ind].split('-')[1]
+                          }
+                if pred[ind-1]=='O':
+                    # print(pred[ind], pred[ind-1])
+                    # print(element)
+                    element["name"]=token[0]
+                    # print(element)
+                wait = False
+            elif pred[ind].startswith('I') and pred[ind+1].startswith('I'):
+                name = name+' '+token[0]
+                wait = True
+            else: #only to check
+                print('There\'s something wrong2')
 
         if not wait:
             # print(element)
@@ -209,25 +236,24 @@ def main():
     train(traindata, labels)
 
     # #PREDICT
-    testdir = "./data/Train/"
-    # testdir = "./data/Devel/"
-    outputfile = "./task9.2_lluis_1.txt"
-    if os.path.exists(testdir):
-        testfiles = os.listdir(testdir)
-    testdata = [] #where all the features are saved
-    labels = [] #where the ground truth of the train data labels will be
-    f = open(outputfile, "a")
-    for file in testfiles:
-        print(testdir+file)
-        root = parseXML(file, testdir)
-        for sentence in root:
-            (id, text) = get_sentence_info(sentence)
-            token_list = tokenize(text)
-            features = extract_features(token_list)
-            y_pred = predict(features)
-            output_entities(id, token_list, y_pred, f)
-    f.close()
-    # evaluate(testdir, outputfile)
+    for testdir in ["./data/Train/", "./data/Devel/"]:
+        outputfile = "./task9.2_lluis_3.txt"
+        if os.path.exists(testdir):
+            testfiles = os.listdir(testdir)
+        testdata = [] #where all the features are saved
+        labels = [] #where the ground truth of the train data labels will be
+        f = open(outputfile, "a")
+        for file in testfiles:
+            # print(testdir+file)
+            root = parseXML(file, testdir)
+            for sentence in root:
+                (id, text) = get_sentence_info(sentence)
+                token_list = tokenize(text)
+                features = extract_features(token_list)
+                y_pred = predict(features)
+                output_entities(id, token_list, y_pred, f)
+        f.close()
+        evaluate(testdir, outputfile)
 
 if __name__ == "__main__":
     main()
