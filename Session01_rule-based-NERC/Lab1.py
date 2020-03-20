@@ -4,8 +4,8 @@ import os
 from rules import return_type
 
 
-def parse_xml(file, inputdir):
-    dom = parse(inputdir + file)
+def parse_xml(file, input_dir):
+    dom = parse(input_dir + file)
     return dom.getElementsByTagName('sentence')
 
 

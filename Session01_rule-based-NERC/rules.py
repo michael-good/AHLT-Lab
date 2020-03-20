@@ -118,6 +118,7 @@ def return_type(text, index, token_list):
             text.startswith('amph') or
             text.lower().startswith('epin') or
             text.lower().startswith('eryth') or
+            text.lower().startswith('theo') or
             'hydr' in text or
             'cyclo' in text or
             'ole' in text or
@@ -129,7 +130,8 @@ def return_type(text, index, token_list):
             'carb' in text.lower() or
             'chlor' in text.lower() or
             'ofen' in text.lower() or
-            'efav' in text.lower()):
+            'efav' in text.lower() or
+            'theophy' in text.lower()):
         type_ = 'drug'
 
     # if len(text) <= 2:

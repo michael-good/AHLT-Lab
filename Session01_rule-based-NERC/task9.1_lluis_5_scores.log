@@ -2,51 +2,51 @@ SCORES FOR THE GROUP: lluis RUN=5
 
 Strict matching (boundaries + type)
 cor	inc	par	mis	spu	total	prec	recall	F1
-6791	1688	0	4515	2660	12994	0.61	0.52	0.56
+909	290	0	572	393	1771	0.57	0.51	0.54
 
 
 
 Exact matching
 cor	inc	par	mis	spu	total	prec	recall	F1
-7298	1181	0	4515	2660	12994	0.66	0.56	0.6
+977	222	0	572	393	1771	0.61	0.55	0.58
 
 
 
 Partial matching
 cor	inc	par	mis	spu	total	prec	recall	F1
-7298	0	1181	4515	2660	12994	0.66	0.61	0.63
+977	0	222	572	393	1771	0.61	0.61	0.61
 
 
 
 type matching
 cor	inc	par	mis	spu	total	prec	recall	F1
-7517	962	0	4515	2660	12994	0.67	0.58	0.62
+1035	164	0	572	393	1771	0.65	0.58	0.62
 
 
 
 SCORES FOR ENTITY TYPE
 Exact matching on drug
 cor	inc	par	mis	spu	total	prec	recall	F1
-4930	546	0	2904	856	8380	0.78	0.59	0.67
+628	90	0	327	122	1045	0.75	0.6	0.67
 
 
 Exact matching on brand
 cor	inc	par	mis	spu	total	prec	recall	F1
-763	65	0	429	344	1257	0.65	0.61	0.63
+114	3	0	63	69	180	0.61	0.63	0.62
 
 
 Exact matching on group
 cor	inc	par	mis	spu	total	prec	recall	F1
-948	104	0	1893	78	2945	0.84	0.32	0.47
+141	32	0	281	18	454	0.74	0.31	0.44
 
 
 Exact matching on drug_n
 cor	inc	par	mis	spu	total	prec	recall	F1
-150	14	0	248	8	412	0.87	0.36	0.51
+26	1	0	65	3	92	0.87	0.28	0.43
 
 
 MACRO-AVERAGE MEASURES:
 P	R	F1
-0.79	0.47	0.57
+0.74	0.46	0.54
 ________________________________________________________________________
 
