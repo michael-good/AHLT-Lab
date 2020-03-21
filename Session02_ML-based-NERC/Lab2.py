@@ -1,8 +1,8 @@
 import os, sys
 import pycrfsuite
 from nltk.tokenize import TreebankWordTokenizer as twt
-from IPython import embed
 from xml.etree import ElementTree
+from extract_featuresL2 import extract_features
 
 def parseXML(file, inputdir):
     tree = ElementTree.parse(inputdir+file)
@@ -19,56 +19,6 @@ def tokenize(text):
     for s in span_generator:
         tokens.append((text[s[0]:s[1]], s[0], s[1]-1))
     return tokens
-
-
-def extract_features(s):
-    features = []
-    for ind, word in enumerate(s):
-        feat = []
-        # word itself
-        feat.append('form='+ word[0])
-
-        # last 4 letters
-        if len(word[0])>4:
-            feat.append('suf4='+ word[0][-4:])
-        else:
-            feat.append('suf4='+ word[0])
-
-        # next word
-        if ind==len(s)-1:
-            feat.append('next=_EoS_')
-        else:
-            feat.append('next='+ s[ind+1][0])
-
-        # previous word
-        if ind==0:
-            feat.append('prev=_BoS_')
-        else:
-            feat.append('prev='+ s[ind-1][0])
-
-        # if punctuation
-        if (not word[0].isalpha() and not word[0].isdigit()):
-            feat.append('punct')
-
-        # length of the word
-        feat.append('len='+ str(word[2]-word[1]))
-
-        #if capitalized or all capitalized
-        upper=0
-        letter=0
-        for let in word[0]:
-            if let.isalpha():
-                letter+=1
-            if let.isupper():
-                upper+=1
-        if upper > 0:
-            if upper == letter:
-                feat.append('allCapitalized')
-            else:
-                feat.append('capitalized')
-
-        features.append(feat)
-    return features
 
 
 def get_ground_truth_label(token_list, sentence):
@@ -128,12 +78,16 @@ def train(traindata, labels):
     trainer = pycrfsuite.Trainer(verbose=False)
     i=0
     for xseq, yseq in zip(traindata, labels):
+        # if i==0:
+        #     print(xseq)
+        #     print(yseq)
+        #     i=1
         trainer.append(xseq, yseq)
 
     trainer.set_params({
         'c1': 1.0,   # coefficient for L1 penalty
         'c2': 1e-3,  # coefficient for L2 penalty
-        'max_iterations': 50,  # stop earlier
+        'max_iterations': 200,  # stop earlier
         # include transitions that are possible, but not observed
         'feature.possible_transitions': True
     })
