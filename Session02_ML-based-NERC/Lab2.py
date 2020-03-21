@@ -8,10 +8,8 @@ def parseXML(file, inputdir):
     tree = ElementTree.parse(inputdir+file)
     return tree.getroot()
 
-
 def get_sentence_info(sentence):
     return sentence.attrib["id"], sentence.attrib["text"]
-
 
 def tokenize(text):
     span_generator = twt().span_tokenize(text)
@@ -20,8 +18,9 @@ def tokenize(text):
         tokens.append((text[s[0]:s[1]], s[0], s[1]-1))
     return tokens
 
-
 def get_ground_truth_label(token_list, sentence):
+    #return the supposed label for each detected element (not O) of the sentence
+    #only used for the training part
     list_ofset = []
     entities = sentence.getchildren()
     if len(entities)!=0:
@@ -40,7 +39,6 @@ def get_ground_truth_label(token_list, sentence):
                     previous+=1
                 else:
                     previous=0
-
             else:
                 sep_off = [off[0], off[1].split(';')[0], off[1].split(';')[1], off[2]]
                 if token[1]>=int(sep_off[0]) and token[2]<=int(sep_off[1]):
@@ -52,7 +50,6 @@ def get_ground_truth_label(token_list, sentence):
                 else:
                     previous=0
 
-
         if g != 'O':
             if previous == 1:
                 g='B-'+g
@@ -60,17 +57,14 @@ def get_ground_truth_label(token_list, sentence):
                 g='I-'+g
         ground.append(g)
 
-        # if previous>1:
-        #     print(previous, token_list[ind2-(previous-1)], ground[ind2-(previous-1)], token, g)
-
     return ground
 
 
 def output_features(id, s, ents, gold_class):
     for ind, token in enumerate(s):
-        sys.stdout.write( id +'\t'+ token[0] +'\t'+ str(token[1]) +'\t'+ str(token[2]) +'\t'+ gold_class[ind])
+        sys.stdout.write( id +'\t'+ token[0] +'\t'+ str(token[1]) +' '+ str(token[2]) +'\t'+ gold_class[ind] +'\t')
         for feat in ents[ind]:
-            sys.stdout.write('\t'+ str(feat))
+            sys.stdout.write(' '+ str(feat))
         sys.stdout.write('\n')
 
 
@@ -78,16 +72,14 @@ def train(traindata, labels):
     trainer = pycrfsuite.Trainer(verbose=False)
     i=0
     for xseq, yseq in zip(traindata, labels):
-        # if i==0:
-        #     print(xseq)
-        #     print(yseq)
-        #     i=1
         trainer.append(xseq, yseq)
 
     trainer.set_params({
         'c1': 1.0,   # coefficient for L1 penalty
         'c2': 1e-3,  # coefficient for L2 penalty
-        'max_iterations': 200,  # stop earlier
+        # as we have a considerable quantity of features to train from
+        # the training should be longer
+        'max_iterations': 2500,
         # include transitions that are possible, but not observed
         'feature.possible_transitions': True
     })
@@ -102,18 +94,12 @@ def predict(feat):
 
 
 def output_entities(id_, token_list, pred, foutput):
+    # if it's not waiting will print the BI elements without the marks
     wait = False #while it's waiting will not print the elements
     name = ''
     off_start = '0'
     element = {'name':'', 'offset':'', 'type':''}
     for ind, token in enumerate(token_list):
-        # print(token, ind, len(token_list), ind==len(token_list)-1, pred[ind])
-
-        # print(pred[ind][0])
-        # print(pred[ind]=='O')
-        # print(pred[ind].startswith('O'))
-        # print(pred[ind].startswith('B'))
-        # print(pred[ind].startswith('I'))
         if pred[ind]=='O': #if it's a O element, we do nothing
             wait = True
         elif ind == len(token_list)-1: #if it's the last element of the sentence
@@ -130,6 +116,7 @@ def output_entities(id_, token_list, pred, foutput):
             else: #only to check
                 print('There\'s something wrong')
             wait = False
+
         else:
             if( (pred[ind].startswith('B') and pred[ind+1].startswith('O')) or
                     (pred[ind].startswith('B') and pred[ind+1].startswith('B')) ):
@@ -149,10 +136,7 @@ def output_entities(id_, token_list, pred, foutput):
                           'type': pred[ind].split('-')[1]
                           }
                 if pred[ind-1]=='O':
-                    # print(pred[ind], pred[ind-1])
-                    # print(element)
                     element["name"]=token[0]
-                    # print(element)
                 wait = False
             elif pred[ind].startswith('I') and pred[ind+1].startswith('I'):
                 name = name+' '+token[0]
@@ -161,12 +145,14 @@ def output_entities(id_, token_list, pred, foutput):
                 print('There\'s something wrong2')
 
         if not wait:
-            # print(element)
             foutput.write(id_ + '|' + element['offset'] + '|' + element['name'] + '|' + element['type'] + '\n')
 
 
 def evaluate(input_dir, output_file):
     os.system('java -jar eval/evaluateNER.jar ' + input_dir + ' ' + output_file)
+
+def external_prediction(feat):
+    return False
 
 
 def main():
@@ -177,7 +163,6 @@ def main():
     traindata = [] #where all the features are saved
     labels = [] #where the ground truth of the train data labels will be
     for file in trainfiles:
-        # print(traindir+file)
         root = parseXML(file, traindir)
         for sentence in root:
             (id, text) = get_sentence_info(sentence)
@@ -186,25 +171,25 @@ def main():
             type_ground = get_ground_truth_label(token_list, sentence)
             traindata.append(features)
             labels.append(type_ground)
-            # output_features(id, token_list, features, type_ground)
+            output_features(id, token_list, features, type_ground)
     train(traindata, labels)
 
-    # #PREDICT
+    # PREDICT
     for testdir in ["./data/Train/", "./data/Devel/"]:
-        outputfile = "./task9.2_lluis_3.txt"
+        outputfile = "./task9.2_lluis_1.txt"
         if os.path.exists(testdir):
             testfiles = os.listdir(testdir)
         testdata = [] #where all the features are saved
-        labels = [] #where the ground truth of the train data labels will be
         f = open(outputfile, "a")
         for file in testfiles:
-            # print(testdir+file)
             root = parseXML(file, testdir)
             for sentence in root:
                 (id, text) = get_sentence_info(sentence)
                 token_list = tokenize(text)
                 features = extract_features(token_list)
-                y_pred = predict(features)
+                external = external_prediction(features)
+                if external==False:
+                    y_pred = predict(features)
                 output_entities(id, token_list, y_pred, f)
         f.close()
         evaluate(testdir, outputfile)
