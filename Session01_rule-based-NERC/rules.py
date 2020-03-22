@@ -1,13 +1,14 @@
-def return_type_ext_res(text, index, token_list):
-    return
 
-
-def return_type(text, index, token_list, external_resources=False):
+def return_type(text, index, token_list, hsdb_list=None, drug_bank=None):
     type_ = 'other'
     type_aux = 'other'
 
-    if external_resources:
-        return return_type_ext_res(text, index, token_list)
+    if not (hsdb_list is None and drug_bank is None):
+        if text.lower() in hsdb_list:
+            return 'drug', 'drug'
+        for key, value in drug_bank.items():
+            if text.lower() == key.lower():
+                return value, value
 
     if (
             'MHD' in text or
