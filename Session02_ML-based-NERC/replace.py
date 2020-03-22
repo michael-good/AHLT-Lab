@@ -1,5 +1,10 @@
 import random
 
+"""
+This file processes DrugBank.txt and creates a new document DrugBank_partial.txt 
+with a reduced size so that Lab2.py processing time is not so long
+"""
+
 outputfile = './resources/DrugBank_partial.txt'
 
 filename_drug_bank = './resources/DrugBank.txt'

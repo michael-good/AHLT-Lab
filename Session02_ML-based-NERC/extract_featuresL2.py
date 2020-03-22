@@ -1,10 +1,10 @@
 def extract_features(s, hsdb_list=None, drug_bank=None):
-    features = [] # where the list of features of all the sentence will be
+    features = []  # where the list of features of all the sentence will be
     for ind, word in enumerate(s):
-        feat = [] #where list of features for that word will be saved
+        feat = []  # where list of features for that word will be saved
 
         # word itself
-        feat.append('form='+ word[0])
+        feat.append('form=' + word[0])
 
         # looking at external resources
         if not (hsdb_list is None and drug_bank is None):
@@ -12,66 +12,66 @@ def extract_features(s, hsdb_list=None, drug_bank=None):
                 feat.append('hsdb_drug')
             for key, value in drug_bank.items():
                 if word[0].lower() == key.lower():
-                        feat.append('drug_bank_'+value)
+                    feat.append('drug_bank_' + value)
 
         # last [1,..,5] letters
         for sufix in [1, 2, 3, 4, 5]:
-            if len(word[0])>=sufix:
-                feat.append('suf'+str(sufix)+'='+ word[0][(-sufix):])
+            if len(word[0]) >= sufix:
+                feat.append('suf' + str(sufix) + '=' + word[0][(-sufix):])
             else:
-                feat.append('suf'+str(sufix)+'='+ word[0])
+                feat.append('suf' + str(sufix) + '=' + word[0])
 
         # first [1,..,5] letters
         for prefix in [1, 2, 3, 4, 5]:
-            if len(word[0])>=prefix:
-                feat.append('pref'+str(prefix)+'='+ word[0][:prefix])
+            if len(word[0]) >= prefix:
+                feat.append('pref' + str(prefix) + '=' + word[0][:prefix])
             else:
-                feat.append('pref'+str(prefix)+'='+ word[0])
+                feat.append('pref' + str(prefix) + '=' + word[0])
 
         # next [1, .., 3] words
         for next in [1, 2, 3]:
-            if ind>=len(s)-next:
-                feat.append('next'+str(next)+'=_EoS_')
+            if ind >= len(s) - next:
+                feat.append('next' + str(next) + '=_EoS_')
             else:
-                feat.append('next'+str(next)+'='+ s[ind+next][0])
+                feat.append('next' + str(next) + '=' + s[ind + next][0])
 
         # previous [1,..,3] words
         for prev in [1, 2, 3]:
-            if ind<=prev:
-                feat.append('prev'+str(prev)+'=_BoS_')
+            if ind <= prev:
+                feat.append('prev' + str(prev) + '=_BoS_')
             else:
-                feat.append('prev'+str(prev)+'='+ s[ind-prev][0])
+                feat.append('prev' + str(prev) + '=' + s[ind - prev][0])
 
         # length of the word
-        feat.append('len='+ str(word[2]-word[1]))
+        feat.append('len=' + str(word[2] - word[1]))
 
         # if punctuation
         if (not word[0].isalpha() and not word[0].isdigit()):
             feat.append('punct')
 
-        #if capitalized or all capitalized (without counting the numbers or punctuation)
-        upper=0
-        letter=0
+        # if capitalized or all capitalized (without counting the numbers or punctuation)
+        upper = 0
+        letter = 0
         for let in word[0]:
             if let.isalpha():
-                letter+=1
+                letter += 1
             if let.isupper():
-                upper+=1
+                upper += 1
         if upper > 0:
             if upper == letter:
                 feat.append('allCapitalized')
             else:
                 feat.append('capitalized')
 
-        #how many numbers
-        number=0
+        # how many numbers
+        number = 0
         for let in word[0]:
             if let.isdigit():
-                number+=1
-        feat.append('numbers='+str(number))
+                number += 1
+        feat.append('numbers=' + str(number))
 
-        #features from rules from lab1
-        if (    'MHD' in word[0] or
+        # features from rules from lab1
+        if ('MHD' in word[0] or
                 'NaC' in word[0] or
                 'MC' in word[0] or
                 'gaine' in word[0] or
@@ -86,7 +86,7 @@ def extract_features(s, hsdb_list=None, drug_bank=None):
                 'PTX' in word[0] or
                 'PCP' in word[0]):
             feat.append('rules_drug_n')
-        if(     word[0].endswith('zides') or
+        if (word[0].endswith('zides') or
                 word[0].startswith('sali') or
                 'ids' in word[0] or
                 'urea' in word[0].lower() or
@@ -103,7 +103,7 @@ def extract_features(s, hsdb_list=None, drug_bank=None):
                 word[0].lower().startswith('digitalis') or
                 word[0].lower().startswith('diu')):
             feat.append('rules_group')
-        if(     word[0].isupper() or
+        if (word[0].isupper() or
                 word[0].startswith('SPR') or
                 word[0].startswith('Acc') or
                 word[0].lower().startswith('equ') or
@@ -112,7 +112,7 @@ def extract_features(s, hsdb_list=None, drug_bank=None):
                 'XX' in word[0] or
                 'IVA' in word[0]):
             feat.append('rules_brand')
-        if(     word[0].endswith('azole') or
+        if (word[0].endswith('azole') or
                 word[0].endswith('ine') or
                 word[0].endswith('amine') or
                 word[0].endswith('mycin') or
