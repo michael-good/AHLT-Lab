@@ -37,8 +37,8 @@ def return_type(text, index, token_list, hsdb_list=None, drug_bank=None):
             'MC' in text or
             'gaine' in text or
             (len(text) > 16 and ((text[0].isdigit() and text[1] == '-') or
-                                 (text[0].isdigit() and text[1].isdigit() and text[2] == '-'))) or  # 1- or 16-
-            (len(text) > 10 and (text[0].isdigit() and text[1] == ',' and text[2].isdigit())) or  # 1,3
+                                 (text[0].isdigit() and text[1].isdigit() and text[2] == '-'))) or
+            (len(text) > 10 and (text[0].isdigit() and text[1] == ',' and text[2].isdigit())) or
             text.lower().startswith('bombe') or
             text.lower().startswith('contor') or
             text.lower().startswith('dmp') or
@@ -53,12 +53,15 @@ def return_type(text, index, token_list, hsdb_list=None, drug_bank=None):
         type_ = 'drug_n'
 
     elif text.lower().startswith('(') and token_list[index + 1][0] == ('-' or '+'):
+        # If above condition is fulfilled it is an indicator that the current token is of type drug_n
+        # and that it is the union of 4 tokens
         type_ = 4
         type_aux = 'drug_n'
 
     # if it has the prefix word, it returns a special case
     elif (
-            # Set of rules to classify as group class
+            # Set of rules to classify as group class. type_ is set to 4, which means that this token
+            # possibly belongs to a group of 4 tokens that represent the same group
             len(token_list) - index > 2 and
           (text.lower().startswith('central') and
            token_list[index + 1][0].lower().startswith('nervous') and
@@ -66,7 +69,7 @@ def return_type(text, index, token_list, hsdb_list=None, drug_bank=None):
         type_ = 4
         type_aux = 'group'
     elif (
-            # Set of rules to classify as group class
+            # Set of rules to classify as group class. This token is the third of a group of related tokens
             len(token_list) - index > 2 and
           (text.lower().startswith('beta-adre') or
            (text.lower().startswith('hmg') or text.lower().startswith('monoamine')) and token_list[index + 2][
@@ -79,7 +82,7 @@ def return_type(text, index, token_list, hsdb_list=None, drug_bank=None):
         type_ = 3
         type_aux = 'group'
     elif (
-            # Set of rules to classify as brand class
+            # Set of rules to classify as brand class. This token is the second of a group of related tokens
             len(token_list) - index > 1 and (
             text.lower().startswith('beta') and 'blocke' in token_list[index + 1][0].lower() or
             text.lower().startswith('psycho') or

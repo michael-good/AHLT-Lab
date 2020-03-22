@@ -1,0 +1,52 @@
+task9.2_lluis_9_Test-NER does not follow the convention file name for the task!
+
+Strict matching (boundaries + type)
+cor	inc	par	mis	spu	total	prec	recall	F1
+364	227	0	95	377	686	0.38	0.53	0.44
+
+
+
+Exact matching
+cor	inc	par	mis	spu	total	prec	recall	F1
+469	122	0	95	377	686	0.48	0.68	0.57
+
+
+
+Partial matching
+cor	inc	par	mis	spu	total	prec	recall	F1
+469	0	122	95	377	686	0.48	0.77	0.6
+
+
+
+type matching
+cor	inc	par	mis	spu	total	prec	recall	F1
+416	175	0	95	377	686	0.43	0.61	0.5
+
+
+
+SCORES FOR ENTITY TYPE
+Exact matching on drug
+cor	inc	par	mis	spu	total	prec	recall	F1
+272	43	0	36	117	351	0.63	0.77	0.69
+
+
+Exact matching on brand
+cor	inc	par	mis	spu	total	prec	recall	F1
+51	1	0	7	18	59	0.73	0.86	0.79
+
+
+Exact matching on group
+cor	inc	par	mis	spu	total	prec	recall	F1
+41	5	0	109	20	155	0.62	0.26	0.37
+
+
+Exact matching on drug_n
+cor	inc	par	mis	spu	total	prec	recall	F1
+0	3	0	118	1	121	0	0	0
+
+
+MACRO-AVERAGE MEASURES:
+P	R	F1
+0.49	0.48	0.46
+________________________________________________________________________
+

@@ -4,7 +4,7 @@ import os
 from rules import return_type
 
 # If the flag is set to True, external resources will be used
-USE_EXTERNAL_RESOURCES = False
+USE_EXTERNAL_RESOURCES = True
 
 
 def parse_xml(file, input_dir):
@@ -65,32 +65,39 @@ def extract_entities(token_list, hsdb_list, drug_bank):
                            position in the original text and its class
     """
     list_entities = []
-    previous_type = 'n'
+    previous_type = None
     name_group = ''
-    type_aux = 'n'
-    type_aux_saved = False
+    type_first_element_group = None
+    offset = None
     for index, element in enumerate(token_list):
-        type_element, aux = return_type(element[0], index, token_list, hsdb_list, drug_bank)
+        # return_type classifies the current token. If there is a relationship between such token and other
+        # tokens in the sentence, current token type is stored in aux and type_element is given a number
+        # that determines the number of possible tokens in the list that may be part of the same type
+        type_element, type_group = return_type(element[0], index, token_list, hsdb_list, drug_bank)
+        # If there are more than one word that could have the same type of the current token, store the last
+        # into the name_group variable so that it can be properly classified together with the former in the future
         if isinstance(type_element, int) and type_element != 1:
-            off = str(element[1])
+            offset = str(element[1])
             name_group = name_group + ' ' + element[0]
             previous_type = type_element - 1
-            if not type_aux_saved:
-                type_aux = aux
-                type_aux_saved = True
+            if type_first_element_group is None:
+                type_first_element_group = type_group
+        # Keep adding tokens to the name_group variable if they are related
         elif isinstance(previous_type, int) and previous_type != 1:
             name_group = name_group + ' ' + element[0]
             previous_type -= 1
+        # Once we get to the final element of the related tokens of the token list, create an entity with the
+        # information stored in name_group
         elif isinstance(previous_type, int) and previous_type == 1:
             entity = {'name': name_group + ' ' + element[0],
-                      'offset': off + '-' + str(element[2]),
-                      'type': type_aux
+                      'offset': offset + '-' + str(element[2]),
+                      'type': type_first_element_group
                       }
             name_group = ''
-            previous_type = 'n'
-            type_aux_saved = False
+            previous_type = None
+            type_first_element_group = None
             list_entities.append(entity)
-
+        # If there are no related tokens to the current one in the sentence and a type has been detected
         elif type_element != 'other':
             entity = {'name': element[0],
                       'offset': str(element[1]) + '-' + str(element[2]),
