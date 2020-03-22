@@ -1,6 +1,13 @@
-def return_type(text, index, token_list):
+def return_type_ext_res(text, index, token_list):
+    return
+
+
+def return_type(text, index, token_list, external_resources=False):
     type_ = 'other'
     type_aux = 'other'
+
+    if external_resources:
+        return return_type_ext_res(text, index, token_list)
 
     if (
             'MHD' in text or
@@ -33,7 +40,6 @@ def return_type(text, index, token_list):
           (text.lower().startswith('central') and
            token_list[index + 1][0].lower().startswith('nervous') and
            token_list[index + 2][0].lower().startswith('system'))):
-        # text.lower().startswith('beFsdgsgsg') )):
         type_ = 4
         type_aux = 'group'
     elif (len(token_list) - index > 2 and
@@ -45,7 +51,6 @@ def return_type(text, index, token_list):
            token_list[index + 1][
                0].lower().startswith('blocke') or
            text.lower().startswith('cns') and token_list[index + 2][0].lower().startswith('drugs'))):
-        # text.lower().startswith('beFsdgsgsg') )):
         type_ = 3
         type_aux = 'group'
     elif (len(token_list) - index > 1 and (
@@ -65,7 +70,6 @@ def return_type(text, index, token_list):
                 'prep')) or
             (text.lower().startswith('pota') or text.lower().startswith('loop') or text.lower().startswith(
                 'thiazide')) and token_list[index + 1][0].lower().startswith('diu'))):
-        # text.lower().startswith('fdgsdgsdg') )):
         type_ = 2
         type_aux = 'group'
 
@@ -87,7 +91,6 @@ def return_type(text, index, token_list):
             text.lower().startswith('cortico') or
             text.lower().startswith('digitalis') or
             text.lower().startswith('diu')):
-        # "fjksdgksd" in text.lower() ):
         type_ = 'group'
 
     elif (
@@ -134,6 +137,4 @@ def return_type(text, index, token_list):
             'theophy' in text.lower()):
         type_ = 'drug'
 
-    # if len(text) <= 2:
-    #         type = "other"
     return type_, type_aux

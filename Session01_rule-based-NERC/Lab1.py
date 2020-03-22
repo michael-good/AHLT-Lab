@@ -3,6 +3,8 @@ from nltk.tokenize import TreebankWordTokenizer as twt
 import os
 from rules import return_type
 
+USE_EXTERNAL_RESOURCES = False
+
 
 def parse_xml(file, input_dir):
     dom = parse(input_dir + file)
@@ -28,7 +30,7 @@ def extract_entities(token_list):
     type_aux = 'n'
     type_aux_saved = False
     for index, element in enumerate(token_list):
-        type_element, aux = return_type(element[0], index, token_list)
+        type_element, aux = return_type(element[0], index, token_list, USE_EXTERNAL_RESOURCES)
         if isinstance(type_element, int) and type_element != 1:
             off = str(element[1])
             name_group = name_group + ' ' + element[0]
