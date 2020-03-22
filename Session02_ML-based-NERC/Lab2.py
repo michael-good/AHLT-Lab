@@ -1,4 +1,4 @@
-import os
+import os, sys
 import pycrfsuite
 from nltk.tokenize import TreebankWordTokenizer as twt
 from xml.etree import ElementTree
@@ -6,7 +6,7 @@ from extract_featuresL2 import extract_features
 
 # True will obtain features from the external files too (goal5)
 # If false will not obtain them (goal4)
-EXTERNAL_FILE = False
+USE_EXTERNAL_RESOURCES = False
 
 def parseXML(file, inputdir):
     tree = ElementTree.parse(inputdir+file)
@@ -23,56 +23,59 @@ def tokenize(text):
     return tokens
 
 def get_ground_truth_label(token_list, sentence):
-    #return the supposed label for each detected element (not O) of the sentence
-    #only used for the training part
+    '''
+        Only used for the training part
+        The idea is to return collect the ground truth of the sentence in a list
+        separating the words grouped by the spacebar, go word by word looking if they appear in the list
+        and if they appear look in which position from the separation, if they don't appear it's assigned the O
+    '''
     list_ofset = []
     entities = sentence.getchildren()
     if len(entities)!=0:
         for entity in entities:
             if entity.tag=='entity':
-                list_ofset.append(entity.attrib['charOffset'].split('-'))
-
+                list_ofset.append(entity.attrib['text'].split(' '))
     ground = []
-    previous=0
-    for ind2, token in enumerate(token_list):
-        g='O' #assign O first, if it's any kind of drug it will stay like this
+    for token in token_list:
+        g='O'
         for ind, off in enumerate(list_ofset):
-            if len(off[1].split(';'))==1:
-                if token[1]>=int(off[0]) and token[2]<=int(off[1]):
-                    g=entities[ind].attrib['type']
-                    previous+=1
+            if token[0] in off:
+                if len(off)>1 and token[0] not in off[0]:
+                    g = 'I-'+entities[ind].attrib['type']
                 else:
-                    previous=0
-            else:   # there are some elements assigned to more than one
-                    # to these elements only assign the last tag that have appeared
-                sep_off = [off[0], off[1].split(';')[0], off[1].split(';')[1], off[2]]
-                if token[1]>=int(sep_off[0]) and token[2]<=int(sep_off[1]):
-                    g=entities[ind].attrib['type']
-                    previous+=1
-                elif token[1]>=int(sep_off[2]) and token[2]<=int(sep_off[3]):
-                    g=entities[ind].attrib['type']
-                    previous+=1
-                else:
-                    previous=0
-
-        # add the BI tags
-        if g != 'O':
-            if previous == 1:
-                g='B-'+g
-            else:
-                g='I-'+g
+                    g = 'B-'+entities[ind].attrib['type']
         ground.append(g)
 
     return ground
 
+def get_external_resources():
+    filename_hsdb = './resources/HSDB.txt'
+    # filename_drug_bank = './resources/DrugBank.txt'
+    filename_drug_bank = './resources/DrugBank_partial.txt'
 
-def output_features(id, s, ents, gold_class, trainfile):
+    with open(filename_hsdb, 'r') as f:
+        drugs_data = f.readlines()
+    hsdb_list = []
+    for element in drugs_data:
+        hsdb_list.append(element.lower().rstrip())
+
+    with open(filename_drug_bank, 'r',  encoding="utf8") as g:
+        data = g.readlines()
+
+    drug_bank = {}
+    for sentence in data:
+        split_sentence = sentence.rsplit('|', 1)
+        drug_bank[split_sentence[0]] = split_sentence[-1].rstrip()
+
+    return hsdb_list, drug_bank
+
+def output_features(id, s, ents, gold_class):
     for ind, token in enumerate(s):
-        sentence_features = id +'\t'+ token[0] +'\t'+ str(token[1]) +' '+ str(token[2]) +'\t'+ gold_class[ind] +'\t'
+        sentence_features = id +'\t'+ token[0] +'\t'+ str(token[1]) +'\t'+ str(token[2]) +'\t'+ gold_class[ind]
         for feat in ents[ind]:
-            sentence_features = sentence_features+' '+ str(feat)
+            sentence_features = sentence_features+'\t'+ str(feat)
         sentence_features = sentence_features+'\n'
-        trainfile.write(sentence_features)
+        # sys.stdout.write(sentence_features)
 
 
 def train(traindata, labels):
@@ -90,18 +93,27 @@ def train(traindata, labels):
         'feature.possible_transitions': True
     })
 
-    trainer.train('model_trained_goal4.crfsuite')
+    if USE_EXTERNAL_RESOURCES:
+        trainer.train('model_trained_goal5.crfsuite')
+    else:
+        trainer.train('model_trained_goal4.crfsuite')
     print(trainer.logparser.last_iteration)
+
 
 def predict(feat):
     # predicts the tag for the word given the features
     predictor = pycrfsuite.Tagger()
-    predictor.open('model_trained_goal4.crfsuite')
+    if USE_EXTERNAL_RESOURCES:
+        predictor.open('model_trained_goal5.crfsuite')
+    else:
+        predictor.open('model_trained_goal4.crfsuite')
+
     return predictor.tag(feat)
 
 
 def output_entities(id_, token_list, pred, foutput):
     # if it's not waiting will print the BI elements without the marks
+    # in order to not print the O's or print together the BI
     wait = False #while it's waiting will not print the elements
     name = ''
     off_start = '0'
@@ -120,6 +132,9 @@ def output_entities(id_, token_list, pred, foutput):
                           'offset': off_start + '-' + str(token[2]),
                           'type': pred[ind].split('-')[1]
                           }
+                if name == '' and ind!=len(token_list)-1:
+                    element["name"]=token[0]
+                wait = False
             else: #only to check
                 print('There\'s something wrong')
             wait = False
@@ -142,11 +157,14 @@ def output_entities(id_, token_list, pred, foutput):
                           'offset': off_start + '-' + str(token[2]),
                           'type': pred[ind].split('-')[1]
                           }
-                if pred[ind-1]=='O':
+                if name == '':
                     element["name"]=token[0]
                 wait = False
             elif pred[ind].startswith('I') and pred[ind+1].startswith('I'):
-                name = name+' '+token[0]
+                if name == '':
+                    name = token[0]
+                else:
+                    name = name+' '+token[0]
                 wait = True
             else: #only to check
                 print('There\'s something wrong2')
@@ -162,36 +180,34 @@ def evaluate(input_dir, output_file):
 def main():
     # TRAIN
     traindir = "./data/Train/"
-    if EXTERNAL_FILE:
-        trainfile = "./train_elements_9.5_lluis_1.txt"
-    else:
-        trainfile = "./train_elements_9.5_lluis_1.txt"
     if os.path.exists(traindir):
         trainfiles = os.listdir(traindir)
     traindata = [] #where all the features are saved
     labels = [] #where the ground truth of the train data labels will be
-    t = open(trainfile, "a")
+    # extracts elements from external resources
+    hsdb_list = None
+    drug_bank = None
+    if USE_EXTERNAL_RESOURCES:
+        hsdb_list, drug_bank = get_external_resources()
     for file in trainfiles:
         root = parseXML(file, traindir)
         for sentence in root:
             (id, text) = get_sentence_info(sentence)
             token_list = tokenize(text)
-            features = extract_features(token_list, EXTERNAL_FILE)
+            features = extract_features(token_list, hsdb_list, drug_bank)
             traindata.append(features)
             type_ground = get_ground_truth_label(token_list, sentence)
             labels.append(type_ground)
-            output_features(id, token_list, features, type_ground, t)
+            output_features(id, token_list, features, type_ground)
     train(traindata, labels)
-    t.close()
 
     # PREDICT
-    #two different files for the two goals of the lab2
-    if EXTERNAL_FILE:
+    #three different files for the two goals of the lab2
+    if USE_EXTERNAL_RESOURCES:
         output = "./task9.5_lluis_1"
     else:
         output = "./task9.4_lluis_1"
-    # for test in ["Devel", "Test-NER", "Test-DDI"]:
-    for test in ["Devel"]:
+    for test in ["Devel", "Test-NER", "Test-DDI"]:
         outputfile = output+'_'+test+'.txt'
         f = open(outputfile, "w")
         testdir = "./data/"+test+"/"
@@ -203,7 +219,7 @@ def main():
             for sentence in root:
                 (id, text) = get_sentence_info(sentence)
                 token_list = tokenize(text)
-                features = extract_features(token_list, EXTERNAL_FILE)
+                features = extract_features(token_list, hsdb_list, drug_bank)
                 y_pred = predict(features)
                 output_entities(id, token_list, y_pred, f)
         f.close()
