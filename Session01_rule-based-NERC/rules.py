@@ -1,5 +1,19 @@
 
 def return_type(text, index, token_list, hsdb_list=None, drug_bank=None):
+    """
+    Parses given XML file and retrieves the elements with tag 'sentence'
+
+    Parameters:
+        text: token word
+        index: position of the token in token list created out of the text sentence
+        token_list: list of words of the sentence
+        hsdb_list: list of drugs. Only available when external resources activated
+        drug_bank: list of possible sentences and their corresponding label
+                   Only available when external resources activated
+    Returns:
+        type_: classification type of the token (text) analyzed
+        type_aux:
+    """
     type_ = 'other'
     type_aux = 'other'
 

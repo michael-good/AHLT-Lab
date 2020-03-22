@@ -3,19 +3,46 @@ from nltk.tokenize import TreebankWordTokenizer as twt
 import os
 from rules import return_type
 
+# If the flag is set to True, external resources will be used
 USE_EXTERNAL_RESOURCES = False
 
 
 def parse_xml(file, input_dir):
+    """
+    Parses given XML file and retrieves the elements with tag 'sentence'
+
+    Parameters:
+        file: name of the file to parse
+        input_dir: path to the file to parse
+    Returns:
+        A list of 'sentence' elements contained within file
+    """
     dom = parse(input_dir + file)
     return dom.getElementsByTagName('sentence')
 
 
 def get_sentence_info(sentence):
+    """
+        Given an element sentence from an XML file, extracts 'id' and 'text' data from it
+
+        Parameters:
+            sentence: 'sentence' element from XML file
+        Returns:
+            'id' and 'text' information fields contained in sentence
+    """
     return sentence.getAttribute('id'), sentence.getAttribute('text')
 
 
 def tokenize(text):
+    """
+        Splits input text into words
+
+        Parameters:
+            text: group of words to split
+        Returns:
+            A list of tokens. Each token is made of a tuple that contains a word and its position in
+            the original text in the following form: ("word", initial_offset, end_offset)
+    """
     span_generator = twt().span_tokenize(text)
     tokens = []
     for s in span_generator:
@@ -24,6 +51,19 @@ def tokenize(text):
 
 
 def extract_entities(token_list, hsdb_list, drug_bank):
+    """
+        Given a list of word tokens, decides which class represents each one of them thanks to
+        a defined set of rules. External resources can be used as well if desired.
+
+        Parameters:
+            token_list: list of tokens of a 'sentence'
+            hsdb_list: list of drugs. Only available when external resources activated
+            drug_bank: drug_bank: list of possible sentences and their corresponding label
+                       Only available when external resources activated
+        Returns:
+            list_entities: For each token, a dictionary that stores information about its value,
+                           position in the original text and its class
+    """
     list_entities = []
     previous_type = 'n'
     name_group = ''
@@ -62,27 +102,55 @@ def extract_entities(token_list, hsdb_list, drug_bank):
 
 
 def output_entities(id_, entities, output):
+    """
+        Stores entities data into output txt file in a readable format
+
+        Parameters:
+            id_: identifier of the 'sentence' element
+            entities: list of extracted entities
+            output: txt file
+    """
     for element in entities:
         output.write(id_ + '|' + element['offset'] + '|' + element['name'] + '|' + element['type'] + '\n')
 
 
 def evaluate(input_dir, output_file):
+    """
+        Evaluates the performance of the classifier by means of different metrics such as
+        precision, recall and f-score
+
+        Parameters:
+            input_dir: path to output_file
+            output_file: txt file holding entities data
+    """
     os.system('java -jar eval/evaluateNER.jar ' + input_dir + ' ' + output_file)
 
 
 def get_external_resources():
+    """
+        Gets external resources data and processes them for future use in the program
+
+        Returns:
+            hsdb_list: list of drugs
+            drug_bank: list of possible sentences and their corresponding label
+    """
     filename_hsdb = './resources/HSDB.txt'
     filename_drug_bank = './resources/DrugBank.txt'
 
+    # Load HSDB.txt data
     with open(filename_hsdb, 'r') as f:
         drugs_data = f.readlines()
+    # Get rid of carriage return at the end of each line and convert all words to lowercase
     hsdb_list = []
     for element in drugs_data:
         hsdb_list.append(element.lower().rstrip())
 
+    # Load DrugBank.txt data
     with open(filename_drug_bank, 'r') as g:
         data = g.readlines()
 
+    # Store DrugBank.txt data into a dictionary where keys correspond to possible sentence's text and
+    # values are their class
     drug_bank = {}
     for sentence in data:
         split_sentence = sentence.rsplit('|', 1)
@@ -92,15 +160,28 @@ def get_external_resources():
 
 
 def nerc(input_dir, output_file):
-    if os.path.exists(input_dir):
-        input_files = os.listdir(input_dir)
+    """
+        Extracts entities datasets and decides what class they belong to. Moreover, it stores
+        all the information into an output file that is then evaluated by means of statistical metrics
+
+        Parameters:
+            input_dir: path to datasets
+            output_file: path to desired location of output txt file
+        """
+    # Set input_files variable if given paths exists and removes previously created output files
+    input_files = os.listdir(input_dir)
     if os.path.exists(output_file):
         os.remove(output_file)
     f = open(output_file, 'w')
+
+    # If use of external resources is desired necessary data is loaded
     hsdb_list = None
     drug_bank = None
     if USE_EXTERNAL_RESOURCES:
         hsdb_list, drug_bank = get_external_resources()
+
+    # Loops over each file in the folder 'input_dir' and makes a classification of each word token
+    # in every sentence element of the datasets
     i = 0
     for file in input_files:
         tree = parse_xml(file, input_dir)
@@ -110,6 +191,7 @@ def nerc(input_dir, output_file):
             entities = extract_entities(token_list, hsdb_list, drug_bank)
             output_entities(id_, entities, f)
         i += 1
+        # Prints the percentage of completion of the main task
         print("{0:.2f}%".format(i / len(input_files) * 100))
     f.close()
     evaluate(input_dir, output_file)
