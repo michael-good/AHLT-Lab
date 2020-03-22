@@ -138,7 +138,7 @@ def get_external_resources():
     filename_drug_bank = './resources/DrugBank.txt'
 
     # Load HSDB.txt data
-    with open(filename_hsdb, 'r') as f:
+    with open(filename_hsdb, 'r', encoding='utf8') as f:
         drugs_data = f.readlines()
     # Get rid of carriage return at the end of each line and convert all words to lowercase
     hsdb_list = []
@@ -146,7 +146,7 @@ def get_external_resources():
         hsdb_list.append(element.lower().rstrip())
 
     # Load DrugBank.txt data
-    with open(filename_drug_bank, 'r') as g:
+    with open(filename_drug_bank, 'r', encoding='utf8') as g:
         data = g.readlines()
 
     # Store DrugBank.txt data into a dictionary where keys correspond to possible sentence's text and
@@ -198,9 +198,14 @@ def nerc(input_dir, output_file):
 
 
 def main():
-    input_dir = './data/Devel/'
-    output_file = './task9.1_lluis_5.txt'
-    nerc(input_dir, output_file)
+    input_folder = ['Devel', 'Test-NER', 'Test-DDI']
+    for element in input_folder:
+        input_dir = './data/' + element + '/'
+        if USE_EXTERNAL_RESOURCES:
+            output_file = './task9.2_lluis_9_' + element + '.txt'
+        else:
+            output_file = './task9.1_lluis_9_' + element + '.txt'
+        nerc(input_dir, output_file)
 
 
 if __name__ == '__main__':

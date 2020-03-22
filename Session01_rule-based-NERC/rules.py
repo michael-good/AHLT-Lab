@@ -17,14 +17,21 @@ def return_type(text, index, token_list, hsdb_list=None, drug_bank=None):
     type_ = 'other'
     type_aux = 'other'
 
+    # Next if block only executes if external resources are enabled i.e. they have been loaded into memory.
+    # If that is the case, the system will first try to classify the token using them. If classification is not
+    # possible, it will then move on to perform a standard rule-based classification
     if not (hsdb_list is None and drug_bank is None):
+        # Checks if the token exists in HSDB durg list. If that is the case, it is directly classified as drug
         if text.lower() in hsdb_list:
             return 'drug', 'drug'
+        # For each line in DrugBank.txt, if its sentence matches the token return the type indicated by the document
         for key, value in drug_bank.items():
             if text.lower() == key.lower():
                 return value, value
 
+    # Set of rules not based on external resources used to perform drug classification
     if (
+        # Set of rules to classify as drug_n class
             'MHD' in text or
             'NaC' in text or
             'MC' in text or
@@ -45,19 +52,22 @@ def return_type(text, index, token_list, hsdb_list=None, drug_bank=None):
             'PCP' in text):
         type_ = 'drug_n'
 
-    elif (
-            text.lower().startswith('(') and token_list[index + 1][0] == ('-' or '+')):
+    elif text.lower().startswith('(') and token_list[index + 1][0] == ('-' or '+'):
         type_ = 4
         type_aux = 'drug_n'
 
     # if it has the prefix word, it returns a special case
-    elif (len(token_list) - index > 2 and
+    elif (
+            # Set of rules to classify as group class
+            len(token_list) - index > 2 and
           (text.lower().startswith('central') and
            token_list[index + 1][0].lower().startswith('nervous') and
            token_list[index + 2][0].lower().startswith('system'))):
         type_ = 4
         type_aux = 'group'
-    elif (len(token_list) - index > 2 and
+    elif (
+            # Set of rules to classify as group class
+            len(token_list) - index > 2 and
           (text.lower().startswith('beta-adre') or
            (text.lower().startswith('hmg') or text.lower().startswith('monoamine')) and token_list[index + 2][
                0].lower().startswith('inh') or
@@ -68,7 +78,9 @@ def return_type(text, index, token_list, hsdb_list=None, drug_bank=None):
            text.lower().startswith('cns') and token_list[index + 2][0].lower().startswith('drugs'))):
         type_ = 3
         type_aux = 'group'
-    elif (len(token_list) - index > 1 and (
+    elif (
+            # Set of rules to classify as brand class
+            len(token_list) - index > 1 and (
             text.lower().startswith('beta') and 'blocke' in token_list[index + 1][0].lower() or
             text.lower().startswith('psycho') or
             (text.lower().startswith('cepha') or text.lower().startswith('macro')) and 'antibiotics' in
@@ -89,6 +101,7 @@ def return_type(text, index, token_list, hsdb_list=None, drug_bank=None):
         type_aux = 'group'
 
     elif (
+            # Set of rules to classify as group class
             text.endswith('zides') or
             text.startswith('sali') or
             'ids' in text or
@@ -109,6 +122,7 @@ def return_type(text, index, token_list, hsdb_list=None, drug_bank=None):
         type_ = 'group'
 
     elif (
+            # Set of rules to classify as brand class
             text.isupper() or
             text.startswith('SPR') or
             text.startswith('Acc') or
@@ -120,6 +134,7 @@ def return_type(text, index, token_list, hsdb_list=None, drug_bank=None):
         type_ = 'brand'
 
     elif (
+            # Set of rules to classify as drug class
             text.endswith('azole') or
             text.endswith('ine') or
             text.endswith('amine') or
