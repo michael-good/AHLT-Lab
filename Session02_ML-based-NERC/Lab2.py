@@ -81,11 +81,11 @@ def train(traindata, labels):
         trainer.append(xseq, yseq)
 
     trainer.set_params({
-        'c1': 1.0,   # coefficient for L1 penalty
+        'c1': 0.2,   # coefficient for L1 penalty
         'c2': 1e-3,  # coefficient for L2 penalty
         # as we have a considerable quantity of features to train from
         # the training should be longer
-        'max_iterations': 3000,
+        'max_iterations': 200,
         # include transitions that are possible, but not observed
         'feature.possible_transitions': True
     })
@@ -184,31 +184,30 @@ def main():
     train(traindata, labels)
     t.close()
 
-    for n in range(6):
-        # PREDICT
-        #two different files for the two goals of the lab2
-        if EXTERNAL_FILE:
-            output = "./task9.5_lluis_1"
-        else:
-            output = "./task9.4_lluis_1"
-        # for test in ["Devel", "Test-NER", "Test-DDI"]:
-        for test in ["Devel"]:
-            outputfile = output+'_'+test+'.txt'
-            f = open(outputfile, "a")
-            testdir = "./data/"+test+"/"
-            if os.path.exists(testdir):
-                testfiles = os.listdir(testdir)
-            testdata = [] #where all the features are saved
-            for file in testfiles:
-                root = parseXML(file, testdir)
-                for sentence in root:
-                    (id, text) = get_sentence_info(sentence)
-                    token_list = tokenize(text)
-                    features = extract_features(token_list, EXTERNAL_FILE)
-                    y_pred = predict(features)
-                    output_entities(id, token_list, y_pred, f)
-            f.close()
-            evaluate(testdir, outputfile)
+    # PREDICT
+    #two different files for the two goals of the lab2
+    if EXTERNAL_FILE:
+        output = "./task9.5_lluis_1"
+    else:
+        output = "./task9.4_lluis_1"
+    # for test in ["Devel", "Test-NER", "Test-DDI"]:
+    for test in ["Devel"]:
+        outputfile = output+'_'+test+'.txt'
+        f = open(outputfile, "w")
+        testdir = "./data/"+test+"/"
+        if os.path.exists(testdir):
+            testfiles = os.listdir(testdir)
+        testdata = [] #where all the features are saved
+        for file in testfiles:
+            root = parseXML(file, testdir)
+            for sentence in root:
+                (id, text) = get_sentence_info(sentence)
+                token_list = tokenize(text)
+                features = extract_features(token_list, EXTERNAL_FILE)
+                y_pred = predict(features)
+                output_entities(id, token_list, y_pred, f)
+        f.close()
+        evaluate(testdir, outputfile)
 
 if __name__ == "__main__":
     main()
