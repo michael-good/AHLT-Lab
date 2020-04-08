@@ -10,23 +10,31 @@ def parse_xml(file):
 
 def getOffsets(sentence, word):
     start_index = sentence.find(word)
-    print(start_index)
-    end_index = start_index + len(word) # if the start_index is not -1
+    end_index = start_index + len(word) -1 # if the start_index is not -1
     return start_index, end_index
 
+import networkx
 def analyze(sentence):
     # parse text (as many times as needed)
     mytree, = my_parser.raw_parse(sentence)
-    print(mytree)
-    word = 'knkds'
-    start_off, end_off = getOffsets(sentence, word)
-    print(sentence)
-    print(word, start_off, end_off)
 
-    return None
+    # enrich the NLPDepencyGraph with the start and end offset
+    for e in range(1, len(mytree.nodes)):
+        node = mytree.nodes[e]
+        word = node['word']
+        start_off, end_off = getOffsets(sentence, word)
+        # returns start_off=-1 if didn't find the word in the sentence
+        if start_off != -1:
+            node['start'] = start_off
+            node['end'] = end_off
+
+    return mytree
 
 def main():
     inputdir = './data/Train'
+
+    # i = 0
+    # printed=True
 
     # process each file in directory
     for f in os.listdir(inputdir) :
@@ -47,6 +55,8 @@ def main():
                 entities[id] = offs
             # Tokenize, tag, and parse sentence
             analysis = analyze(stext)
+            # print(analysis)
+
     #         # for each pair in the sentence, decide whether it is DDI and its type
     #         pairs = s.getElementsByTagName("pair")
     #         for p in pairs:
