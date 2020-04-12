@@ -2,6 +2,12 @@
 # Created by https://www.gitignore.io/api/linux,macos,python,pycharm,windows
 # Edit at https://www.gitignore.io/?templates=linux,macos,python,pycharm,windows
 
+Session03_rule-based-DDI/stanford-corenlp-full-2018-10-05/
+Session03_rule-based-DDI/data/
+Session03_rule-based-DDI/eval/
+Session04_ML-based-DDI/data/
+Session04_ML-based-DDI/eval/
+
 ### Linux ###
 *~
 
@@ -265,4 +271,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/linux,macos,python,pycharm,windows
-
