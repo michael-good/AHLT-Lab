@@ -6,6 +6,8 @@ from nltk.parse.corenlp import CoreNLPDependencyParser
 # connect to your CoreNLP server (just once)
 my_parser = CoreNLPDependencyParser(url="http://localhost:9000")
 from nltk.classify import megam
+import nltk
+nltk.config_megam('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe')
 
 def parse_xml(file):
     return parse(file)
@@ -56,9 +58,33 @@ def output_ddi(id, e1, e2, ddi_type, fout):
     sentence_features = id + '|' + e1 + '|' + e2 + '|' + str(ddi) + '|' + ddi_type +'\n'
     fout.write(sentence_features) # print in a file
 
-def evaluate(inputdir,outputfile):
+def evaluate(inputdir, outputfile):
     os.system("java -jar eval/evaluateDDI.jar " + inputdir + " " + outputfile)
 
+import time
+def predict(feat_dict, feat_test, classifier):
+
+    # # create a dictionary with the binary of the feat that appears
+    # feat_test_dict = feat_dict
+    # for feat in feat_test:
+    #     if feat in feat_test_dict:
+    #         feat_test_dict[feat]=1;
+
+    # create a dictionary with the binary of the feat that appears
+    feat_test_dict = {}
+    for feat in feat_test:
+        feat_test_dict[feat]=1;
+
+    # save to a file
+    t_test = open('te5.txt','w')
+    t_test.write(str(feat_test_dict))
+    t_test.close()
+
+    # pred = classifier.classify_many(test)
+    pred = classifier.classify(feat_test_dict)
+    return pred
+
+import numpy as np
 def main():
 
     # # TRAIN
@@ -102,19 +128,109 @@ def main():
     #                 id_e2 = p.attributes["e2"].value
     #                 features = extract_features(analysis, entities, id_e1, id_e2)
     #                 # print(features)
-    #                 type = 'null' #get ground truth
+    #                 is_ddi = p.attributes["ddi"].value #get ground truth
+    #                 if is_ddi=="true" and 'type' in p.attributes:
+    #                     type = p.attributes["type"].value
+    #                 else:
+    #                     type = "null"
     #
-    #                 # output_features(sid, id_e1, id_e2, type, features, foutput)
+    #                 output_features(sid, id_e1, id_e2, type, features, foutput)
     #
-    # # os.system('cat '+train_file+'  | cut -f4- > megam.dat')
+    # os.system('cat '+train_file+'  | cut -f4- > megam.dat')
+    # foutput.close()
+
+    start = time.time()
+
+
+    # # with complte dictionary
+    # read_train_examples = open("megam.dat", "r")
+    # # first we create a dictionary for all the feat and assign them to 0
+    # feat_dict = {}
+    # for ind, x in enumerate(read_train_examples):
+    #     feat_train = x.split()[1:]
+    #     for feat in feat_train:
+    #         if feat not in feat_dict:
+    #             # print(feat_dict)
+    #             # print(feat)
+    #             feat_dict[feat]=0;
+    # print(len(feat_dict))
     #
+    #
+    # read_train_examples = open("megam.dat", "r")
+    # # create a dictionary with the binary of the feat that appears
+    # # and append together with its label
+    # train = []
+    # for ind, x in enumerate(read_train_examples):
+    #     if ind in range(20):
+    #         label_train = x.split()[0]
+    #         feat_train = x.split()[1:]
+    #         feat_train_dict = feat_dict
+    #         for feat in feat_train:
+    #             if feat in feat_train_dict:
+    #                 feat_train_dict[feat]=1;
+    #         train.append((feat_train_dict, label_train))
+    # # save to a file
+    # t_train = open('t2.txt','w')
+    # t_train.write(str(train))
+    # t_train.close()
+
+
+    # with the dictionary of only the ones that appeared
+    read_train_examples = open("megam.dat", "r")
+    # create a dictionary with the binary of the feat that appears
+    # and append together with its label
+    train = []
+    feat_train_dict = {}
+    count_null=0
+    count_notnull=0
+    balanced=True
+    for ind, x in enumerate(read_train_examples):
+        # if ind in range(2000):
+            label_train = x.split()[0]
+            feat_train = x.split()[1:]
+            # feat_train_dict = feat_dict
+            if label_train!="null": # if its not a null
+                for feat in feat_train:
+                    feat_train_dict[feat]=1;
+                train.append((feat_train_dict, label_train))
+                count_notnull+=1
+            else:
+                count_null+=1
+    # save to a file
+    t_train = open('t5.txt','w')
+    t_train.write(str(train))
+    t_train.close()
+    print('count null-notnull', count_null, count_notnull)
+
+
+    # classifier = nltk.classify.NaiveBayesClassifier.train(train)
+    # print(sorted(classifier.labels()))
+    try:
+        # classifier = nltk.classify.MaxentClassifier.train(train, 'MEGAM', trace=0, max_iter=1000)
+        classifier = nltk.classify.MaxentClassifier.train(train, 'MEGAM')
+    except Exception as e:
+        print('Error: %r' % e)
+    end=time.time()
+    print('time_train', end-start)
+    print(sorted(classifier.labels()))
+
+# THIS ONE
+# https://stackoverflow.com/questions/12606543/nltk-megam-max-ent-algorithms-on-windows
+
+    # https://stackoverflow.com/questions/46852316/installing-megam-for-nltk-on-windows #windows
+    # https://groups.google.com/forum/#!topic/nltk-users/k3T6BzAsOJc  #Macos
     # #training with megam
     # # megam multiclass file
     # # ./megam.opt multiclass small2 > weights
     # # ./megam.opt -predict weights multiclass small2 | head -5
 
+    # https://groups.google.com/forum/#!topic/nltk-users/k3T6BzAsOJc
+
     # PREDICT
-    output = 'task9.6_lluis_1'
+    output = 'task9.6_lluis_5'
+
+    start = time.time()
+    feat_dict = {}
 
     # for test in ["Devel", "Test-NER", "Test-DDI"]:
     for test in ["Devel"]:
@@ -154,12 +270,15 @@ def main():
                         id_e2 = p.attributes["e2"].value
                         features = extract_features(analysis, entities, id_e1, id_e2)
                         # print(features)
-                        prediction = 'null' #predict
+                        prediction = predict(feat_dict, features, classifier)
+                        # prediction = 'null' #predict
 
                         output_ddi(sid, id_e1, id_e2, prediction, outf);
 
         outf.close()
         # get performance score
+        end=time.time()
+        print('time_test', end-start)
         evaluate(testdir,outputfile)
 
 
