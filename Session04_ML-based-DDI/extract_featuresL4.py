@@ -1,36 +1,98 @@
-def extract_features(tree, entities, e1, e2, hsdb_list=None, drug_bank=None):
+def is_entity_1or2(start, end, entities, e1, e2):
+    if start >= starte1 and end <= ende1:
+        return true:founde1=True
+
+    elif start >= starte2 or end <= ende2:
+        founde2=True
+
+
+def number_entities(tree, entities, e1, e2):
+    starte1 = int(entities[e1][0])
+    ende1 = int(entities[e1][1])
+    starte2 = int(entities[e2][0])
+    ende2 = int(entities[e2][1])
+
+    # get the element number of the entities
+    for e in range(1, len(tree.nodes)):
+        node = tree.nodes[e]
+        # print(node)
+        # it's not a bracket
+        if 'start' in node:
+            start = node["start"]
+            end = node["end"]
+
+
+
+
+
+
+
+def extract_features(tree, entities, e1, e2, i, hsdb_list=None, drug_bank=None):
     features = []  # where the list of features of all the sentence will be
-    # print('extract featureeeees')
-    # print('tree')
-    # print(tree)
-    # print(entities)
-    # print(e1, entities[e1], e2, entities[e2])
+    if i<1:
+        # print('extract featureeeees')
+        # print('tree', i)
+        # print(tree)
+        # print(entities)
+        # print(e1, entities[e1], e2, entities[e2])
+        founde1=False
+        founde2=False
+        # ignore multi formed words
+        # (that result in span of [34, 43;70 ,85] for example)
+        if len(entities[e1])==2 and len(entities[e2])==2:
 
-    # ignore multi formed words
-    # (that result in span of [34, 43;70 ,85] for example)
-    if len(entities[e1])==2 and len(entities[e2])==2:
+            numberentities()
+            numbere1 = e
+            nodee1 = tree.nodes[numbere1]
+            depse1 = nodee1["deps"]
 
-        # 1st feature: if it's before after or inbetween the entities ------
-        starte1 = int(entities[e1][0])
-        ende1 = int(entities[e1][1])
-        starte2 = int(entities[e2][0])
-        ende2 = int(entities[e2][1])
+            for e in range(1, len(tree.nodes)):
+                node = tree.nodes[e]
+                # print(node)
+                # it's not a bracket
+                if 'start' in node:
+                    start = node["start"]
+                    end = node["end"]
 
-        for e in range(1, len(tree.nodes)):
-            node = tree.nodes[e]
-            # print(node)
-            # it's not a bracket
-            if 'start' in node:
-                start = node["start"]
-                # it's not one of the entities we are featuring
-                if start != starte1 and start != starte2:
-                    # print('start e1', starte1, 'start e2', starte2, 'start', start)
-                    if start < starte1:
-                        features.append('lb1='+ node["lemma"])
-                    elif start > starte1 and start < starte2:
-                        features.append('b12='+ node["lemma"])
-                    elif start > starte2:
-                        features.append('lib='+ node["lemma"])
+                    if start != starte1 and start != starte2: # it's not one of the entities we are featuring
+                        # # (1) get the position relative to the entities of each word
+                        # if start < starte1:
+                        #     features.append('lb1='+ node["lemma"])
+                        if start > starte1 and start < starte2:
+                            features.append('b12='+ node["lemma"])
+                        # elif start > starte2:
+                        #     features.append('lib='+ node["lemma"])
+
+                        # (3) check who is under who (same parent case)
+                        if founde1 and founde2: #check if the entities have been found
+                        # look if in the dependencies of the actual element appear both entities as childs
+                            deps = node["deps"]
+                            list_deps=[]
+                            for dep in deps:
+                                for number in deps[dep]:
+                                    list_deps.append(number) # get list of all childs
+                            # print(list_deps, numbere1, numbere2)
+                            if numbere1 in list_deps and numbere2 in list_deps:
+                                features.append('same_father')
+
+                    # (4) return the verb of the sentence
+                    if node["tag"]=='VBN':
+                        print(node["lemma"])
+                        features.append('verb='+ node["lemma"])
+
+            # (2) check who is under who (direct child case)
+            if founde1 and founde2: #check if the entities have been found
+            # look if in the dependencies of one of the entities appears the other
+                for dep in depse1:
+                    if numbere2 in depse1[dep]:
+                        features.append('2under1')
+                        features.append('dep='+ dep)
+                for dep in depse2:
+                    if numbere1 in depse2[dep]:
+                        features.append('1under2')
+                        features.append('dep='+ dep)
+    return features
+
 
 
         # word = node['word']
@@ -186,4 +248,3 @@ def extract_features(tree, entities, e1, e2, hsdb_list=None, drug_bank=None):
     #         feat.append('rules_drugs')
     #
     #     features.append(feat)
-    return features
