@@ -1,0 +1,378 @@
+warfarin|sedatives
+Clinical implications of warfarin interactions with five sedatives.
+
+Chloral hydrate|anticoagulant agents
+Chloral hydrate and methaqualone interact pharmacologically with orally administered anticoagulant agents, but the effect is not clinically significant. 
+methaqualone|anticoagulant agents
+Chloral hydrate and methaqualone interact pharmacologically with orally administered anticoagulant agents, but the effect is not clinically significant. 
+prostaglandin F2alpha|oxytocin
+In vitro interaction of prostaglandin F2alpha and oxytocin in placental vessels.
+
+antidepressant drugs|hypoglycemic agents
+Treatment with antidepressant drugs can directly interfere with blood glucose levels or may interact with hypoglycemic agents. 
+ketamine|halothane
+Interaction of ketamine and halothane in rats.
+
+Rifampin|warfarin
+Rifampin and warfarin: a drug interaction.
+
+warfarin|rifampin
+The drug interaction between warfarin and rifampin is not well known. 
+clindamycin|gentamicin
+Interaction of clindamycin and gentamicin in vitro.
+
+gentamycin|atracurium
+Interaction of gentamycin and atracurium in anaesthetised horses.
+
+alprazolam|diltiazem
+Drugs and other substances demonstrated to be CYP 3A inhibitors on the basis of clinical studies involving benzodiazepines metabolized similarly to alprazolam or on the basis of in vitro studies with alprazolam or other benzodiazepines (caution is recommended during coadministration with alprazolam): Available data from clinical studies of benzodiazepines other than alprazolam suggest a possible drug interaction with alprazolam for the following: diltiazem, isoniazid, macrolide antibiotics such as erythromycin and clarithromycin, and grapefruit juice.
+alprazolam|isoniazid
+Drugs and other substances demonstrated to be CYP 3A inhibitors on the basis of clinical studies involving benzodiazepines metabolized similarly to alprazolam or on the basis of in vitro studies with alprazolam or other benzodiazepines (caution is recommended during coadministration with alprazolam): Available data from clinical studies of benzodiazepines other than alprazolam suggest a possible drug interaction with alprazolam for the following: diltiazem, isoniazid, macrolide antibiotics such as erythromycin and clarithromycin, and grapefruit juice.
+alprazolam|macrolide antibiotics
+Drugs and other substances demonstrated to be CYP 3A inhibitors on the basis of clinical studies involving benzodiazepines metabolized similarly to alprazolam or on the basis of in vitro studies with alprazolam or other benzodiazepines (caution is recommended during coadministration with alprazolam): Available data from clinical studies of benzodiazepines other than alprazolam suggest a possible drug interaction with alprazolam for the following: diltiazem, isoniazid, macrolide antibiotics such as erythromycin and clarithromycin, and grapefruit juice.
+alprazolam|erythromycin
+Drugs and other substances demonstrated to be CYP 3A inhibitors on the basis of clinical studies involving benzodiazepines metabolized similarly to alprazolam or on the basis of in vitro studies with alprazolam or other benzodiazepines (caution is recommended during coadministration with alprazolam): Available data from clinical studies of benzodiazepines other than alprazolam suggest a possible drug interaction with alprazolam for the following: diltiazem, isoniazid, macrolide antibiotics such as erythromycin and clarithromycin, and grapefruit juice.
+alprazolam|clarithromycin
+Drugs and other substances demonstrated to be CYP 3A inhibitors on the basis of clinical studies involving benzodiazepines metabolized similarly to alprazolam or on the basis of in vitro studies with alprazolam or other benzodiazepines (caution is recommended during coadministration with alprazolam): Available data from clinical studies of benzodiazepines other than alprazolam suggest a possible drug interaction with alprazolam for the following: diltiazem, isoniazid, macrolide antibiotics such as erythromycin and clarithromycin, and grapefruit juice.
+alprazolam|sertraline
+Data from in vitro studies of alprazolam suggest a possible drug interaction with alprazolam for the following: sertraline and paroxetine.
+alprazolam|paroxetine
+Data from in vitro studies of alprazolam suggest a possible drug interaction with alprazolam for the following: sertraline and paroxetine.
+benzodiazepines|ergotamine
+Data from in vitro studies of benzodiazepines other than alprazolam suggest a possible drug interaction for the following: ergotamine, cyclosporine, amiodarone, nicardipine, and nifedipine.
+benzodiazepines|cyclosporine
+Data from in vitro studies of benzodiazepines other than alprazolam suggest a possible drug interaction for the following: ergotamine, cyclosporine, amiodarone, nicardipine, and nifedipine.
+benzodiazepines|amiodarone
+Data from in vitro studies of benzodiazepines other than alprazolam suggest a possible drug interaction for the following: ergotamine, cyclosporine, amiodarone, nicardipine, and nifedipine.
+benzodiazepines|nicardipine
+Data from in vitro studies of benzodiazepines other than alprazolam suggest a possible drug interaction for the following: ergotamine, cyclosporine, amiodarone, nicardipine, and nifedipine.
+benzodiazepines|nifedipine
+Data from in vitro studies of benzodiazepines other than alprazolam suggest a possible drug interaction for the following: ergotamine, cyclosporine, amiodarone, nicardipine, and nifedipine.
+alprazolam|ergotamine
+Data from in vitro studies of benzodiazepines other than alprazolam suggest a possible drug interaction for the following: ergotamine, cyclosporine, amiodarone, nicardipine, and nifedipine.
+alprazolam|cyclosporine
+Data from in vitro studies of benzodiazepines other than alprazolam suggest a possible drug interaction for the following: ergotamine, cyclosporine, amiodarone, nicardipine, and nifedipine.
+alprazolam|amiodarone
+Data from in vitro studies of benzodiazepines other than alprazolam suggest a possible drug interaction for the following: ergotamine, cyclosporine, amiodarone, nicardipine, and nifedipine.
+alprazolam|nicardipine
+Data from in vitro studies of benzodiazepines other than alprazolam suggest a possible drug interaction for the following: ergotamine, cyclosporine, amiodarone, nicardipine, and nifedipine.
+alprazolam|nifedipine
+Data from in vitro studies of benzodiazepines other than alprazolam suggest a possible drug interaction for the following: ergotamine, cyclosporine, amiodarone, nicardipine, and nifedipine.
+acetylsalicylic acid|Activase
+In addition to bleeding associated with heparin and vitamin K antagonists, drugs that alter platelet function (such as acetylsalicylic acid, dipyridamole and Abciximab) may increase the risk of bleeding if administered prior to, during, or after Activase therapy.
+Beta-adrenergic blocking agents|sympathomimetics
+Beta-adrenergic blocking agents may also interact with sympathomimetics.
+Bentiromide|acetaminophen
+Bentiromide may interact with acetaminophen (e.g., Tylenol), chloramphenicol (e.g., Chloromycetin), local anesthetics (e.g., benzocaine and lidocaine), para-aminobenzoic acid (PABA)-containing preparations (e.g., sunscreens and some multivitamins), procainamide (e.g., Pronestyl), sulfonamides (sulfa medicines), thiazide diuretics (use of these medicines during the test period will affect the test results), and pancreatic supplements (use of pancreatic supplements may give false test results).
+Bentiromide|Tylenol
+Bentiromide may interact with acetaminophen (e.g., Tylenol), chloramphenicol (e.g., Chloromycetin), local anesthetics (e.g., benzocaine and lidocaine), para-aminobenzoic acid (PABA)-containing preparations (e.g., sunscreens and some multivitamins), procainamide (e.g., Pronestyl), sulfonamides (sulfa medicines), thiazide diuretics (use of these medicines during the test period will affect the test results), and pancreatic supplements (use of pancreatic supplements may give false test results).
+Bentiromide|chloramphenicol
+Bentiromide may interact with acetaminophen (e.g., Tylenol), chloramphenicol (e.g., Chloromycetin), local anesthetics (e.g., benzocaine and lidocaine), para-aminobenzoic acid (PABA)-containing preparations (e.g., sunscreens and some multivitamins), procainamide (e.g., Pronestyl), sulfonamides (sulfa medicines), thiazide diuretics (use of these medicines during the test period will affect the test results), and pancreatic supplements (use of pancreatic supplements may give false test results).
+Bentiromide|Chloromycetin
+Bentiromide may interact with acetaminophen (e.g., Tylenol), chloramphenicol (e.g., Chloromycetin), local anesthetics (e.g., benzocaine and lidocaine), para-aminobenzoic acid (PABA)-containing preparations (e.g., sunscreens and some multivitamins), procainamide (e.g., Pronestyl), sulfonamides (sulfa medicines), thiazide diuretics (use of these medicines during the test period will affect the test results), and pancreatic supplements (use of pancreatic supplements may give false test results).
+Bentiromide|anesthetics
+Bentiromide may interact with acetaminophen (e.g., Tylenol), chloramphenicol (e.g., Chloromycetin), local anesthetics (e.g., benzocaine and lidocaine), para-aminobenzoic acid (PABA)-containing preparations (e.g., sunscreens and some multivitamins), procainamide (e.g., Pronestyl), sulfonamides (sulfa medicines), thiazide diuretics (use of these medicines during the test period will affect the test results), and pancreatic supplements (use of pancreatic supplements may give false test results).
+Bentiromide|benzocaine
+Bentiromide may interact with acetaminophen (e.g., Tylenol), chloramphenicol (e.g., Chloromycetin), local anesthetics (e.g., benzocaine and lidocaine), para-aminobenzoic acid (PABA)-containing preparations (e.g., sunscreens and some multivitamins), procainamide (e.g., Pronestyl), sulfonamides (sulfa medicines), thiazide diuretics (use of these medicines during the test period will affect the test results), and pancreatic supplements (use of pancreatic supplements may give false test results).
+Bentiromide|lidocaine
+Bentiromide may interact with acetaminophen (e.g., Tylenol), chloramphenicol (e.g., Chloromycetin), local anesthetics (e.g., benzocaine and lidocaine), para-aminobenzoic acid (PABA)-containing preparations (e.g., sunscreens and some multivitamins), procainamide (e.g., Pronestyl), sulfonamides (sulfa medicines), thiazide diuretics (use of these medicines during the test period will affect the test results), and pancreatic supplements (use of pancreatic supplements may give false test results).
+Bentiromide|para-aminobenzoic acid
+Bentiromide may interact with acetaminophen (e.g., Tylenol), chloramphenicol (e.g., Chloromycetin), local anesthetics (e.g., benzocaine and lidocaine), para-aminobenzoic acid (PABA)-containing preparations (e.g., sunscreens and some multivitamins), procainamide (e.g., Pronestyl), sulfonamides (sulfa medicines), thiazide diuretics (use of these medicines during the test period will affect the test results), and pancreatic supplements (use of pancreatic supplements may give false test results).
+Bentiromide|PABA
+Bentiromide may interact with acetaminophen (e.g., Tylenol), chloramphenicol (e.g., Chloromycetin), local anesthetics (e.g., benzocaine and lidocaine), para-aminobenzoic acid (PABA)-containing preparations (e.g., sunscreens and some multivitamins), procainamide (e.g., Pronestyl), sulfonamides (sulfa medicines), thiazide diuretics (use of these medicines during the test period will affect the test results), and pancreatic supplements (use of pancreatic supplements may give false test results).
+Bentiromide|multivitamins
+Bentiromide may interact with acetaminophen (e.g., Tylenol), chloramphenicol (e.g., Chloromycetin), local anesthetics (e.g., benzocaine and lidocaine), para-aminobenzoic acid (PABA)-containing preparations (e.g., sunscreens and some multivitamins), procainamide (e.g., Pronestyl), sulfonamides (sulfa medicines), thiazide diuretics (use of these medicines during the test period will affect the test results), and pancreatic supplements (use of pancreatic supplements may give false test results).
+Bentiromide|procainamide
+Bentiromide may interact with acetaminophen (e.g., Tylenol), chloramphenicol (e.g., Chloromycetin), local anesthetics (e.g., benzocaine and lidocaine), para-aminobenzoic acid (PABA)-containing preparations (e.g., sunscreens and some multivitamins), procainamide (e.g., Pronestyl), sulfonamides (sulfa medicines), thiazide diuretics (use of these medicines during the test period will affect the test results), and pancreatic supplements (use of pancreatic supplements may give false test results).
+Bentiromide|Pronestyl
+Bentiromide may interact with acetaminophen (e.g., Tylenol), chloramphenicol (e.g., Chloromycetin), local anesthetics (e.g., benzocaine and lidocaine), para-aminobenzoic acid (PABA)-containing preparations (e.g., sunscreens and some multivitamins), procainamide (e.g., Pronestyl), sulfonamides (sulfa medicines), thiazide diuretics (use of these medicines during the test period will affect the test results), and pancreatic supplements (use of pancreatic supplements may give false test results).
+Bentiromide|sulfonamides
+Bentiromide may interact with acetaminophen (e.g., Tylenol), chloramphenicol (e.g., Chloromycetin), local anesthetics (e.g., benzocaine and lidocaine), para-aminobenzoic acid (PABA)-containing preparations (e.g., sunscreens and some multivitamins), procainamide (e.g., Pronestyl), sulfonamides (sulfa medicines), thiazide diuretics (use of these medicines during the test period will affect the test results), and pancreatic supplements (use of pancreatic supplements may give false test results).
+Bentiromide|thiazide diuretics
+Bentiromide may interact with acetaminophen (e.g., Tylenol), chloramphenicol (e.g., Chloromycetin), local anesthetics (e.g., benzocaine and lidocaine), para-aminobenzoic acid (PABA)-containing preparations (e.g., sunscreens and some multivitamins), procainamide (e.g., Pronestyl), sulfonamides (sulfa medicines), thiazide diuretics (use of these medicines during the test period will affect the test results), and pancreatic supplements (use of pancreatic supplements may give false test results).
+Benzthiazide|alcohol
+Benzthiazide may interact with alcohol, blood thinners, decongestant drugs (allergy, cold, and sinus medicines), diabetic drugs, lithium, norepinephrine, NSAIDs like Aleve or Ibuprofen, and high blood pressure medications.
+Benzthiazide|blood thinner
+Benzthiazide may interact with alcohol, blood thinners, decongestant drugs (allergy, cold, and sinus medicines), diabetic drugs, lithium, norepinephrine, NSAIDs like Aleve or Ibuprofen, and high blood pressure medications.
+Benzthiazide|decongestant drugs
+Benzthiazide may interact with alcohol, blood thinners, decongestant drugs (allergy, cold, and sinus medicines), diabetic drugs, lithium, norepinephrine, NSAIDs like Aleve or Ibuprofen, and high blood pressure medications.
+Benzthiazide|lithium
+Benzthiazide may interact with alcohol, blood thinners, decongestant drugs (allergy, cold, and sinus medicines), diabetic drugs, lithium, norepinephrine, NSAIDs like Aleve or Ibuprofen, and high blood pressure medications.
+Benzthiazide|norepinephrine
+Benzthiazide may interact with alcohol, blood thinners, decongestant drugs (allergy, cold, and sinus medicines), diabetic drugs, lithium, norepinephrine, NSAIDs like Aleve or Ibuprofen, and high blood pressure medications.
+Benzthiazide|NSAIDs
+Benzthiazide may interact with alcohol, blood thinners, decongestant drugs (allergy, cold, and sinus medicines), diabetic drugs, lithium, norepinephrine, NSAIDs like Aleve or Ibuprofen, and high blood pressure medications.
+Benzthiazide|Aleve
+Benzthiazide may interact with alcohol, blood thinners, decongestant drugs (allergy, cold, and sinus medicines), diabetic drugs, lithium, norepinephrine, NSAIDs like Aleve or Ibuprofen, and high blood pressure medications.
+Benzthiazide|Ibuprofen
+Benzthiazide may interact with alcohol, blood thinners, decongestant drugs (allergy, cold, and sinus medicines), diabetic drugs, lithium, norepinephrine, NSAIDs like Aleve or Ibuprofen, and high blood pressure medications.
+carbonic anhydrase inhibitors|salicylate
+However, in patients treated with oral carbonic anhydrase inhibitors, rare instances of drug interactions have occurred with high-dose salicylate therapy.
+Bromocriptine mesylate|dopamine antagonists
+Bromocriptine mesylate may interact with dopamine antagonists, butyrophenones, and certain other agents.
+Bromocriptine mesylate|butyrophenones
+Bromocriptine mesylate may interact with dopamine antagonists, butyrophenones, and certain other agents.
+buprenorphine|benzodiazepines
+Based on anecdotal reports, there may be an interaction between buprenorphine and benzodiazepines.
+celecoxib|fluconazole
+Clinical studies with celecoxib have identified potentially significant interactions with fluconazole and lithium.
+celecoxib|lithium
+Clinical studies with celecoxib have identified potentially significant interactions with fluconazole and lithium.
+nonsteroidal anti-inflammatory drugs|furosemide
+Experience with nonsteroidal anti-inflammatory drugs (NSAIDs) suggests the potential for interactions with furosemide and ACE inhibitors.
+nonsteroidal anti-inflammatory drugs|ACE inhibitors
+Experience with nonsteroidal anti-inflammatory drugs (NSAIDs) suggests the potential for interactions with furosemide and ACE inhibitors.
+NSAIDs|furosemide
+Experience with nonsteroidal anti-inflammatory drugs (NSAIDs) suggests the potential for interactions with furosemide and ACE inhibitors.
+NSAIDs|ACE inhibitors
+Experience with nonsteroidal anti-inflammatory drugs (NSAIDs) suggests the potential for interactions with furosemide and ACE inhibitors.
+Chlorotrianisene|antidepressants
+Chlorotrianisene may interact with antidepressants, aspirin, barbiturates, bromocriptine, calcium supplements, corticosteroids, corticotropin, cyclosporine, dantrolene, nicotine, somatropin, tamoxifen, and warfarin.
+Chlorotrianisene|aspirin
+Chlorotrianisene may interact with antidepressants, aspirin, barbiturates, bromocriptine, calcium supplements, corticosteroids, corticotropin, cyclosporine, dantrolene, nicotine, somatropin, tamoxifen, and warfarin.
+Chlorotrianisene|barbiturates
+Chlorotrianisene may interact with antidepressants, aspirin, barbiturates, bromocriptine, calcium supplements, corticosteroids, corticotropin, cyclosporine, dantrolene, nicotine, somatropin, tamoxifen, and warfarin.
+Chlorotrianisene|bromocriptine
+Chlorotrianisene may interact with antidepressants, aspirin, barbiturates, bromocriptine, calcium supplements, corticosteroids, corticotropin, cyclosporine, dantrolene, nicotine, somatropin, tamoxifen, and warfarin.
+Chlorotrianisene|calcium
+Chlorotrianisene may interact with antidepressants, aspirin, barbiturates, bromocriptine, calcium supplements, corticosteroids, corticotropin, cyclosporine, dantrolene, nicotine, somatropin, tamoxifen, and warfarin.
+Chlorotrianisene|corticosteroids
+Chlorotrianisene may interact with antidepressants, aspirin, barbiturates, bromocriptine, calcium supplements, corticosteroids, corticotropin, cyclosporine, dantrolene, nicotine, somatropin, tamoxifen, and warfarin.
+Chlorotrianisene|corticotropin
+Chlorotrianisene may interact with antidepressants, aspirin, barbiturates, bromocriptine, calcium supplements, corticosteroids, corticotropin, cyclosporine, dantrolene, nicotine, somatropin, tamoxifen, and warfarin.
+Chlorotrianisene|cyclosporine
+Chlorotrianisene may interact with antidepressants, aspirin, barbiturates, bromocriptine, calcium supplements, corticosteroids, corticotropin, cyclosporine, dantrolene, nicotine, somatropin, tamoxifen, and warfarin.
+Chlorotrianisene|dantrolene
+Chlorotrianisene may interact with antidepressants, aspirin, barbiturates, bromocriptine, calcium supplements, corticosteroids, corticotropin, cyclosporine, dantrolene, nicotine, somatropin, tamoxifen, and warfarin.
+Chlorotrianisene|nicotine
+Chlorotrianisene may interact with antidepressants, aspirin, barbiturates, bromocriptine, calcium supplements, corticosteroids, corticotropin, cyclosporine, dantrolene, nicotine, somatropin, tamoxifen, and warfarin.
+Chlorotrianisene|somatropin
+Chlorotrianisene may interact with antidepressants, aspirin, barbiturates, bromocriptine, calcium supplements, corticosteroids, corticotropin, cyclosporine, dantrolene, nicotine, somatropin, tamoxifen, and warfarin.
+Chlorotrianisene|tamoxifen
+Chlorotrianisene may interact with antidepressants, aspirin, barbiturates, bromocriptine, calcium supplements, corticosteroids, corticotropin, cyclosporine, dantrolene, nicotine, somatropin, tamoxifen, and warfarin.
+Chlorotrianisene|warfarin
+Chlorotrianisene may interact with antidepressants, aspirin, barbiturates, bromocriptine, calcium supplements, corticosteroids, corticotropin, cyclosporine, dantrolene, nicotine, somatropin, tamoxifen, and warfarin.
+SSRI|TCA
+The extent to which SSRI-TCAinteractions may pose clinical problems will depend on the degree of inhibition and the pharmacokinetics of the SSRI involved.
+FLEXERIL|MAO inhibitors
+FLEXERIL may have life-threatening interactions with MAO inhibitors.
+HUMORSOL|succinylcholine
+Possible drug interactions of HUMORSOL with succinylcholine or with other anticholinesterase agents.
+HUMORSOL|anticholinesterase agents
+Possible drug interactions of HUMORSOL with succinylcholine or with other anticholinesterase agents.
+SSRI|TCA
+The extent to which SSRI-TCA interactions may pose clinical problems will depend on the degree of inhibition and the pharmacokinetics of the SSRI involved.
+Dexbrompheniramine|alcohol
+Dexbrompheniramine can interact with alcohol or other CNS depressants (may potentiate the CNS depressant effects of either these medications or antihistamines), anticholinergics or other medications with anticholinergic activity (anticholinergic effects may be potentiated when these medications are used concurrently with antihistamines), and monoamine oxidase (MAO) inhibitors (concurrent use with antihistamines may prolong and intensify the anticholinergic and CNS depressant effects of antihistamines).
+Dexbrompheniramine|CNS depressants
+Dexbrompheniramine can interact with alcohol or other CNS depressants (may potentiate the CNS depressant effects of either these medications or antihistamines), anticholinergics or other medications with anticholinergic activity (anticholinergic effects may be potentiated when these medications are used concurrently with antihistamines), and monoamine oxidase (MAO) inhibitors (concurrent use with antihistamines may prolong and intensify the anticholinergic and CNS depressant effects of antihistamines).
+Dexbrompheniramine|anticholinergics
+Dexbrompheniramine can interact with alcohol or other CNS depressants (may potentiate the CNS depressant effects of either these medications or antihistamines), anticholinergics or other medications with anticholinergic activity (anticholinergic effects may be potentiated when these medications are used concurrently with antihistamines), and monoamine oxidase (MAO) inhibitors (concurrent use with antihistamines may prolong and intensify the anticholinergic and CNS depressant effects of antihistamines).
+Dexbrompheniramine|monoamine oxidase (MAO) inhibitors
+Dexbrompheniramine can interact with alcohol or other CNS depressants (may potentiate the CNS depressant effects of either these medications or antihistamines), anticholinergics or other medications with anticholinergic activity (anticholinergic effects may be potentiated when these medications are used concurrently with antihistamines), and monoamine oxidase (MAO) inhibitors (concurrent use with antihistamines may prolong and intensify the anticholinergic and CNS depressant effects of antihistamines).
+diethylpropion|antihypertensive drugs
+conversely, diethylpropion may interfere with antihypertensive drugs (i.e., guanethidine, a-methyldopa).
+diethylpropion|guanethidine
+conversely, diethylpropion may interfere with antihypertensive drugs (i.e., guanethidine, a-methyldopa).
+diethylpropion|a-methyldopa
+conversely, diethylpropion may interfere with antihypertensive drugs (i.e., guanethidine, a-methyldopa).
+diltiazem|cyclosporine
+A pharmacokinetic interaction between diltiazem and cyclosporine has been observed during studies involving renal and cardiac transplant patients.
+Diphenoxylate HCl|MAO inhibitors
+Diphenoxylate HCl and atropine sulfate may interact with MAO inhibitors In studies with male rats, diphenoxylate hydrochloride was found to inhibit the hepatic microsomal enzyme system at a dose of 2 mg/kg/day.
+atropine sulfate|MAO inhibitors
+Diphenoxylate HCl and atropine sulfate may interact with MAO inhibitors In studies with male rats, diphenoxylate hydrochloride was found to inhibit the hepatic microsomal enzyme system at a dose of 2 mg/kg/day.
+erythromycin|terfenadine
+Thus, the interaction observed between erythromycin and terfenadine is not expected for dirithromycin.
+erythromycin|cyclosporine
+Other drugs Drug interactions have been reported with concomitant administration of erythromycin and other medications, including cyclosporine, hexobarbital, carbamazepine, alfentanil, disopyramide, phenytoin, bromocriptine, valproate, astemizole, and lovastatin.
+erythromycin|hexobarbital
+Other drugs Drug interactions have been reported with concomitant administration of erythromycin and other medications, including cyclosporine, hexobarbital, carbamazepine, alfentanil, disopyramide, phenytoin, bromocriptine, valproate, astemizole, and lovastatin.
+erythromycin|carbamazepine
+Other drugs Drug interactions have been reported with concomitant administration of erythromycin and other medications, including cyclosporine, hexobarbital, carbamazepine, alfentanil, disopyramide, phenytoin, bromocriptine, valproate, astemizole, and lovastatin.
+erythromycin|alfentanil
+Other drugs Drug interactions have been reported with concomitant administration of erythromycin and other medications, including cyclosporine, hexobarbital, carbamazepine, alfentanil, disopyramide, phenytoin, bromocriptine, valproate, astemizole, and lovastatin.
+erythromycin|disopyramide
+Other drugs Drug interactions have been reported with concomitant administration of erythromycin and other medications, including cyclosporine, hexobarbital, carbamazepine, alfentanil, disopyramide, phenytoin, bromocriptine, valproate, astemizole, and lovastatin.
+erythromycin|phenytoin
+Other drugs Drug interactions have been reported with concomitant administration of erythromycin and other medications, including cyclosporine, hexobarbital, carbamazepine, alfentanil, disopyramide, phenytoin, bromocriptine, valproate, astemizole, and lovastatin.
+erythromycin|bromocriptine
+Other drugs Drug interactions have been reported with concomitant administration of erythromycin and other medications, including cyclosporine, hexobarbital, carbamazepine, alfentanil, disopyramide, phenytoin, bromocriptine, valproate, astemizole, and lovastatin.
+erythromycin|valproate
+Other drugs Drug interactions have been reported with concomitant administration of erythromycin and other medications, including cyclosporine, hexobarbital, carbamazepine, alfentanil, disopyramide, phenytoin, bromocriptine, valproate, astemizole, and lovastatin.
+erythromycin|astemizole
+Other drugs Drug interactions have been reported with concomitant administration of erythromycin and other medications, including cyclosporine, hexobarbital, carbamazepine, alfentanil, disopyramide, phenytoin, bromocriptine, valproate, astemizole, and lovastatin.
+erythromycin|lovastatin
+Other drugs Drug interactions have been reported with concomitant administration of erythromycin and other medications, including cyclosporine, hexobarbital, carbamazepine, alfentanil, disopyramide, phenytoin, bromocriptine, valproate, astemizole, and lovastatin.
+SSRI|TCA
+The extent to which SSRI-TCA interactions may pose clinical problems will depend on the degree of inhibition and the pharmacokinetics of the SSRI involved.
+erythromycin|carbamazepine
+There have been reports of interactions of erythromycin with carbamazepine, cyclosporine, tacrolimus, hexobarbital, phenytoin, alfentanil, cisapride, disopyramide, lovastatin, bromocriptine, valproate, terfenadine, and astemizole.
+erythromycin|cyclosporine
+There have been reports of interactions of erythromycin with carbamazepine, cyclosporine, tacrolimus, hexobarbital, phenytoin, alfentanil, cisapride, disopyramide, lovastatin, bromocriptine, valproate, terfenadine, and astemizole.
+erythromycin|tacrolimus
+There have been reports of interactions of erythromycin with carbamazepine, cyclosporine, tacrolimus, hexobarbital, phenytoin, alfentanil, cisapride, disopyramide, lovastatin, bromocriptine, valproate, terfenadine, and astemizole.
+erythromycin|hexobarbital
+There have been reports of interactions of erythromycin with carbamazepine, cyclosporine, tacrolimus, hexobarbital, phenytoin, alfentanil, cisapride, disopyramide, lovastatin, bromocriptine, valproate, terfenadine, and astemizole.
+erythromycin|phenytoin
+There have been reports of interactions of erythromycin with carbamazepine, cyclosporine, tacrolimus, hexobarbital, phenytoin, alfentanil, cisapride, disopyramide, lovastatin, bromocriptine, valproate, terfenadine, and astemizole.
+erythromycin|alfentanil
+There have been reports of interactions of erythromycin with carbamazepine, cyclosporine, tacrolimus, hexobarbital, phenytoin, alfentanil, cisapride, disopyramide, lovastatin, bromocriptine, valproate, terfenadine, and astemizole.
+erythromycin|cisapride
+There have been reports of interactions of erythromycin with carbamazepine, cyclosporine, tacrolimus, hexobarbital, phenytoin, alfentanil, cisapride, disopyramide, lovastatin, bromocriptine, valproate, terfenadine, and astemizole.
+erythromycin|disopyramide
+There have been reports of interactions of erythromycin with carbamazepine, cyclosporine, tacrolimus, hexobarbital, phenytoin, alfentanil, cisapride, disopyramide, lovastatin, bromocriptine, valproate, terfenadine, and astemizole.
+erythromycin|lovastatin
+There have been reports of interactions of erythromycin with carbamazepine, cyclosporine, tacrolimus, hexobarbital, phenytoin, alfentanil, cisapride, disopyramide, lovastatin, bromocriptine, valproate, terfenadine, and astemizole.
+erythromycin|bromocriptine
+There have been reports of interactions of erythromycin with carbamazepine, cyclosporine, tacrolimus, hexobarbital, phenytoin, alfentanil, cisapride, disopyramide, lovastatin, bromocriptine, valproate, terfenadine, and astemizole.
+erythromycin|valproate
+There have been reports of interactions of erythromycin with carbamazepine, cyclosporine, tacrolimus, hexobarbital, phenytoin, alfentanil, cisapride, disopyramide, lovastatin, bromocriptine, valproate, terfenadine, and astemizole.
+erythromycin|terfenadine
+There have been reports of interactions of erythromycin with carbamazepine, cyclosporine, tacrolimus, hexobarbital, phenytoin, alfentanil, cisapride, disopyramide, lovastatin, bromocriptine, valproate, terfenadine, and astemizole.
+erythromycin|astemizole
+There have been reports of interactions of erythromycin with carbamazepine, cyclosporine, tacrolimus, hexobarbital, phenytoin, alfentanil, cisapride, disopyramide, lovastatin, bromocriptine, valproate, terfenadine, and astemizole.
+Zarontin|antiepileptic drugs
+Since Zarontin (ethosuximide) may interact with concurrently administered antiepileptic drugs, periodic serum level determinations of these drugs may be necessary (eg, ethosuximide may elevate phenytoin serum levels and valproic acid has been reported to both increase and decrease ethosuximide levels).
+ethosuximide|antiepileptic drugs
+Since Zarontin (ethosuximide) may interact with concurrently administered antiepileptic drugs, periodic serum level determinations of these drugs may be necessary (eg, ethosuximide may elevate phenytoin serum levels and valproic acid has been reported to both increase and decrease ethosuximide levels).
+hydantoin antiepileptic|phenytoin
+A two-way interaction between the hydantoin antiepileptic, phenytoin, and the coumarin anticoagulants has been suggested.
+hydantoin antiepileptic|coumarin anticoagulant
+A two-way interaction between the hydantoin antiepileptic, phenytoin, and the coumarin anticoagulants has been suggested.
+Etonogestrel|acetaminophen
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Tylenol
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|antibiotics
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|ampicillin
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|tetracycline
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|anticonvulsants
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Dilantin
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Phenobarbital
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Tegretol
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Trileptal
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Topamax
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Felbatol
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|antifungals
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Gris-PEG
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Nizoral
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Sporanox
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|atorvastatin
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Lipitor
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|clofibrate
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Atromid-S
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|cyclosporine
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Neoral
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Sandimmune
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|protease inhibitors
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Agenerase
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Crixivan
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Fortovase
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Invirase
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Kaletra
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Norvir
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Viracept
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|morphine
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Astramorph
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Kadian
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|MS Contin
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|phenylbutazone
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|prednisolone
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Prelone
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|rifadin
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|rifampin
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|temazepam
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|theophylline
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|Theo-Dur
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Etonogestrel|vitamin C
+Etonogestrel may interact with the following medications: acetaminophen (Tylenol), antibiotics such as ampicillin and tetracycline, anticonvulsants (Dilantin, Phenobarbital, Tegretol, Trileptal, Topamax, Felbatol), antifungals (Gris-PEG, Nizoral, Sporanox), atorvastatin (Lipitor), clofibrate (Atromid-S), cyclosporine (Neoral, Sandimmune), HIV drugs classified as protease inhibitors (Agenerase, Crixivan, Fortovase, Invirase, Kaletra, Norvir, Viracept), morphine (Astramorph, Kadian, MS Contin), phenylbutazone, prednisolone (Prelone), rifadin (rifampin), St. Johns wort, temazepam, theophylline (Theo-Dur), and vitamin C.
+Flupenthixol|Monoamine oxidase inhibitors
+Drug Interactions: Flupenthixol may interact with some drugs, like Monoamine oxidase inhibitors (MAOI): MAOI could theoretically affect flupenthixol pharmacodynamics - Arecoline - Eproxindine - Ethanol: Flupenthixol and Ethanol cause additive CNS depression - Tricyclic antidepressants: Flupenthixol increases the effect of Tricyclic antidepressants
+Flupenthixol|MAOI
+Drug Interactions: Flupenthixol may interact with some drugs, like Monoamine oxidase inhibitors (MAOI): MAOI could theoretically affect flupenthixol pharmacodynamics - Arecoline - Eproxindine - Ethanol: Flupenthixol and Ethanol cause additive CNS depression - Tricyclic antidepressants: Flupenthixol increases the effect of Tricyclic antidepressants
+Flurbiprofen|propranolol
+Flurbiprofen did not affect the pharmacokinetic profile of either drug, and the mechanism under lying the interference with propranolols hypotensive effect is unknown.
+fluvoxamine|alprazolam
+Although it has not been definitively demonstrated that fluvoxamine is a potent IIIA4 inhibitor, it is likely to be, given the substantial interaction of fluvoxamine with alprazolam.
+vitamin B12|folic acid
+Medications can interfere with folate utilization, including: anticonvulsant medications (such as phenytoin, and primidone) metformin (sometimes prescribed to control blood sugar in type 2 diabetes) sulfasalazine (used to control inflammation associated with Crohns disease and ulcerative colitis) triamterene (a diuretic) Methotrexate There has been concern about the interaction between vitamin B12 and folic acid.
+FOSCAVIR|pentamidine
+A possible drug interaction of FOSCAVIR and intravenous pentamidine has been described.
+glyburide|ciprofloxacin
+A possible interaction between glyburide and ciprofloxacin, a fluoroquinolone antibiotic, has been reported, resulting in a potentiation of the hypoglycemic action of glyburide.
+miconazole|hypoglycemic agents
+A potential interaction between oral miconazole and oral hypoglycemic agents leading to severe hypoglycemia has been reported.
+fluconazole|glipizide
+The effect of concomitant administration of fluconazole and glipizide has been demonstrated in a placebo-controlled crossover study in normal volunteers.
+EPA|aspirin
+Interactions may occur between EPA supplements and aspirin and other non-steroidal anti-inflammatory drugs and herbs such as garlic (Allium sativum) and ginkgo (Ginkgo biloba).
+EPA|non-steroidal anti-inflammatory drugs
+Interactions may occur between EPA supplements and aspirin and other non-steroidal anti-inflammatory drugs and herbs such as garlic (Allium sativum) and ginkgo (Ginkgo biloba).
+EPA|ginkgo
+Interactions may occur between EPA supplements and aspirin and other non-steroidal anti-inflammatory drugs and herbs such as garlic (Allium sativum) and ginkgo (Ginkgo biloba).
+EPA|Ginkgo biloba
+Interactions may occur between EPA supplements and aspirin and other non-steroidal anti-inflammatory drugs and herbs such as garlic (Allium sativum) and ginkgo (Ginkgo biloba).
+SSRI|TCA
+The extent to which SSRI-TCA interactions may pose clinical problems will depend on the degree of inhibition, and the pharmacokinetics of the SSRI involved.
+Ketoconazole|Isoniazid
+Ketoconazole: Potential interaction of Ketoconazole and Isoniazid may exist.
+linezolid|adrenergic
+Therefore, linezolid has the potential for interaction with adrenergic and serotonergic agents.
+linezolid|serotonergic agents
+Therefore, linezolid has the potential for interaction with adrenergic and serotonergic agents.
+warfarin|NSAIDs
+Caution should be exercised when administering nabumetone with warfarin since interactions have been seen with other NSAIDs.
+beta-adrenergic receptor blocking agents|Anesthetics
+When administered concurrently, the following drugs may interact with beta-adrenergic receptor blocking agents: Anesthetics, general: exaggeration of the hypotension induced by general anesthetics.
+nevirapine|warfarin
+The in vitro interaction between nevirapine and the antithrombotic agent warfarin is complex.
+digoxin|nifedipine
+Digitalis: Immediate Release Capsules: Since there have been isolated reports of patients with elevated digoxin levels, and there is a possible interaction between digoxin and nifedipine, it is recommended that digoxin levels be monitored when initiating, adjusting, and discontinuing nifedipine to avoid possible over- or under-digitalization.
+Sulfacetamide|silver
+Sulfacetamide preparations are incompatible with silver preparations.
+Sulfapyridine|Acetaminophen
+Sulfapyridine may interact with any of the following: - Acetaminophen (e.g., Tylenol) (with long-term, high-dose use) or
+Sulfapyridine|Tylenol
+Sulfapyridine may interact with any of the following: - Acetaminophen (e.g., Tylenol) (with long-term, high-dose use) or

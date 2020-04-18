@@ -1,0 +1,41 @@
+SCORES FOR THE GROUP: lluis RUN=Devel
+Gold Dataset: /Devel
+
+Partial Evaluation: only detection of DDI (regadless to the type)
+tp	fp	fn	total	prec	recall	F1
+119	85	365	484	0,5833	0,2459	0,3459
+
+
+Detection and Classification of DDI
+tp	fp	fn	total	prec	recall	F1
+97	107	387	484	0,4755	0,2004	0,282
+
+
+________________________________________________________________________
+
+SCORES FOR DDI TYPE
+Scores for ddi with type mechanism
+tp	fp	fn	total	prec	recall	F1
+55	85	146	201	0,3929	0,2736	0,3226
+
+
+Scores for ddi with type effect
+tp	fp	fn	total	prec	recall	F1
+37	18	125	162	0,6727	0,2284	0,341
+
+
+Scores for ddi with type advise
+tp	fp	fn	total	prec	recall	F1
+5	4	114	119	0,5556	0,042	0,0781
+
+
+Scores for ddi with type int
+tp	fp	fn	total	prec	recall	F1
+0	0	2	2	0	0	0
+
+
+MACRO-AVERAGE MEASURES:
+	P	R	F1
+	0,4053	0,136	0,2037
+________________________________________________________________________
+

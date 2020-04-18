@@ -1,0 +1,10 @@
+parent: nmod-nmod
+parent: nmod-conj
+parent: nmod-dep
+2under1: conj
+1under2: case
+parent: nsubjpass-nmod
+parent: nmod-case
+parent: nmod-nmod
+parent: nmod-conj
+parent: nmod-nmod
