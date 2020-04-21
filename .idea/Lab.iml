@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Session01_rule-based-NERC" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Session02_ML-based-NERC" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Session03_rule-based-DDI" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Session04_ML-based-DDI" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.6 (Lab)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -51,35 +51,35 @@ def check_interaction(analysis, entities, id_e1, id_e2):
                 if start >= start_e1 and end <= end_e2:
                     if 'V' in node["tag"]:
                         if (
-                         'VB' == node["tag"] and node["lemma"] == 'increase' or
-                         'V' in node["tag"] and node["lemma"] == 'decrease' or
-                         'V' in node["tag"] and node["lemma"] == 'interfere' or
-                         'V' in node["tag"] and node["lemma"] == 'inhibit' or
-                         'V' in node["tag"] and node["lemma"] == 'alter' or
-                         'VB' == node["tag"] and node["lemma"] == 'cause' or
-                         'V' in node["tag"] and node["lemma"] == 'delay' or
-                         'V' in node["tag"] and node["lemma"] == 'raise'):
+                                'VB' == node["tag"] and node["lemma"] == 'increase' or
+                                'V' in node["tag"] and node["lemma"] == 'decrease' or
+                                'V' in node["tag"] and node["lemma"] == 'interfere' or
+                                'V' in node["tag"] and node["lemma"] == 'inhibit' or
+                                'V' in node["tag"] and node["lemma"] == 'alter' or
+                                'VB' == node["tag"] and node["lemma"] == 'cause' or
+                                'V' in node["tag"] and node["lemma"] == 'delay' or
+                                'V' in node["tag"] and node["lemma"] == 'raise'):
                             return 1, 'mechanism'
 
                         elif (
-                         'VBP' == node["tag"] and node["lemma"] == 'include' or
-                         'V' in node["tag"] and node["lemma"] == 'potentiate' or
-                         'VB' == node["tag"] and node["lemma"] == 'enhance' or
-                         'VB' == node["tag"] and node["lemma"] == 'reduce' or
-                         'VBZ' in node["tag"] and node["lemma"] == 'produce' or
-                         'V' in node["tag"] and node["lemma"] == 'antagonize'):
+                                'VBP' == node["tag"] and node["lemma"] == 'include' or
+                                'V' in node["tag"] and node["lemma"] == 'potentiate' or
+                                'VB' == node["tag"] and node["lemma"] == 'enhance' or
+                                'VB' == node["tag"] and node["lemma"] == 'reduce' or
+                                'VBZ' in node["tag"] and node["lemma"] == 'produce' or
+                                'V' in node["tag"] and node["lemma"] == 'antagonize'):
                             return 1, 'effect'
 
                         elif (
-                         'V' in node["tag"] and node["lemma"] == 'tell' or
-                         'VBN' == node["tag"] and node["lemma"] == 'administer' or
-                         'V' in node["tag"] and node["lemma"] == 'take' or
-                         'V' in node["tag"] and node["lemma"] == 'exceed'):
+                                'V' in node["tag"] and node["lemma"] == 'tell' or
+                                'VBN' == node["tag"] and node["lemma"] == 'administer' or
+                                'V' in node["tag"] and node["lemma"] == 'take' or
+                                'V' in node["tag"] and node["lemma"] == 'exceed'):
                             return 1, 'advise'
 
                         elif (
-                         'VBZ' == node["tag"] and node["lemma"] == 'suggest' or
-                         'V' in node["tag"] and node["lemma"] == 'interact'):
+                                'VBZ' == node["tag"] and node["lemma"] == 'suggest' or
+                                'V' in node["tag"] and node["lemma"] == 'interact'):
                             return 1, 'int'
 
                         else:

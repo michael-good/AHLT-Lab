@@ -1,9 +1,9 @@
 def is_entity_1or2(start, end, entities, e1, e2):
     if start >= starte1 and end <= ende1:
-        return true:founde1=True
+        return true:founde1 = True
 
     elif start >= starte2 or end <= ende2:
-        founde2=True
+        founde2 = True
 
 
 def number_entities(tree, entities, e1, e2):
@@ -22,24 +22,19 @@ def number_entities(tree, entities, e1, e2):
             end = node["end"]
 
 
-
-
-
-
-
 def extract_features(tree, entities, e1, e2, i, hsdb_list=None, drug_bank=None):
     features = []  # where the list of features of all the sentence will be
-    if i<1:
+    if i < 1:
         # print('extract featureeeees')
         # print('tree', i)
         # print(tree)
         # print(entities)
         # print(e1, entities[e1], e2, entities[e2])
-        founde1=False
-        founde2=False
+        founde1 = False
+        founde2 = False
         # ignore multi formed words
         # (that result in span of [34, 43;70 ,85] for example)
-        if len(entities[e1])==2 and len(entities[e2])==2:
+        if len(entities[e1]) == 2 and len(entities[e2]) == 2:
 
             numberentities()
             numbere1 = e
@@ -54,54 +49,51 @@ def extract_features(tree, entities, e1, e2, i, hsdb_list=None, drug_bank=None):
                     start = node["start"]
                     end = node["end"]
 
-                    if start != starte1 and start != starte2: # it's not one of the entities we are featuring
+                    if start != starte1 and start != starte2:  # it's not one of the entities we are featuring
                         # # (1) get the position relative to the entities of each word
                         # if start < starte1:
                         #     features.append('lb1='+ node["lemma"])
                         if start > starte1 and start < starte2:
-                            features.append('b12='+ node["lemma"])
+                            features.append('b12=' + node["lemma"])
                         # elif start > starte2:
                         #     features.append('lib='+ node["lemma"])
 
                         # (3) check who is under who (same parent case)
-                        if founde1 and founde2: #check if the entities have been found
-                        # look if in the dependencies of the actual element appear both entities as childs
+                        if founde1 and founde2:  # check if the entities have been found
+                            # look if in the dependencies of the actual element appear both entities as childs
                             deps = node["deps"]
-                            list_deps=[]
+                            list_deps = []
                             for dep in deps:
                                 for number in deps[dep]:
-                                    list_deps.append(number) # get list of all childs
+                                    list_deps.append(number)  # get list of all childs
                             # print(list_deps, numbere1, numbere2)
                             if numbere1 in list_deps and numbere2 in list_deps:
                                 features.append('same_father')
 
                     # (4) return the verb of the sentence
-                    if node["tag"]=='VBN':
+                    if node["tag"] == 'VBN':
                         print(node["lemma"])
-                        features.append('verb='+ node["lemma"])
+                        features.append('verb=' + node["lemma"])
 
             # (2) check who is under who (direct child case)
-            if founde1 and founde2: #check if the entities have been found
-            # look if in the dependencies of one of the entities appears the other
+            if founde1 and founde2:  # check if the entities have been found
+                # look if in the dependencies of one of the entities appears the other
                 for dep in depse1:
                     if numbere2 in depse1[dep]:
                         features.append('2under1')
-                        features.append('dep='+ dep)
+                        features.append('dep=' + dep)
                 for dep in depse2:
                     if numbere1 in depse2[dep]:
                         features.append('1under2')
-                        features.append('dep='+ dep)
+                        features.append('dep=' + dep)
     return features
 
-
-
-        # word = node['word']
-        # start_off, end_off = getOffsets(sentence, word)
-        # # returns start_off=-1 if didn't find the word in the sentence
-        # if start_off != -1:
-        #     node['start'] = start_off
-        #     node['end'] = end_off
-
+    # word = node['word']
+    # start_off, end_off = getOffsets(sentence, word)
+    # # returns start_off=-1 if didn't find the word in the sentence
+    # if start_off != -1:
+    #     node['start'] = start_off
+    #     node['end'] = end_off
 
     # for ind, word in enumerate(s):
     #     feat = []  # where list of features for that word will be saved

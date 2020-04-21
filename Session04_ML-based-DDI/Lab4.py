@@ -1,32 +1,60 @@
+import nltk
+import os
 from xml.dom.minidom import parse
-import sys, os
 from extract_featuresL4 import extract_features
 # import nltk CoreNLP module (just once)
 from nltk.parse.corenlp import CoreNLPDependencyParser
+
 # connect to your CoreNLP server (just once)
 my_parser = CoreNLPDependencyParser(url="http://localhost:9000")
-from nltk.classify import megam
-import nltk
+
 nltk.config_megam('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe')
 
+
 def parse_xml(file):
+    """
+        Parses given XML file
+
+        Parameters:
+            file: name of the file to parse
+        Returns:
+            Data structure holding 'file' data in a readable way
+    """
     return parse(file)
 
-def getOffsets(sentence, word):
+
+def get_offsets(sentence, word):
+    """
+        Retrieves the position of word within sentence at character level
+
+        Parameters:
+            sentence: information held by 'sentence' tag structure in XML file
+            word: string of a word that belongs to the provided sentence
+        Returns:
+            Start and end index of the position of word within sentence at character level
+    """
     start_index = sentence.find(word)
-    end_index = start_index + len(word) -1 # if the start_index is not -1
+    # if the start_index is not -1
+    end_index = start_index + len(word) - 1
     return start_index, end_index
 
+
 def analyze(sentence):
+    """
+        Generates a grammar dependency tree of all the words within the sentence
+
+        Parameters:
+            sentence: information held by 'sentence' tag structure in XML file
+        Returns:
+            A grammar dependency tree
+    """
     # parse text (as many times as needed)
-    # print(sentence)
-    mytree, = my_parser.raw_parse(sentence)
-    # print(mytree)
+    tree, _ = my_parser.raw_parse(sentence)
     # enrich the NLPDepencyGraph with the start and end offset
-    for e in range(1, len(mytree.nodes)):
-        node = mytree.nodes[e]
+    for e in range(1, len(tree.nodes)):
+        node = tree.nodes[e]
         word = node['word']
-        start_off, end_off = getOffsets(sentence, word)
+        start_off, end_off = get_offsets(sentence, word)
         # returns start_off=-1 if didn't find the word in the sentence
         # SHOULD LOOK IF THERE'S , OR . FOR NOW ONLY RETURNS THE SPAN OF THE FIRST APPEARED
         if start_off != -1:
@@ -38,39 +66,71 @@ def analyze(sentence):
             # them as if they are not needed for the features
             pass
             # print(node)
+    return tree
 
-    return mytree
 
-def output_features(id, e1, e2, gold_class, features, fout):
-    sentence_features = id + '\t' + e1 + '\t' + e2 + '\t' + gold_class
+def output_features(id_, e1, e2, gold_class, features, fout):
+    """
+        Prints to stdout the feature vector in the specified format
+
+        Parameters:
+            id_: sentence identifier
+            e1: name of first entity
+            e2: name of second entity
+            gold_class: classification type
+            features: list of features
+            fout: output txt file
+    """
+    sentence_features = id_ + '\t' + e1 + '\t' + e2 + '\t' + gold_class
     for feat in features:
         sentence_features = sentence_features + '\t' + str(feat)
     sentence_features = sentence_features + '\n'
-    # sys.stdout.write(sentence_features) # print in the terminal
-    fout.write(sentence_features) # print in a file
+    # print in the terminal
+    # sys.stdout.write(sentence_features)
+    # print in a file
+    fout.write(sentence_features)
 
-def output_ddi(id, e1, e2, ddi_type, fout):
+
+def output_ddi(id_, e1, e2, ddi_type, fout):
+    """
+        Prints on fout the interactions between two given entities in the right format
+
+        Parameters:
+            id_: sentence identifier
+            e1: name of first entity
+            e2: name of second entity
+            ddi_type: interaction type
+            fout: output txt file
+    """
     if ddi_type == 'null':
-        ddi=0
+        ddi = 0
     else:
-        ddi=1
+        ddi = 1
+    sentence_features = id_ + '|' + e1 + '|' + e2 + '|' + str(ddi) + '|' + ddi_type + '\n'
+    # print in a file
+    fout.write(sentence_features)
 
-    sentence_features = id + '|' + e1 + '|' + e2 + '|' + str(ddi) + '|' + ddi_type +'\n'
-    fout.write(sentence_features) # print in a file
 
-def evaluate(inputdir, outputfile):
-    os.system("java -jar eval/evaluateDDI.jar " + inputdir + " " + outputfile)
+def evaluate(input_dir, output_file):
+    """
+        Evaluates the performance of the classifier by means of different metrics such as
+        precision, recall and f-score
 
-import time
+        Parameters:
+            input_dir: path to output_file
+            output_file: txt file holding entities data
+    """
+    os.system("java -jar eval/evaluateDDI.jar " + input_dir + " " + output_file)
+
+
 def predict(feat_dict, feat_test, classifier):
-
     # create a dictionary with the binary of the feat that appears
     feat_test_dict = {}
     for feat in feat_test:
-        feat_test_dict[feat]=1;
+        feat_test_dict[feat] = 1;
 
     # save to a file
-    t_test = open('te_onlyUnder.txt','w')
+    t_test = open('te_onlyUnder.txt', 'w')
     t_test.write(str(feat_test_dict))
     t_test.close()
 
@@ -78,14 +138,12 @@ def predict(feat_dict, feat_test, classifier):
     pred = classifier.classify(feat_test_dict)
     return pred
 
-import numpy as np
+
 def main():
-
-    i=0
-
+    i = 0
 
     # TRAIN
-    traindir = './data/Train'
+    train_dir = './data/Train'
 
     train_file = 'train_features_output_onlyUnder.txt'
     if os.path.exists(train_file):
@@ -93,48 +151,43 @@ def main():
     foutput = open(train_file, "a")
 
     # process each file in directory
-    for f in os.listdir(traindir) :
+    for f in os.listdir(train_dir):
         print(f)
         # parse XML file, obtaining a DOM tree
-        tree = parse(traindir + "/" + f)
+        tree = parse(train_dir + "/" + f)
         # process each sentence in the file
         sentences = tree.getElementsByTagName("sentence")
-        for s in sentences :
-            sid = s.attributes["id"].value # get sentence id
-            stext = s.attributes["text"].value # get sentence text
+        for s in sentences:
+            sid = s.attributes["id"].value  # get sentence id
+            stext = s.attributes["text"].value  # get sentence text
             # it gives an error on the raw_parser if the sentence is empty ("")
             if stext != "":
-                # print('stext')
-                # print(stext)
-
                 # load sentence entities into a dictionary
                 entities = {}
-                ents = s.getElementsByTagName("entity")
-                for e in ents :
-                    id = e.attributes["id"].value
-                    offs = e.attributes["charOffset"].value.split("-")
-                    entities[id] = offs
+                sentence_entities = s.getElementsByTagName("entity")
+                for e in sentence_entities:
+                    id_ = e.attributes["id"].value
+                    offset = e.attributes["charOffset"].value.split("-")
+                    entities[id_] = offset
                 # Tokenize, tag, and parse sentence
                 analysis = analyze(stext)
-                # print(analysis)
-
                 # for each pair in the sentence, decide whether it is DDI and its type
                 pairs = s.getElementsByTagName("pair")
                 for p in pairs:
                     id_e1 = p.attributes["e1"].value
                     id_e2 = p.attributes["e2"].value
                     features = extract_features(analysis, entities, id_e1, id_e2, i)
-                    # print(features)
-                    is_ddi = p.attributes["ddi"].value #get ground truth
-                    if is_ddi=="true" and 'type' in p.attributes:
-                        type = p.attributes["type"].value
+                    # get ground truth
+                    is_ddi = p.attributes["ddi"].value
+                    if is_ddi == "true" and 'type' in p.attributes:
+                        type_ = p.attributes["type"].value
                     else:
-                        type = "null"
+                        type_ = "null"
 
-                    output_features(sid, id_e1, id_e2, type, features, foutput)
-                    i=i+1
+                    output_features(sid, id_e1, id_e2, type_, features, foutput)
+                    i += 1
 
-    os.system('cat '+train_file+'  | cut -f4- > megam.dat')
+    os.system('cat ' + train_file + '  | cut -f4- > megam.dat')
     foutput.close()
 
     #
@@ -213,11 +266,11 @@ def main():
     #
     #                 # load sentence entities into a dictionary
     #                 entities = {}
-    #                 ents = s.getElementsByTagName("entity")
-    #                 for e in ents :
+    #                 sentence_entities = s.getElementsByTagName("entity")
+    #                 for e in sentence_entities :
     #                     id = e.attributes["id"].value
-    #                     offs = e.attributes["charOffset"].value.split("-")
-    #                     entities[id] = offs
+    #                     offset = e.attributes["charOffset"].value.split("-")
+    #                     entities[id] = offset
     #                 # Tokenize, tag, and parse sentence
     #                 analysis = analyze(stext)
     #                 # print(analysis)

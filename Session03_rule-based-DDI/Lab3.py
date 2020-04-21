@@ -4,6 +4,7 @@ from xml.dom.minidom import parse
 from interactions import check_interaction
 # import nltk CoreNLP module (just once)
 from nltk.parse.corenlp import CoreNLPDependencyParser
+
 # connect to your CoreNLP server (just once)
 my_parser = CoreNLPDependencyParser(url="http://localhost:9000")
 
@@ -88,7 +89,7 @@ def main():
     foutput = open(output_file, "w")
 
     # process each file in directory
-    for f in os.listdir(input_dir) :
+    for f in os.listdir(input_dir):
         # print(f)
         # parse XML file, obtaining a DOM tree
         tree = parse(input_dir + "/" + f)
