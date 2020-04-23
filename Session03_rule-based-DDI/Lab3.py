@@ -47,7 +47,7 @@ def analyze(sentence):
             A grammar dependency tree
     """
     # parse text (as many times as needed)
-    tree, _ = my_parser.raw_parse(sentence)
+    tree, = my_parser.raw_parse(sentence)
 
     # enrich the NLPDepencyGraph with the start and end offset
     for e in range(1, len(tree.nodes)):

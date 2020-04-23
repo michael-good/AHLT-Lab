@@ -1,4 +1,3 @@
-import nltk
 import os
 from xml.dom.minidom import parse
 from extract_featuresL4 import extract_features
@@ -8,7 +7,8 @@ from nltk.parse.corenlp import CoreNLPDependencyParser
 # connect to your CoreNLP server (just once)
 my_parser = CoreNLPDependencyParser(url="http://localhost:9000")
 
-nltk.config_megam('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe')
+
+# nltk.config_megam('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe')
 
 
 def parse_xml(file):
@@ -49,7 +49,7 @@ def analyze(sentence):
             A grammar dependency tree
     """
     # parse text (as many times as needed)
-    tree, _ = my_parser.raw_parse(sentence)
+    tree, = my_parser.raw_parse(sentence)
     # enrich the NLPDepencyGraph with the start and end offset
     for e in range(1, len(tree.nodes)):
         node = tree.nodes[e]
@@ -140,24 +140,29 @@ def predict(feat_dict, feat_test, classifier):
 
 
 def main():
-    i = 0
-
-    # TRAIN
+    ###############################
+    ###          TRAIN          ###
+    ###############################
     train_dir = './data/Train'
 
-    train_file = 'train_features_output_onlyUnder.txt'
+    train_file = 'train_features_output.txt'
     if os.path.exists(train_file):
         os.remove(train_file)
     foutput = open(train_file, "a")
 
+    number_files_train = 1
+    number_sentences_train = 4
     # process each file in directory
-    for f in os.listdir(train_dir):
-        print(f)
+    for number_files, f in enumerate(os.listdir(train_dir)):
+        if number_files >= number_files_train:
+            break
         # parse XML file, obtaining a DOM tree
         tree = parse(train_dir + "/" + f)
         # process each sentence in the file
         sentences = tree.getElementsByTagName("sentence")
-        for s in sentences:
+        for number_sentences, s in enumerate(sentences):
+            if number_sentences >= number_sentences_train:
+                break
             sid = s.attributes["id"].value  # get sentence id
             stext = s.attributes["text"].value  # get sentence text
             # it gives an error on the raw_parser if the sentence is empty ("")
@@ -173,7 +178,7 @@ def main():
                 analysis = analyze(stext)
                 # for each pair in the sentence, decide whether it is DDI and its type
                 pairs = s.getElementsByTagName("pair")
-                for p in pairs:
+                for i, p in enumerate(pairs):
                     id_e1 = p.attributes["e1"].value
                     id_e2 = p.attributes["e2"].value
                     features = extract_features(analysis, entities, id_e1, id_e2, i)
@@ -185,9 +190,8 @@ def main():
                         type_ = "null"
 
                     output_features(sid, id_e1, id_e2, type_, features, foutput)
-                    i += 1
 
-    os.system('cat ' + train_file + '  | cut -f4- > megam.dat')
+    # os.system('cat ' + train_file + '  | cut -f4- > megam.dat')
     foutput.close()
 
     #
