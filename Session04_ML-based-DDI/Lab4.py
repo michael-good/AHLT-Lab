@@ -7,8 +7,8 @@ from nltk.parse.corenlp import CoreNLPDependencyParser
 # connect to your CoreNLP server (just once)
 my_parser = CoreNLPDependencyParser(url="http://localhost:9000")
 
-
-# nltk.config_megam('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe')
+import nltk
+nltk.config_megam('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe')
 
 
 def parse_xml(file):
@@ -129,14 +129,14 @@ def evaluate(input_dir, output_file):
     os.system("java -jar eval/evaluateDDI.jar " + input_dir + " " + output_file)
 
 
-def predict(feat_dict, feat_test, classifier):
+def predict(feat_test, classifier):
     # create a dictionary with the binary of the feat that appears
     feat_test_dict = {}
     for feat in feat_test:
         feat_test_dict[feat] = 1;
 
     # save to a file
-    t_test = open('te_onlyUnder.txt', 'w')
+    t_test = open('test_features.txt', 'w')
     t_test.write(str(feat_test_dict))
     t_test.close()
 
@@ -150,7 +150,7 @@ def main():
     mode = 'eval'
     os_version = 'windows'
 
-    if mode == 'train':
+    if mode == 'train_feat':
         ###############################
         ###          TRAIN          ###
         ###############################
@@ -216,133 +216,118 @@ def main():
             # TODO:
             pass
 
+    elif mode == 'train_model' or mode == 'eval':
 
-    # os.system('cat ' + train_file + '  | cut -f4- > megam.dat')
+        read_train_examples = open("train_features_output.txt", "r")
+        # # obtain the dictionary with all the possible features appeared in the training
+        # feat_train_dict = {}
+        # for ind, x in enumerate(read_train_examples):
+        #     if ind in range(2000):
+        #         label_train = x.split()[3]
+        #         feat_train = x.split()[4:]
+        #
+        #         for feat in feat_train:
+        #             feat_train_dict[feat]=0;
+        # read_train_examples.close()
 
-    #
-    # start = time.time()
-    # read_train_examples = open("megam.dat", "r")
-    # # create a dictionary with the binary of the feat that appears
-    # # and append together with its label
-    # train = []
-    # feat_train_dict = {}
-    # count_null=0
-    # count_notnull=0
-    # for ind, x in enumerate(read_train_examples):
-    #     # if ind in range(2000):
-    #         label_train = x.split()[0]
-    #         feat_train = x.split()[1:]
-    #         # feat_train_dict = feat_dict
-    #         if label_train!="null" or True: # if its not a null
-    #             for feat in feat_train:
-    #                 feat_train_dict[feat]=1;
-    #             train.append((feat_train_dict, label_train))
-    #             # count_notnull+=1
-    #
-    #             #for all
-    #             if label_train!="null":
-    #                 count_notnull+=1
-    #             else:
-    #                 count_null+=1
-    #         else:
-    #             count_null+=1
-    # # save to a file
-    # t_train = open('t_onlyUnder.txt','w')
-    # t_train.write(str(train))
-    # t_train.close()
-    # print('count null-notnull', count_null, count_notnull)
-    #
-    #
-    # # classifier = nltk.classify.NaiveBayesClassifier.train(train)
-    # # print(sorted(classifier.labels()))
-    # try:
-    #     # classifier = nltk.classify.MaxentClassifier.train(train, 'MEGAM', trace=0, max_iter=1000)
-    #     classifier = nltk.classify.MaxentClassifier.train(train, 'MEGAM')
-    # except Exception as e:
-    #     print('Error: %r' % e)
-    # end=time.time()
-    # print('time_train', end-start)
-    # print(sorted(classifier.labels()))
-    #
-    # # THIS ONE
-    # # https://stackoverflow.com/questions/12606543/nltk-megam-max-ent-algorithms-on-windows
-    #
+        read_train_examples = open("train_features_output.txt", "r")
+        # create a dictionary with the binary of the feat that appears
+        # and append together with its label
+        feat_train_dict = {}
+        train = []
+        for ind, x in enumerate(read_train_examples):
+            if ind in range(2000):
+                label_train = x.split()[3]
+                feat_train = x.split()[4:]
 
-    elif mode=='eval':
-        ###############################
-        ###          TEST          ###
-        ###############################
+                for feat in feat_train:
+                    feat_train_dict[feat]=1;
+                train.append((feat_train_dict, label_train))
+        read_train_examples.close()
 
-        output = 'task9.6_lluis_1'
-        feat_dict = {}
+        try:
+            # classifier = nltk.classify.MaxentClassifier.train(train, 'MEGAM', trace=0, max_iter=1000)
+            classifier = nltk.classify.MaxentClassifier.train(train, 'MEGAM')
+        except Exception as e:
+            print('Error: %r' % e)
+        print(sorted(classifier.labels()))
+        #
+        # # THIS ONE
+        # # https://stackoverflow.com/questions/12606543/nltk-megam-max-ent-algorithms-on-windows
+        #
 
-        # for test in ["Devel", "Test-NER", "Test-DDI"]:
-        for test in ["Devel"]:
+        if mode=='eval':
+            ###############################
+            ###          TEST          ###
+            ###############################
 
-            outputfile = output + '_' + test + '_results.txt'
-            outf = open(outputfile, "w")
-            testdir = "./data/" + test + "/"
+            output = 'task9.6_lluis_1'
+            feat_dict = {}
 
-            test_file = 'test_features_output.txt'
-            if os.path.exists(test_file):
-                os.remove(test_file)
-                os.remove('megam_test.dat')
-            foutput = open(test_file, "a")
-            foutput2 = open('megam_test.dat', "a")
+            # for test in ["Devel", "Test-NER", "Test-DDI"]:
+            for test in ["Devel"]:
 
-            # process each file in directory
-            for f in os.listdir(testdir) :
-                # parse XML file, obtaining a DOM tree
-                tree = parse(testdir + "/" + f)
-                # process each sentence in the file
-                sentences = tree.getElementsByTagName("sentence")
-                for s in sentences :
-                    sid = s.attributes["id"].value # get sentence id
-                    stext = s.attributes["text"].value # get sentence text
-                    # it gives an error on the raw_parser if the sentence is empty ("")
-                    if stext != "":
-                        # print('stext')
-                        # print(stext)
+                outputfile = output + '_' + test + '_results.txt'
+                outf = open(outputfile, "w")
+                testdir = "./data/" + test + "/"
 
-                        # load sentence entities into a dictionary
-                        entities = {}
-                        sentence_entities = s.getElementsByTagName("entity")
-                        for e in sentence_entities :
-                            id = e.attributes["id"].value
-                            offset = e.attributes["charOffset"].value.split("-")
-                            entities[id] = offset
-                        # Tokenize, tag, and parse sentence
-                        analysis = analyze(stext)
-                        # print(analysis)
+                test_file = 'test_features_output.txt'
+                if os.path.exists(test_file):
+                    os.remove(test_file)
+                    os.remove('megam_test.dat')
+                foutput = open(test_file, "a")
+                foutput2 = open('megam_test.dat', "a")
 
-                        # for each pair in the sentence, decide whether it is DDI and its type
-                        pairs = s.getElementsByTagName("pair")
-                        for p in pairs:
-                            id_e1 = p.attributes["e1"].value
-                            id_e2 = p.attributes["e2"].value
-                            features = extract_features(analysis, entities, id_e1, id_e2)
-                            # print(features)
-                            output_features(sid, id_e1, id_e2, 'UNK', features, foutput, foutput2)
+                # process each file in directory
+                for f in os.listdir(testdir) :
+                    # parse XML file, obtaining a DOM tree
+                    tree = parse(testdir + "/" + f)
+                    # process each sentence in the file
+                    sentences = tree.getElementsByTagName("sentence")
+                    for s in sentences :
+                        sid = s.attributes["id"].value # get sentence id
+                        stext = s.attributes["text"].value # get sentence text
+                        # it gives an error on the raw_parser if the sentence is empty ("")
+                        if stext != "":
+                            # print('stext')
+                            # print(stext)
 
-        foutput.close()
-        foutput2.close()
+                            # load sentence entities into a dictionary
+                            entities = {}
+                            sentence_entities = s.getElementsByTagName("entity")
+                            for e in sentence_entities :
+                                id = e.attributes["id"].value
+                                offset = e.attributes["charOffset"].value.split("-")
+                                entities[id] = offset
+                            # Tokenize, tag, and parse sentence
+                            analysis = analyze(stext)
+                            # print(analysis)
+
+                            # for each pair in the sentence, decide whether it is DDI and its type
+                            pairs = s.getElementsByTagName("pair")
+                            for p in pairs:
+                                id_e1 = p.attributes["e1"].value
+                                id_e2 = p.attributes["e2"].value
+                                features = extract_features(analysis, entities, id_e1, id_e2)
+                                # print(features)
+                                output_features(sid, id_e1, id_e2, 'UNK', features, foutput, foutput2)
+
+                                prediction = predict(features, classifier)
+                                output_ddi(sid, id_e1, id_e2, prediction, outf)
+            # foutput.close()
+            # foutput2.close()
+            #
+            #
+            # if os_version == 'windows':
+            #     os.system('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -nc -nobias -predict me_model.dat multiclass  megam_test.dat')
+            # elif os_version == 'linux':
+            #     # TODO:
+            #     pass
 
 
-        if os_version == 'windows':
-            os.system('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -nc -nobias -predict me_model.dat multiclass  megam_test.dat')
-        elif os_version == 'linux':
-            # TODO:
-            pass
-
-
-                            # prediction = predict(feat_dict, features, classifier)
-                            # # prediction = 'null' #predict
-                            #
-                            # output_ddi(sid, id_e1, id_e2, prediction, outf);
-
-        outf.close()
-        # get performance score
-        evaluate(testdir,outputfile)
+            outf.close()
+            # get performance score
+            evaluate(testdir,outputfile)
 
 
 if __name__ == '__main__':
