@@ -147,8 +147,9 @@ def predict(feat_test, classifier):
 
 def main():
 
-    mode = 'eval'
-    os_version = 'windows'
+    mode = 'eval' # train_feat, train_model or eval
+    os_version = 'windows' # windows or linux
+    megam_v = 'nltk' # nltk or exe
 
     if mode == 'train_feat':
         ###############################
@@ -174,7 +175,7 @@ def main():
             # process each sentence in the file
             sentences = tree.getElementsByTagName("sentence")
             for number_sentences, s in enumerate(sentences):
-                if number_sentences_train < max_train_sentences:
+                # if number_sentences_train < max_train_sentences:
 
 
 
@@ -210,13 +211,14 @@ def main():
         foutput.close()
         foutput2.close()
 
+    if mode == 'train_model' and megam_v=='exe':
         if os_version == 'windows':
             os.system('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -quiet -nc -nobias multiclass megam.dat > me_model.dat')
         elif os_version == 'linux':
             # TODO:
             pass
 
-    elif mode == 'train_model' or mode == 'eval':
+    if (mode == 'train_model' or mode =='eval') and megam_v=='nltk':
 
         read_train_examples = open("train_features_output.txt", "r")
         # # obtain the dictionary with all the possible features appeared in the training
@@ -256,78 +258,80 @@ def main():
         # # https://stackoverflow.com/questions/12606543/nltk-megam-max-ent-algorithms-on-windows
         #
 
-        if mode=='eval':
-            ###############################
-            ###          TEST          ###
-            ###############################
+    if mode=='eval':
+        ###############################
+        ###          TEST          ###
+        ###############################
 
-            output = 'task9.6_lluis_1'
-            feat_dict = {}
+        output = 'task9.6_lluis_2'
+        feat_dict = {}
 
-            # for test in ["Devel", "Test-NER", "Test-DDI"]:
-            for test in ["Devel"]:
+        # for test in ["Devel", "Test-NER", "Test-DDI"]:
+        for test in ["Devel"]:
 
-                outputfile = output + '_' + test + '_results.txt'
-                outf = open(outputfile, "w")
-                testdir = "./data/" + test + "/"
+            outputfile = output + '_' + test + '_results.txt'
+            outf = open(outputfile, "w")
+            testdir = "./data/" + test + "/"
 
-                test_file = 'test_features_output.txt'
-                if os.path.exists(test_file):
-                    os.remove(test_file)
-                    os.remove('megam_test.dat')
-                foutput = open(test_file, "a")
-                foutput2 = open('megam_test.dat', "a")
+            test_file = 'test_features_output.txt'
+            if os.path.exists(test_file):
+                os.remove(test_file)
+                os.remove('megam_test.dat')
+            foutput = open(test_file, "a")
+            foutput2 = open('megam_test.dat', "a")
 
-                # process each file in directory
-                for f in os.listdir(testdir) :
-                    # parse XML file, obtaining a DOM tree
-                    tree = parse(testdir + "/" + f)
-                    # process each sentence in the file
-                    sentences = tree.getElementsByTagName("sentence")
-                    for s in sentences :
-                        sid = s.attributes["id"].value # get sentence id
-                        stext = s.attributes["text"].value # get sentence text
-                        # it gives an error on the raw_parser if the sentence is empty ("")
-                        if stext != "":
-                            # print('stext')
-                            # print(stext)
+            # process each file in directory
+            for f in os.listdir(testdir) :
+                # parse XML file, obtaining a DOM tree
+                tree = parse(testdir + "/" + f)
+                # process each sentence in the file
+                sentences = tree.getElementsByTagName("sentence")
+                for s in sentences :
+                    sid = s.attributes["id"].value # get sentence id
+                    stext = s.attributes["text"].value # get sentence text
+                    # it gives an error on the raw_parser if the sentence is empty ("")
+                    if stext != "":
+                        # print('stext')
+                        # print(stext)
 
-                            # load sentence entities into a dictionary
-                            entities = {}
-                            sentence_entities = s.getElementsByTagName("entity")
-                            for e in sentence_entities :
-                                id = e.attributes["id"].value
-                                offset = e.attributes["charOffset"].value.split("-")
-                                entities[id] = offset
-                            # Tokenize, tag, and parse sentence
-                            analysis = analyze(stext)
-                            # print(analysis)
+                        # load sentence entities into a dictionary
+                        entities = {}
+                        sentence_entities = s.getElementsByTagName("entity")
+                        for e in sentence_entities :
+                            id = e.attributes["id"].value
+                            offset = e.attributes["charOffset"].value.split("-")
+                            entities[id] = offset
+                        # Tokenize, tag, and parse sentence
+                        analysis = analyze(stext)
+                        # print(analysis)
 
-                            # for each pair in the sentence, decide whether it is DDI and its type
-                            pairs = s.getElementsByTagName("pair")
-                            for p in pairs:
-                                id_e1 = p.attributes["e1"].value
-                                id_e2 = p.attributes["e2"].value
-                                features = extract_features(analysis, entities, id_e1, id_e2)
-                                # print(features)
-                                output_features(sid, id_e1, id_e2, 'UNK', features, foutput, foutput2)
+                        # for each pair in the sentence, decide whether it is DDI and its type
+                        pairs = s.getElementsByTagName("pair")
+                        for p in pairs:
+                            id_e1 = p.attributes["e1"].value
+                            id_e2 = p.attributes["e2"].value
+                            features = extract_features(analysis, entities, id_e1, id_e2)
+                            # print(features)
+                            output_features(sid, id_e1, id_e2, 'UNK', features, foutput, foutput2)
 
+                            if megam_v == 'nltk':
                                 prediction = predict(features, classifier)
                                 output_ddi(sid, id_e1, id_e2, prediction, outf)
-            # foutput.close()
-            # foutput2.close()
-            #
-            #
-            # if os_version == 'windows':
-            #     os.system('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -nc -nobias -predict me_model.dat multiclass  megam_test.dat')
-            # elif os_version == 'linux':
-            #     # TODO:
-            #     pass
+
+        if megam_v == 'exe':
+            if os_version == 'windows':
+                os.system('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -nc -nobias -predict me_model.dat multiclass  megam_test.dat')
+            elif os_version == 'linux':
+                # TODO:
+                pass
 
 
-            outf.close()
-            # get performance score
-            evaluate(testdir,outputfile)
+        foutput.close()
+        foutput2.close()
+
+        outf.close()
+        # get performance score
+        evaluate(testdir,outputfile)
 
 
 if __name__ == '__main__':
