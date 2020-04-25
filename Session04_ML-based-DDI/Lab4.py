@@ -23,7 +23,7 @@ def parse_xml(file):
     return parse(file)
 
 
-def get_offsets(sentence, word):
+def get_offsets(sentence, word, starting_point):
     """
         Retrieves the position of word within sentence at character level
 
@@ -33,9 +33,9 @@ def get_offsets(sentence, word):
         Returns:
             Start and end index of the position of word within sentence at character level
     """
-    start_index = sentence.find(word)
-    # if the start_index is not -1
+    start_index = sentence[starting_point:].find(word) + starting_point
     end_index = start_index + len(word) - 1
+
     return start_index, end_index
 
 
@@ -51,15 +51,16 @@ def analyze(sentence):
     # parse text (as many times as needed)
     tree, = my_parser.raw_parse(sentence)
     # enrich the NLPDepencyGraph with the start and end offset
+    starting_point=0
     for e in range(1, len(tree.nodes)):
         node = tree.nodes[e]
         word = node['word']
-        start_off, end_off = get_offsets(sentence, word)
+        start_off, end_off = get_offsets(sentence, word, starting_point)
         # returns start_off=-1 if didn't find the word in the sentence
-        # SHOULD LOOK IF THERE'S , OR . FOR NOW ONLY RETURNS THE SPAN OF THE FIRST APPEARED
         if start_off != -1:
             node['start'] = start_off
             node['end'] = end_off
+            starting_point = end_off
         else:
             # for now we will not touch the the braquets which are represented by
             # -lrb- and -rrb-, but then on the feature_extractor we will ignore
@@ -147,7 +148,7 @@ def predict(feat_test, classifier):
 
 def main():
 
-    mode = 'eval' # train_feat, train_model or eval
+    mode = 'train_feat' # train_feat, train_model or eval
     os_version = 'windows' # windows or linux
     megam_v = 'nltk' # nltk or exe
 
@@ -164,20 +165,20 @@ def main():
         foutput = open(train_file, "a")
         foutput2 = open('megam.dat', "a")
 
-
+        i=0
         number_sentences_train = 0
         max_train_sentences = 200
         # process each file in directory
         for number_files, f in enumerate(os.listdir(train_dir)):
+            # print('fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff', f)
 
             # parse XML file, obtaining a DOM tree1
             tree = parse(train_dir + "/" + f)
             # process each sentence in the file
             sentences = tree.getElementsByTagName("sentence")
             for number_sentences, s in enumerate(sentences):
-                # if number_sentences_train < max_train_sentences:
 
-
+                if number_sentences_train < max_train_sentences:
 
                     sid = s.attributes["id"].value  # get sentence id
                     stext = s.attributes["text"].value  # get sentence text
@@ -197,7 +198,8 @@ def main():
                         for i, p in enumerate(pairs):
                             id_e1 = p.attributes["e1"].value
                             id_e2 = p.attributes["e2"].value
-                            features = extract_features(analysis, entities, id_e1, id_e2)
+                            features = extract_features(analysis, entities, id_e1, id_e2, i)
+                            i+=1
                             # get ground truth
                             is_ddi = p.attributes["ddi"].value
                             if is_ddi == "true" and 'type' in p.attributes:
