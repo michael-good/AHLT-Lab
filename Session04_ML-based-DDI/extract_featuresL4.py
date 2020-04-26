@@ -104,44 +104,51 @@ def extract_features(tree, entities, e1, e2):
             # j+=1
         # print('path e2', path_e2)
 
+        # (9) Find word interaction
+        for i in range(1, len(tree.nodes)):
+            node = tree.nodes[i]
+            if node["rel"] != 'punct':  # if it's not a punctuation
+                # (9) indicates if there is an interact in the sentence
+                if 'interact' in node["lemma"]:
+                    features.append('interact_appears')
 
         # (2) check who is under who (direct child case) and the distance
-        direct_child=False
-        dist_e1=0
+        direct_child = False
+        dist_e1 = 0
         for nod in path_e1:
             if nod == number_node_e2:
-                features.append('1under2-d'+str(dist_e1))
-                direct_child=True
+                features.append('1under2-d' + str(dist_e1))
+                direct_child = True
                 break
-            dist_e1+=1
+            dist_e1 += 1
 
-        dist_e2=0
+        dist_e2 = 0
         for nod in path_e2:
             if nod == number_node_e1:
-                features.append('2under1-d'+str(dist_e2))
-                direct_child=True
+                features.append('2under1-d' + str(dist_e2))
+                direct_child = True
                 break
-            dist_e2+=1
+            dist_e2 += 1
 
         # (3) check the common point (same parent case) and the distance
         if direct_child == False:
-            dist_e1=0
+            dist_e1 = 0
             for ind in range(len(path_e1)):
                 if not indexin(path_e1[ind], path_e2):
-                    dist_e1+=1
+                    dist_e1 += 1
                 else:
-                    features.append('common_word='+tree.nodes[path_e1[ind]]["lemma"])
-                    features.append('common_word_type='+tree.nodes[path_e1[ind]]["tag"])
+                    features.append('common_word=' + tree.nodes[path_e1[ind]]["lemma"])
+                    features.append('common_word_type=' + tree.nodes[path_e1[ind]]["tag"])
                     break
-            features.append('common_point_e1:d'+str(dist_e1))
+            features.append('common_point_e1:d' + str(dist_e1))
 
-            dist_e2=0
+            dist_e2 = 0
             for ind in range(len(path_e2)):
                 if not indexin(path_e2[ind], path_e1):
-                    dist_e2+=1
+                    dist_e2 += 1
                 else:
                     break
-            features.append('common_point_e2:d'+str(dist_e2))
+            features.append('common_point_e2:d' + str(dist_e2))
 
         # (5) return the relations/words between the e1/e2 and the path until the common element between them
         rel_e1 = []  # path with the relations
@@ -196,14 +203,14 @@ def extract_features(tree, entities, e1, e2):
             if not indexin(p, path_e2):
                 actual_node = tree.nodes[p]
                 if 'V' in actual_node["tag"]:
-                    features.append('verb_between_tree='+actual_node["lemma"]+'/'+actual_node["tag"])
+                    features.append('verb_between_tree=' + actual_node["lemma"] + '/' + actual_node["tag"])
             else:
                 break
         for p in path_e2:
             if not indexin(p, path_e1):
                 actual_node = tree.nodes[p]
                 if 'V' in actual_node["tag"]:
-                    features.append('verb_between_tree='+actual_node["lemma"]+'/'+actual_node["tag"])
+                    features.append('verb_between_tree=' + actual_node["lemma"] + '/' + actual_node["tag"])
             else:
                 break
         # (7) verbs inbetween the two entities on the sentence structure
@@ -214,26 +221,16 @@ def extract_features(tree, entities, e1, e2):
                     start = node["start"]
                     end = node["end"]
                     if start >= start_e1 and end <= end_e2:
-                        features.append('verb_between_sentence='+node["lemma"]+'/'+node["tag"])
-
-
+                        features.append('verb_between_sentence=' + node["lemma"] + '/' + node["tag"])
         all_heads = []
         found = False
+
         for i in range(1, len(tree.nodes)):
             node = tree.nodes[i]
-
-            # (10) verb connected to the root
-            if node["head"] == 0:
-                features.append('root='+node["lemma"])
-
             if node["rel"] != 'punct':  # if it's not a punctuation
                 all_heads.append(node["head"])
                 # print(node)
                 # it's not a bracket
-
-                # (9) indicates if there is an interact in the sentence
-                if 'interact' in node["lemma"]:
-                    features.append('interact_appear')
 
                 if 'start' in node:
                     offset_start = node["start"]
@@ -260,10 +257,10 @@ def extract_features(tree, entities, e1, e2):
                     offset_end = node["end"]
                     if end_e1 < offset_start < start_e2:
                         if found == False:
-                            sentence = 'sentence_between='+node["lemma"]
-                            found=True
+                            sentence = 'sentence_between=' + node["lemma"]
+                            found = True
                         else:
-                            sentence = sentence +'<'+ node["lemma"]
+                            sentence = sentence + '<' + node["lemma"]
         if found:
             features.append(sentence)
         # print(all_heads)

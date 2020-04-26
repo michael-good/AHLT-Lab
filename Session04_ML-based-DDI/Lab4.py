@@ -3,14 +3,10 @@ import time
 from xml.dom.minidom import parse
 from extract_featuresL4 import extract_features
 from print_output_file import print_output
-# import nltk CoreNLP module (just once)
-import nltk
 from nltk.parse.corenlp import CoreNLPDependencyParser
 
 # connect to your CoreNLP server (just once)
 my_parser = CoreNLPDependencyParser(url="http://localhost:9000")
-
-nltk.config_megam('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe')
 
 
 def parse_xml(file):
@@ -62,7 +58,7 @@ def analyze(sentence):
     tree, = my_parser.raw_parse(sentence1)
     len_tree = len(tree.nodes)
     # enrich the NLPDepencyGraph with the start and end offset
-    starting_point=0
+    starting_point = 0
     # print(len(tree.nodes))
     for e in range(1, len(tree.nodes)):
         node = tree.nodes[e]
@@ -79,18 +75,18 @@ def analyze(sentence):
             # -lrb- and -rrb-, but then on the feature_extractor we will ignore
             # them as if they are not needed for the features
             pass
-    sentence_offset=len(sentence1)
+    sentence_offset = len(sentence1)
     for i in range(1, len(sentence_split)):
         aux_sen = sentence_split[i]
-        if len(aux_sen)>0:
+        if len(aux_sen) > 0:
             # print('aux tree')
             tree_aux, = my_parser.raw_parse(aux_sen)
             # print('len_aux', len(tree_aux.nodes))
             # enrich the NLPDepencyGraph with the start and end offset
-            starting_point=0
+            starting_point = 0
             for e in range(1, len(tree_aux.nodes)):
                 node = tree_aux.nodes[e]
-                if node["address"]!=None:
+                if node["address"] != None:
                     word = node['word']
                     # print(sentence)
                     # print(node)
@@ -108,8 +104,8 @@ def analyze(sentence):
                         pass
                         # print(node)
                     # print('new node', len_tree+e)
-                    node["head"] = node["head"]+len_tree-1
-                    tree.nodes[len_tree-1+e]=node
+                    node["head"] = node["head"] + len_tree - 1
+                    tree.nodes[len_tree - 1 + e] = node
             # print(tree_aux)
             # print(tree)
             # sentence_offset = len(aux_sen)
@@ -194,9 +190,8 @@ def predict(feat_test, classifier):
 
 
 def main():
-    mode = 'eval' # train_feat, train_model or eval
-    os_version = 'windows'  # windows or linux
-    megam_v = 'exe'  # nltk or exe
+    mode = 'eval'  # train_feat, train_model or eval
+    os_version = 'linux'  # windows or linux
     print_int = False
 
     start_time = time.time()
@@ -211,12 +206,12 @@ def main():
             os.remove(train_file)
         if os.path.exists('megam.dat'):
             os.remove('megam.dat')
-        if os_version=='windows':
+        if os_version == 'windows':
             if os.path.exists('me_model_w.dat'):
                 os.remove('me_model_w.dat')
-        elif os_version=='linux':
-            if os.path.exists('me_model.dat'):
-                os.remove('me_model.dat')
+        elif os_version == 'linux':
+            if os.path.exists('me_model_l.dat'):
+                os.remove('me_model_l.dat')
         foutput = open(train_file, "a")
         foutput2 = open('megam.dat', "a")
 
@@ -275,40 +270,13 @@ def main():
         foutput.close()
         foutput2.close()
         print('MEGAM Train...')
-        #if mode == 'train_model' and megam_v == 'exe':
         if os_version == 'windows':
-            os.system('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -quiet -nc -nobias multiclass megam.dat > me_model_w.dat')
+            os.system(
+                'C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -quiet -nc -nobias multiclass megam.dat > me_model_w.dat')
         elif os_version == 'linux':
             os.system('./megam_i686.opt -quiet -nc -nobias multiclass megam.dat > me_model_l.dat')
 
         print("--- %s seconds ---" % (time.time() - start_time))
-
-    if (mode == 'train_model' or mode == 'eval') and megam_v == 'nltk':
-        read_train_examples = open("train_features_output.txt", "r")
-        # create a dictionary with the binary of the feat that appears
-        # and append together with its label
-        feat_train_dict = {}
-        train = []
-        for ind, x in enumerate(read_train_examples):
-            if ind in range(2000):
-                label_train = x.split()[3]
-                feat_train = x.split()[4:]
-
-                for feat in feat_train:
-                    feat_train_dict[feat] = 1;
-                train.append((feat_train_dict, label_train))
-        read_train_examples.close()
-
-        try:
-            # classifier = nltk.classify.MaxentClassifier.train(train, 'MEGAM', trace=0, max_iter=1000)
-            classifier = nltk.classify.MaxentClassifier.train(train, 'MEGAM')
-        except Exception as e:
-            print('Error: %r' % e)
-        print(sorted(classifier.labels()))
-        #
-        # # THIS ONE
-        # # https://stackoverflow.com/questions/12606543/nltk-megam-max-ent-algorithms-on-windows
-        #
 
     if mode == 'eval':
         ###############################
@@ -372,10 +340,6 @@ def main():
                                 type_ = p.attributes["type"].value
                             else:
                                 type_ = "null"
-
-                            if megam_v == 'nltk':
-                                prediction = predict(features, classifier)
-                                output_ddi(sid, id_e1, id_e2, prediction, outf)
                             if print_int:
                                 check_file = open('check_effect_test.txt', 'a')
                                 print_output(stext, type_, check_file, 'effect')
@@ -396,37 +360,35 @@ def main():
         foutput.close()
         foutput2.close()
 
-
         print('MEGAM Test...')
-        if megam_v == 'exe':
-            if os_version == 'windows':
-                os.system(
-                    'C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -nc -nobias -predict me_model_w.dat multiclass  megam_test.dat > output.txt')
-            elif os_version == 'linux':
-                os.system('./megam_i686.opt -nc -nobias -predict me_model_l.dat multiclass  megam_test.dat > output.txt')
+        if os_version == 'windows':
+            os.system(
+                'C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -nc -nobias -predict me_model_w.dat multiclass  megam_test.dat > output.txt')
+        elif os_version == 'linux':
+            os.system('./megam_i686.opt -nc -nobias -predict me_model_l.dat multiclass  megam_test.dat > output.txt')
 
-            with open("output.txt", "r") as f:
-                lines = f.readlines()
-            with open("output.txt", "w") as f:
-                for line in lines:
-                    for i, char in enumerate(line):
-                        if char == '\t':
-                            f.write(line[:i] + '\n')
-                            break
-            with open("output.txt", "r") as f:
-                type_ = [x.strip() for x in f.readlines()]
-            with open("test_features_output.txt", "r") as f:
-                lines = f.readlines()
-            for i, line in enumerate(lines):
-                x = line.split('\t')
-                sentence = x[0]
-                e1 = x[1]
-                e2 = x[2]
-                if len(x) == 3:
-                    type_ddi = 'null'
-                else:
-                    type_ddi = type_[i]
-                output_ddi(sentence, e1, e2, type_ddi, outf)
+        with open("output.txt", "r") as f:
+            lines = f.readlines()
+        with open("output.txt", "w") as f:
+            for line in lines:
+                for i, char in enumerate(line):
+                    if char == '\t':
+                        f.write(line[:i] + '\n')
+                        break
+        with open("output.txt", "r") as f:
+            type_ = [x.strip() for x in f.readlines()]
+        with open("test_features_output.txt", "r") as f:
+            lines = f.readlines()
+        for i, line in enumerate(lines):
+            x = line.split('\t')
+            sentence = x[0]
+            e1 = x[1]
+            e2 = x[2]
+            if len(x) == 3:
+                type_ddi = 'null'
+            else:
+                type_ddi = type_[i]
+            output_ddi(sentence, e1, e2, type_ddi, outf)
         outf.close()
         # get performance score
         evaluate(test_dir, output_file)
