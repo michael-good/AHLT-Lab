@@ -129,11 +129,11 @@ def output_features(id_, e1, e2, gold_class, features, fout, fout2):
             fout: output txt file
     """
 
-    feat_megam = ''
+    feat_megam = gold_class
     sentence_features = id_ + '\t' + e1 + '\t' + e2 + '\t' + gold_class
     for feat in features:
         sentence_features = sentence_features + '\t' + str(feat)
-        feat_megam = feat_megam + str(feat) + ' '
+        feat_megam = feat_megam + ' ' + str(feat)
 
     sentence_features = sentence_features + '\n'
     feat_megam = feat_megam + '\n'
@@ -193,9 +193,9 @@ def predict(feat_test, classifier):
 
 
 def main():
-    mode = 'train_feat' # train_feat, train_model or eval
-    os_version = 'windows'  # windows or linux
-    megam_v = 'nltk'  # nltk or exe
+    mode = 'eval' # train_feat, train_model or eval
+    os_version = 'linux'  # windows or linux
+    megam_v = 'exe'  # nltk or exe
 
     start_time = time.time()
     if mode == 'train_feat':
@@ -209,14 +209,11 @@ def main():
             os.remove(train_file)
         if os.path.exists('megam.dat'):
             os.remove('megam.dat')
+        if os.path.exists('me_model.dat'):
+            os.remove('me_model.dat')
         foutput = open(train_file, "a")
         foutput2 = open('megam.dat', "a")
 
-        null = 0
-        mechanism = 0
-        effect = 0
-        advise = 0
-        int_ = 0
         # process each file in directory
         for number_files, f in enumerate(os.listdir(train_dir)):
             # parse XML file, obtaining a DOM tree1
@@ -242,7 +239,7 @@ def main():
                     for i, p in enumerate(pairs):
                         id_e1 = p.attributes["e1"].value
                         id_e2 = p.attributes["e2"].value
-                        features = extract_features(analysis, entities, id_e1, id_e2, i)
+                        features = extract_features(analysis, entities, id_e1, id_e2)
                         i += 1
                         # get ground truth
                         is_ddi = p.attributes["ddi"].value
@@ -255,18 +252,12 @@ def main():
             print('{:2.2f}'.format(number_files / len(os.listdir(train_dir)) * 100))
         foutput.close()
         foutput2.close()
-
-        if mode == 'train_model' and megam_v == 'exe':
-            if os_version == 'windows':
-                os.system('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -quiet -nc -nobias multiclass megam.dat > me_model.dat')
-            elif os_version == 'linux':
-                os.system('./megam_i686.opt -quiet -nc -nobias multiclass megam.dat > me_model.dat')
-
-        print("null: " + str(null))
-        print("mechanism: " + str(mechanism))
-        print("advise: " + str(advise))
-        print("effect: " + str(effect))
-        print("int: " + str(int_))
+        print('MEGAM Train...')
+        #if mode == 'train_model' and megam_v == 'exe':
+        if os_version == 'windows':
+            os.system('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -quiet -nc -nobias multiclass megam.dat > me_model.dat')
+        elif os_version == 'linux':
+            os.system('./megam_i686.opt -quiet -nc -nobias multiclass megam.dat > me_model.dat')
 
         print("--- %s seconds ---" % (time.time() - start_time))
 
@@ -319,7 +310,7 @@ def main():
             foutput2 = open('megam_test.dat', "a")
 
             # process each file in directory
-            for f in os.listdir(test_dir):
+            for number_files, f in enumerate(os.listdir(test_dir)):
                 # parse XML file, obtaining a DOM tree
                 tree = parse(test_dir + "/" + f)
                 # process each sentence in the file
@@ -349,7 +340,6 @@ def main():
                             id_e1 = p.attributes["e1"].value
                             id_e2 = p.attributes["e2"].value
                             features = extract_features(analysis, entities, id_e1, id_e2)
-                            # print(features)
                             output_features(sid, id_e1, id_e2, '', features, foutput, foutput2)
                             if megam_v == 'nltk':
                                 prediction = predict(features, classifier)
