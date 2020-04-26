@@ -250,7 +250,7 @@ def extract_features(tree, entities, e1, e2):
                     offset_start = node["start"]
                     offset_end = node["end"]
                     if end_e1 < offset_start < start_e2:
-                        if found=False:
+                        if found == False:
                             sentence = 'sentence_between='+node["lemma"]
                             found=True
                         else:
