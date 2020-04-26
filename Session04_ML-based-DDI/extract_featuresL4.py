@@ -143,56 +143,78 @@ def extract_features(tree, entities, e1, e2):
                     break
             features.append('common_point_e2:d'+str(dist_e2))
 
-        # (5) return the relations between the e1/e2 and the path until the common element between them
+        # (5) return the relations/words between the e1/e2 and the path until the common element between them
         rel_e1 = []  # path with the relations
         words_e1 = [tree.nodes[number_node_e1]["lemma"]]
-        for ind in range(len(path_e1)):
-            if not indexin(path_e1[ind], path_e2):
-                actual_node = tree.nodes[path_e1[ind]]
+        for p in path_e1:
+            if not indexin(p, path_e2):
+                actual_node = tree.nodes[p]
                 rel_e1.append(actual_node["rel"])
                 words_e1.append(tree.nodes[actual_node["head"]]["lemma"])
             else:
                 break
         # print('rel e1', rel_e1)
-        if len(rel_e1) > 0:
-            sentence_rel = 'rel_e1=' + rel_e1[0]
-            if len(rel_e1) > 1:
-                for i in range(1, len(rel_e1)):
-                    sentence_rel = sentence_rel + '<' + rel_e1[i]
-            # print('output', sentence)
+        for i, rel in enumerate(rel_e1):
+            if i == 0:
+                sentence_rel = 'rel_e1=' + rel
+            else:
+                sentence_rel = sentence_rel + '<' + rel
             features.append(sentence_rel)
-        if len(words_e1) > 0:
-            sentence_words = 'words_e1=' + words_e1[0]
-            if len(words_e1) > 1:
-                for i in range(1, len(words_e1)):
-                    sentence_words = sentence_words + '<' + words_e1[i]
-            # print('output', sentence)
+
+        for i, wor in enumerate(words_e1):
+            if i == 0:
+                sentence_words = 'words_e1=' + wor
+            else:
+                sentence_words = sentence_words + '<' + wor
             features.append(sentence_words)
 
         rel_e2 = []  # path with the relations
         words_e2 = [tree.nodes[number_node_e2]["lemma"]]
-        for ind in range(len(path_e2)):
-            if not indexin(path_e2[ind], path_e1):
-                actual_node = tree.nodes[path_e2[ind]]
+        for p in path_e2:
+            if not indexin(p, path_e1):
+                actual_node = tree.nodes[p]
                 rel_e2.append(actual_node["rel"])
                 words_e2.append(tree.nodes[actual_node["head"]]["lemma"])
             else:
                 break
         # print('rel e2', rel_e2)
-        if len(rel_e2) > 0:
-            sentence_rel = 'rel_e2=' + rel_e2[0]
-            if len(rel_e2) > 1:
-                for i in range(1, len(rel_e2)):
-                    sentence_rel = sentence_rel + '<' + rel_e2[i]
-            # print('output', sentence)
+        for i, rel in enumerate(rel_e2):
+            if i == 0:
+                sentence_rel = 'rel_e2=' + rel
+            else:
+                sentence_rel = sentence_rel + '<' + rel
             features.append(sentence_rel)
-        if len(words_e2) > 0:
-            sentence_words = 'words_e2=' + words_e2[0]
-            if len(words_e2) > 1:
-                for i in range(1, len(words_e2)):
-                    sentence_words = sentence_words + '<' + words_e2[i]
-            # print('output', sentence)
+        for i, wor in enumerate(words_e2):
+            if i == 0:
+                sentence_words = 'words_e2=' + wor
+            else:
+                sentence_words = sentence_words + '<' + wor
             features.append(sentence_words)
+
+        # (6) verbs inbetween the two entities on the tree structure
+        for p in path_e1:
+            if not indexin(p, path_e2):
+                actual_node = tree.nodes[p]
+                if 'V' in actual_node["tag"]:
+                    features.append('verb_between_tree='+actual_node["lemma"]+'/'+actual_node["tag"])
+            else:
+                break
+        for p in path_e2:
+            if not indexin(p, path_e1):
+                actual_node = tree.nodes[p]
+                if 'V' in actual_node["tag"]:
+                    features.append('verb_between_tree='+actual_node["lemma"]+'/'+actual_node["tag"])
+            else:
+                break
+        # (7) verbs inbetween the two entities on the sentence structure
+        for i in range(1, len(tree.nodes)):
+            node = tree.nodes[i]
+            if 'V' in node["tag"]:
+                if 'start' in node:
+                    start = node["start"]
+                    end = node["end"]
+                    if start >= start_e1 and end <= end_e2:
+                        features.append('verb_between_sentence='+node["lemma"]+'/'+node["tag"])
 
 
         all_heads = []
@@ -222,8 +244,8 @@ def extract_features(tree, entities, e1, e2):
                                 features.append('la2=' + node["lemma"])
 
                     # (4) return the verbs of the sentence
-                    if 'VB' in node["tag"]:
-                        features.append('verb=' + node["lemma"])
+                    # if 'VB' in node["tag"]:
+                    #     features.append('verb=' + node["lemma"])
         # print(all_heads)
     else:
         features.append('multiple_length')
