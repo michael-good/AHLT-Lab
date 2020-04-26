@@ -11,19 +11,27 @@ def number_entities(tree, start_e1, end_e1, start_e2, end_e2, check=False):
         if 'start' in node:
             if check and number_node_e1==None:
                 print('e1: ', start_e1, end_e1)
-                print('e1 '+str(i)+': ', node["start"], node["start"] >= start_e1, node["end"], node["end"] <= end_e1)
-                print('e1 '+str(i)+': ', node["start"], node["start"] <= start_e1, node["end"], node["end"] >= end_e1)
+                # print('e1 '+str(i)+': ', node["start"], node["start"] >= start_e1, node["end"], node["end"] <= end_e1)
+                # print('e1 '+str(i)+': ', node["start"], node["start"] <= start_e1, node["end"], node["end"] >= end_e1)
+                print('e1 '+str(i)+': ', node["start"], node["start"] >= start_e1, node["start"] <= end_e1)
+                print('e1 '+str(i)+': ', node["end"], node["end"] <= start_e1, node["end"] >= end_e1)
             if check and number_node_e2==None:
                 print('e2: ', start_e2, end_e2)
-                print('e2 '+str(i)+': ', node["start"], node["start"] >= start_e2, node["end"], node["end"] <= end_e2)
-                print('e2 '+str(i)+': ', node["start"], node["start"] >= start_e2, node["end"], node["end"] >= end_e2)
-            if ((node["start"] >= start_e1 and node["end"] <= end_e1 and number_node_e1 is None) or
-                (node["start"] <= start_e1 and node["end"] >= end_e1 and number_node_e1 is None) ):
+                # print('e2 '+str(i)+': ', node["start"], node["start"] >= start_e2, node["end"], node["end"] <= end_e2)
+                # print('e2 '+str(i)+': ', node["start"], node["start"] >= start_e2, node["end"], node["end"] >= end_e2)
+                print('e2 '+str(i)+': ', node["start"], node["start"] >= start_e2, node["start"] <= end_e2)
+                print('e2 '+str(i)+': ', node["end"], node["end"] >= start_e2, node["end"] >= end_e2)
+            # if ((start_e1 >= node["start"] and node["end"] <= end_e1 and number_node_e1 is None) or
+            #     (node["start"] <= start_e1 and node["end"] >= end_e1 and number_node_e1 is None) ):
+            if ((start_e1 >= node["start"] and start_e1 <= node["end"] and number_node_e1 is None) or
+                (end_e1 >= node["start"] and end_e1 <= node["end"] and number_node_e1 is None) ):
                 if check:
                     print('found e1')
                 number_node_e1 = i
-            elif ((node["start"] >= start_e2 and node["end"] <= end_e2 and number_node_e2 is None) or
-                (node["start"] <= start_e2 and node["end"] >= end_e2 and number_node_e2 is None) ):
+            # elif ((node["start"] >= start_e2 and node["end"] <= end_e2 and number_node_e2 is None) or
+            #     (node["start"] <= start_e2 and node["end"] >= end_e2 and number_node_e2 is None) ):
+            if ((start_e2 >= node["start"] and start_e2 <= node["end"] and number_node_e2 is None) or
+                (end_e2 >= node["start"] and end_e2 <= node["end"] and number_node_e2 is None) ):
                 if check:
                     print('found e2')
                 number_node_e2 = i
@@ -63,8 +71,9 @@ def extract_features(tree, entities, e1, e2, i):
             if number_node_e1==None or number_node_e2==None:
                 print('Nooooooooooooooooooooooooooooooooooone')
                 number_node_e1, number_node_e2 = number_entities(tree, start_e1, end_e1, start_e2, end_e2, True)
+                print(tree)
+                entotis = entotis-3
                 #
-                # print(tree)
                 # print(start_e1, end_e1)
                 # print(start_e2, end_e2)
 
@@ -143,8 +152,9 @@ def extract_features(tree, entities, e1, e2, i):
 
             all_heads = []
             for i in range(1, len(tree.nodes)):
-                    node = tree.nodes[i]
-                # if not node["punct"]: # if it's not a punctuation
+                node = tree.nodes[i]
+
+                if node["rel"]!='punct': # if it's not a punctuation
                     all_heads.append(node["head"])
                     # print(node)
                     # it's not a bracket

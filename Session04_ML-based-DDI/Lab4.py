@@ -3,11 +3,11 @@ import time
 from xml.dom.minidom import parse
 from extract_featuresL4 import extract_features
 # import nltk CoreNLP module (just once)
+import nltk
 from nltk.parse.corenlp import CoreNLPDependencyParser
 
 # connect to your CoreNLP server (just once)
 my_parser = CoreNLPDependencyParser(url="http://localhost:9000")
-
 
 # nltk.config_megam('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe')
 
@@ -34,7 +34,10 @@ def get_offsets(sentence, word, starting_point):
         Returns:
             Start and end index of the position of word within sentence at character level
     """
-    start_index = sentence[starting_point:].find(word) + starting_point
+    start_index = sentence[starting_point:].find(word)
+    if start_index != -1:
+        start_index = start_index + starting_point
+
     end_index = start_index + len(word) - 1
 
     return start_index, end_index
@@ -50,13 +53,21 @@ def analyze(sentence):
             A grammar dependency tree
     """
     # parse text (as many times as needed)
-    tree, = my_parser.raw_parse(sentence)
+    sentence_offset = 0
+    sentence_split = sentence.split('\n')
+
+    sentence1 = sentence_split[0]
+    # FIRST SENTENCE
+    tree, = my_parser.raw_parse(sentence1)
+    len_tree = len(tree.nodes)
     # enrich the NLPDepencyGraph with the start and end offset
-    starting_point = 0
+    starting_point=0
+    # print(len(tree.nodes))
     for e in range(1, len(tree.nodes)):
         node = tree.nodes[e]
         word = node['word']
-        start_off, end_off = get_offsets(sentence, word, starting_point)
+        # print(sentence)
+        start_off, end_off = get_offsets(sentence1, word, starting_point)
         # returns start_off=-1 if didn't find the word in the sentence
         if start_off != -1:
             node['start'] = start_off
@@ -67,7 +78,41 @@ def analyze(sentence):
             # -lrb- and -rrb-, but then on the feature_extractor we will ignore
             # them as if they are not needed for the features
             pass
-            # print(node)
+    sentence_offset=len(sentence1)
+    for i in range(1, len(sentence_split)):
+        aux_sen = sentence_split[i]
+        if len(aux_sen)>0:
+            # print('aux tree')
+            tree_aux, = my_parser.raw_parse(aux_sen)
+            # print('len_aux', len(tree_aux.nodes))
+            # enrich the NLPDepencyGraph with the start and end offset
+            starting_point=0
+            for e in range(1, len(tree_aux.nodes)):
+                node = tree_aux.nodes[e]
+                if node["address"]!=None:
+                    word = node['word']
+                    # print(sentence)
+                    # print(node)
+                    # print(word, starting_point)
+                    start_off, end_off = get_offsets(aux_sen, word, starting_point)
+                    # returns start_off=-1 if didn't find the word in the sentence
+                    if start_off != -1:
+                        node['start'] = start_off + sentence_offset
+                        node['end'] = end_off + sentence_offset
+                        starting_point = end_off
+                    else:
+                        # for now we will not touch the the braquets which are represented by
+                        # -lrb- and -rrb-, but then on the feature_extractor we will ignore
+                        # them as if they are not needed for the features
+                        pass
+                        # print(node)
+                    # print('new node', len_tree+e)
+                    node["head"] = node["head"]+len_tree-1
+                    tree.nodes[len_tree-1+e]=node
+            # print(tree_aux)
+            # print(tree)
+            # sentence_offset = len(aux_sen)
+
     return tree
 
 
@@ -149,8 +194,8 @@ def predict(feat_test, classifier):
 
 def main():
     mode = 'train_feat' # train_feat, train_model or eval
-    os_version = 'linux'  # windows or linux
-    megam_v = 'exe'  # nltk or exe
+    os_version = 'windows'  # windows or linux
+    megam_v = 'nltk'  # nltk or exe
 
     start_time = time.time()
     if mode == 'train_feat':
@@ -159,7 +204,7 @@ def main():
         ###############################
         train_dir = './data/Train'
 
-        train_file = 'train_features_output.txt'
+        train_file = 'train_features_output2.txt'
         if os.path.exists(train_file):
             os.remove(train_file)
         if os.path.exists('megam.dat'):
@@ -210,6 +255,7 @@ def main():
             print('{:2.2f}'.format(number_files / len(os.listdir(train_dir)) * 100))
         foutput.close()
         foutput2.close()
+
         if mode == 'train_model' and megam_v == 'exe':
             if os_version == 'windows':
                 os.system('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -quiet -nc -nobias multiclass megam.dat > me_model.dat')
@@ -225,7 +271,7 @@ def main():
         print("--- %s seconds ---" % (time.time() - start_time))
 
     if (mode == 'train_model' or mode == 'eval') and megam_v == 'nltk':
-        read_train_examples = open("train_features_output.txt", "r")
+        read_train_examples = open("train_features_output2.txt", "r")
         # create a dictionary with the binary of the feat that appears
         # and append together with its label
         feat_train_dict = {}
