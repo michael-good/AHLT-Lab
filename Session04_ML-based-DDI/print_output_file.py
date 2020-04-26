@@ -48,7 +48,7 @@ def indexin(el, list):
     return False
 
 
-def extract_features(tree, entities, e1, e2):
+def extract_features(tree, entities, e1, e2, ground, outf):
     features = []  # where the list of features of all the sentence will be
     # if i < 1 :
     # print(i, tree)
@@ -218,7 +218,6 @@ def extract_features(tree, entities, e1, e2):
 
 
         all_heads = []
-        found = False
         for i in range(1, len(tree.nodes)):
             node = tree.nodes[i]
 
@@ -249,12 +248,10 @@ def extract_features(tree, entities, e1, e2):
                 if 'start' in node:
                     offset_start = node["start"]
                     offset_end = node["end"]
-                    if end_e1 < offset_start < start_e2:
-                        if found=False:
-                            sentence = 'sentence_between='+node["lemma"]
-                            found=True
-                        else:
-                            sentence = sentence +'<'+ node["lemma"]
+                    if i == number_node_e1:
+                        sentence = 'sentence_between='+node["lemma"]
+                    elif end_e1 < offset_start < start_e2:
+                        sentence = sentence +'<'+ node["lemma"]
         features.append(sentence)
         # print(all_heads)
     else:

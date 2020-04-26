@@ -2,6 +2,7 @@ import os
 import time
 from xml.dom.minidom import parse
 from extract_featuresL4 import extract_features
+from print_output_file import print_output
 # import nltk CoreNLP module (just once)
 import nltk
 from nltk.parse.corenlp import CoreNLPDependencyParser
@@ -193,7 +194,7 @@ def predict(feat_test, classifier):
 
 
 def main():
-    mode = 'eval' # train_feat, train_model or eval
+    mode = 'train_feat' # train_feat, train_model or eval
     os_version = 'windows'  # windows or linux
     megam_v = 'exe'  # nltk or exe
 
@@ -252,7 +253,8 @@ def main():
                         else:
                             type_ = "null"
 
-                        output_features(sid, id_e1, id_e2, type_, features, foutput, foutput2)
+                        # output_features(sid, id_e1, id_e2, type_, features, foutput, foutput2)
+                        print_output(sid, id_e1, id_e2, '', features, foutput, foutput2)
             print('{:2.2f}'.format(number_files / len(os.listdir(train_dir)) * 100))
         foutput.close()
         foutput2.close()
@@ -345,6 +347,7 @@ def main():
                             id_e2 = p.attributes["e2"].value
                             features = extract_features(analysis, entities, id_e1, id_e2)
                             output_features(sid, id_e1, id_e2, '', features, foutput, foutput2)
+
                             if megam_v == 'nltk':
                                 prediction = predict(features, classifier)
                                 output_ddi(sid, id_e1, id_e2, prediction, outf)
