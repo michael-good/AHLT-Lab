@@ -390,3 +390,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    # evaluate("./data/Devel/", "task9.6_lluis_2_Devel_results_int.txt")

@@ -243,9 +243,16 @@ def extract_features(tree, entities, e1, e2):
                             if offset_start > start_e2:
                                 features.append('la2=' + node["lemma"])
 
-                    # (4) return the verbs of the sentence
-                    # if 'VB' in node["tag"]:
-                    #     features.append('verb=' + node["lemma"])
+            # (8) return the sentence inbetween
+            if node["rel"] != 'punct':  # if it's not a punctuation
+                if 'start' in node:
+                    offset_start = node["start"]
+                    offset_end = node["end"]
+                    if i == number_node_e1:
+                        sentence = 'sentence_between='+node["lemma"]
+                    elif end_e1 < offset_start < start_e2:
+                        sentence = sentence +'<'+ node["lemma"]
+        features.append(sentence)
         # print(all_heads)
     else:
         features.append('multiple_length')
