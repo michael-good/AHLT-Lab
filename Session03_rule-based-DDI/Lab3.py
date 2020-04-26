@@ -4,7 +4,6 @@ from xml.dom.minidom import parse
 from interactions import check_interaction
 # import nltk CoreNLP module (just once)
 from nltk.parse.corenlp import CoreNLPDependencyParser
-
 # connect to your CoreNLP server (just once)
 my_parser = CoreNLPDependencyParser(url="http://localhost:9000")
 
@@ -80,9 +79,6 @@ def main():
     # input_dir = './data/Devel'
     # output_file = 'task9.2_lluis_Devel.txt'
 
-    # input_dir = './data/Test-NER'
-    # output_file = 'task9.2_lluis_TestNER.txt'
-
     input_dir = './data/Test-DDI'
     output_file = 'task9.2_lluis_TestDDI.txt'
 
@@ -90,7 +86,6 @@ def main():
 
     # process each file in directory
     for f in os.listdir(input_dir):
-        # print(f)
         # parse XML file, obtaining a DOM tree
         tree = parse(input_dir + "/" + f)
         # process each sentence in the file
@@ -119,17 +114,11 @@ def main():
                     id_e1 = p.attributes["e1"].value
                     id_e2 = p.attributes["e2"].value
 
-                    # #ground truth
-                    # is_ddi_g = p.attributes["ddi"].value #get ground truth
-                    # if is_ddi_g=="true" and 'type' in p.attributes:
-                    #     type_g = p.attributes["type"].value
-                    # else:
-                    #     type_g = "null"
-
                     (is_ddi, ddi_type) = check_interaction(analysis, entities, id_e1, id_e2)
                     foutput.write("|".join([sid, id_e1, id_e2, str(is_ddi), ddi_type]))
                     foutput.write("\n")
     foutput.close()
+
     # get performance score
     evaluate(input_dir, output_file)
 
