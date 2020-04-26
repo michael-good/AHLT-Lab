@@ -2,12 +2,10 @@ import os
 import time
 from xml.dom.minidom import parse
 from extract_featuresL4 import extract_features
-from print_output_file import print_output
+¡# import nltk CoreNLP module (just once)
 from nltk.parse.corenlp import CoreNLPDependencyParser
-
 # connect to your CoreNLP server (just once)
 my_parser = CoreNLPDependencyParser(url="http://localhost:9000")
-
 
 def parse_xml(file):
     """
@@ -28,6 +26,7 @@ def get_offsets(sentence, word, starting_point):
         Parameters:
             sentence: information held by 'sentence' tag structure in XML file
             word: string of a word that belongs to the provided sentence
+            starting_point: position within the sentence from to start searching the word
         Returns:
             Start and end index of the position of word within sentence at character level
     """
@@ -43,6 +42,7 @@ def get_offsets(sentence, word, starting_point):
 def analyze(sentence):
     """
         Generates a grammar dependency tree of all the words within the sentence
+        enriched with the start and end offsets
 
         Parameters:
             sentence: information held by 'sentence' tag structure in XML file
@@ -51,19 +51,17 @@ def analyze(sentence):
     """
     # parse text (as many times as needed)
     sentence_offset = 0
+    # there seems to appear elements in between some sentences that read as a '\n'
+    # so we obtain the tree for all the sentences
     sentence_split = sentence.split('\n')
-
+    # normally, as there aren't any '\n' between sentences, this will be the only sentence obtained
     sentence1 = sentence_split[0]
-    # FIRST SENTENCE
     tree, = my_parser.raw_parse(sentence1)
     len_tree = len(tree.nodes)
-    # enrich the NLPDepencyGraph with the start and end offset
-    starting_point = 0
-    # print(len(tree.nodes))
+    starting_point=0
     for e in range(1, len(tree.nodes)):
         node = tree.nodes[e]
         word = node['word']
-        # print(sentence)
         start_off, end_off = get_offsets(sentence1, word, starting_point)
         # returns start_off=-1 if didn't find the word in the sentence
         if start_off != -1:
@@ -75,22 +73,17 @@ def analyze(sentence):
             # -lrb- and -rrb-, but then on the feature_extractor we will ignore
             # them as if they are not needed for the features
             pass
-    sentence_offset = len(sentence1)
+    # if there's some '\n' n between, we will include the subtree on the other sentences into the principal tree
+    sentence_offset=len(sentence1)
     for i in range(1, len(sentence_split)):
         aux_sen = sentence_split[i]
-        if len(aux_sen) > 0:
-            # print('aux tree')
+        if len(aux_sen)>0:
             tree_aux, = my_parser.raw_parse(aux_sen)
-            # print('len_aux', len(tree_aux.nodes))
-            # enrich the NLPDepencyGraph with the start and end offset
-            starting_point = 0
+            starting_point=0
             for e in range(1, len(tree_aux.nodes)):
                 node = tree_aux.nodes[e]
-                if node["address"] != None:
+                if node["address"]!=None:
                     word = node['word']
-                    # print(sentence)
-                    # print(node)
-                    # print(word, starting_point)
                     start_off, end_off = get_offsets(aux_sen, word, starting_point)
                     # returns start_off=-1 if didn't find the word in the sentence
                     if start_off != -1:
@@ -103,19 +96,16 @@ def analyze(sentence):
                         # them as if they are not needed for the features
                         pass
                         # print(node)
-                    # print('new node', len_tree+e)
-                    node["head"] = node["head"] + len_tree - 1
-                    tree.nodes[len_tree - 1 + e] = node
-            # print(tree_aux)
-            # print(tree)
-            # sentence_offset = len(aux_sen)
+                    node["head"] = node["head"]+len_tree-1
+                    tree.nodes[len_tree-1+e]=node
 
     return tree
 
 
 def output_features(id_, e1, e2, gold_class, features, fout, fout2):
     """
-        Prints to stdout the feature vector in the specified format
+        Writes to the fout and fout2 the feature vector in the specified format.
+        In the fout2 there's no information about the id of the sentence nor entities
 
         Parameters:
             id_: sentence identifier
@@ -124,6 +114,7 @@ def output_features(id_, e1, e2, gold_class, features, fout, fout2):
             gold_class: classification type
             features: list of features
             fout: output txt file
+            fout2: output txt file
     """
 
     feat_megam = gold_class
@@ -134,16 +125,13 @@ def output_features(id_, e1, e2, gold_class, features, fout, fout2):
 
     sentence_features = sentence_features + '\n'
     feat_megam = feat_megam + '\n'
-    # print in the terminal
-    # sys.stdout.write(sentence_features)
-    # print in a file
     fout.write(sentence_features)
     fout2.write(feat_megam)
 
 
 def output_ddi(id_, e1, e2, ddi_type, fout):
     """
-        Prints on fout the interactions between two given entities in the right format
+        Writes in the fout file the interactions between two given entities in the right format
 
         Parameters:
             id_: sentence identifier
@@ -157,7 +145,6 @@ def output_ddi(id_, e1, e2, ddi_type, fout):
     else:
         ddi = 1
     sentence_features = id_ + '|' + e1 + '|' + e2 + '|' + str(ddi) + '|' + ddi_type + '\n'
-    # print in a file
     fout.write(sentence_features)
 
 
@@ -173,26 +160,8 @@ def evaluate(input_dir, output_file):
     os.system("java -jar eval/evaluateDDI.jar " + input_dir + " " + output_file)
 
 
-def predict(feat_test, classifier):
-    # create a dictionary with the binary of the feat that appears
-    feat_test_dict = {}
-    for feat in feat_test:
-        feat_test_dict[feat] = 1;
-
-    # save to a file
-    t_test = open('test_features.txt', 'w')
-    t_test.write(str(feat_test_dict))
-    t_test.close()
-
-    # pred = classifier.classify_many(test)
-    pred = classifier.classify(feat_test_dict)
-    return pred
-
-
 def main():
-    mode = 'eval'  # train_feat, train_model or eval
-    os_version = 'linux'  # windows or linux
-    print_int = False
+    mode = 'eval' # train_feat, train_model or eval
 
     start_time = time.time()
     if mode == 'train_feat':
@@ -206,12 +175,8 @@ def main():
             os.remove(train_file)
         if os.path.exists('megam.dat'):
             os.remove('megam.dat')
-        if os_version == 'windows':
-            if os.path.exists('me_model_w.dat'):
-                os.remove('me_model_w.dat')
-        elif os_version == 'linux':
-            if os.path.exists('me_model_l.dat'):
-                os.remove('me_model_l.dat')
+        if os.path.exists('me_model.dat'):
+            os.remove('me_model.dat')
         foutput = open(train_file, "a")
         foutput2 = open('megam.dat', "a")
 
@@ -241,7 +206,6 @@ def main():
                         id_e1 = p.attributes["e1"].value
                         id_e2 = p.attributes["e2"].value
                         features = extract_features(analysis, entities, id_e1, id_e2)
-                        i += 1
                         # get ground truth
                         is_ddi = p.attributes["ddi"].value
                         if is_ddi == "true" and 'type' in p.attributes:
@@ -250,31 +214,12 @@ def main():
                             type_ = "null"
 
                         output_features(sid, id_e1, id_e2, type_, features, foutput, foutput2)
-                        if print_int:
-                            check_file = open('check_effect_train.txt', 'a')
-                            print_output(stext, type_, check_file, 'effect')
-                            check_file.close()
-                            check_file = open('check_mecha_train.txt', 'a')
-                            print_output(stext, type_, check_file, 'mechanism')
-                            check_file.close()
-                            check_file = open('check_adv_train.txt', 'a')
-                            print_output(stext, type_, check_file, 'advise')
-                            check_file.close()
-                            check_file = open('check_int_train.txt', 'a')
-                            print_output(stext, type_, check_file, 'int')
-                            check_file.close()
-                            check_file = open('check_null_train.txt', 'a')
-                            print_output(stext, type_, check_file, 'null')
-                            check_file.close()
+
             print('{:2.2f}'.format(number_files / len(os.listdir(train_dir)) * 100))
         foutput.close()
         foutput2.close()
         print('MEGAM Train...')
-        if os_version == 'windows':
-            os.system(
-                'C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -quiet -nc -nobias multiclass megam.dat > me_model_w.dat')
-        elif os_version == 'linux':
-            os.system('./megam_i686.opt -quiet -nc -nobias multiclass megam.dat > me_model_l.dat')
+        os.system('./megam_i686.opt -quiet -nc -nobias multiclass megam.dat > me_model.dat')
 
         print("--- %s seconds ---" % (time.time() - start_time))
 
@@ -283,12 +228,9 @@ def main():
         ###          TEST           ###
         ###############################
 
-        output = 'task9.6_lluis_2'
+        output = 'task9.6_lluis_1'
 
-        check_file = open('check_int_test.txt', 'w')
-
-        # for test in ["Devel", "Test-NER", "Test-DDI"]:
-        for test in ["Devel"]:
+        for test in ["Devel", "Test-DDI"]:
 
             output_file = output + '_' + test + '_results.txt'
             outf = open(output_file, "w")
@@ -312,9 +254,6 @@ def main():
                     stext = s.attributes["text"].value  # get sentence text
                     # it gives an error on the raw_parser if the sentence is empty ("")
                     if stext != "":
-                        # print('stext')
-                        # print(stext)
-
                         # load sentence entities into a dictionary
                         entities = {}
                         sentence_entities = s.getElementsByTagName("entity")
@@ -324,7 +263,6 @@ def main():
                             entities[id] = offset
                         # Tokenize, tag, and parse sentence
                         analysis = analyze(stext)
-                        # print(analysis)
 
                         # for each pair in the sentence, decide whether it is DDI and its type
                         pairs = s.getElementsByTagName("pair")
@@ -334,38 +272,13 @@ def main():
                             features = extract_features(analysis, entities, id_e1, id_e2)
                             output_features(sid, id_e1, id_e2, '', features, foutput, foutput2)
 
-                            # get ground truth
-                            is_ddi = p.attributes["ddi"].value
-                            if is_ddi == "true" and 'type' in p.attributes:
-                                type_ = p.attributes["type"].value
-                            else:
-                                type_ = "null"
-                            if print_int:
-                                check_file = open('check_effect_test.txt', 'a')
-                                print_output(stext, type_, check_file, 'effect')
-                                check_file.close()
-                                check_file = open('check_mecha_test.txt', 'a')
-                                print_output(stext, type_, check_file, 'mechanism')
-                                check_file.close()
-                                check_file = open('check_adv_test.txt', 'a')
-                                print_output(stext, type_, check_file, 'advise')
-                                check_file.close()
-                                check_file = open('check_int_test.txt', 'a')
-                                print_output(stext, type_, check_file, 'int')
-                                check_file.close()
-                                check_file = open('check_null_test.txt', 'a')
-                                print_output(stext, type_, check_file, 'null')
-                                check_file.close()
                 print('{:2.2f}'.format(number_files / len(os.listdir(test_dir)) * 100))
         foutput.close()
         foutput2.close()
 
+
         print('MEGAM Test...')
-        if os_version == 'windows':
-            os.system(
-                'C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -nc -nobias -predict me_model_w.dat multiclass  megam_test.dat > output.txt')
-        elif os_version == 'linux':
-            os.system('./megam_i686.opt -nc -nobias -predict me_model_l.dat multiclass  megam_test.dat > output.txt')
+        os.system('./megam_i686.opt -nc -nobias -predict me_model.dat multiclass  megam_test.dat > output.txt')
 
         with open("output.txt", "r") as f:
             lines = f.readlines()
@@ -390,6 +303,7 @@ def main():
                 type_ddi = type_[i]
             output_ddi(sentence, e1, e2, type_ddi, outf)
         outf.close()
+
         # get performance score
         evaluate(test_dir, output_file)
         print("--- %s seconds ---" % (time.time() - start_time))
@@ -397,4 +311,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    # evaluate("./data/Devel/", "task9.6_lluis_2_Devel_results_int.txt")
