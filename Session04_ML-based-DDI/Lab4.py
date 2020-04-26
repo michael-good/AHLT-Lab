@@ -204,7 +204,7 @@ def main():
         ###############################
         train_dir = './data/Train'
 
-        train_file = 'train_features_output2.txt'
+        train_file = 'train_features_output.txt'
         if os.path.exists(train_file):
             os.remove(train_file)
         if os.path.exists('megam.dat'):
@@ -266,7 +266,7 @@ def main():
         print("--- %s seconds ---" % (time.time() - start_time))
 
     if (mode == 'train_model' or mode == 'eval') and megam_v == 'nltk':
-        read_train_examples = open("train_features_output2.txt", "r")
+        read_train_examples = open("train_features_output.txt", "r")
         # create a dictionary with the binary of the feat that appears
         # and append together with its label
         feat_train_dict = {}
@@ -306,7 +306,7 @@ def main():
             outf = open(output_file, "w")
             test_dir = "./data/" + test + "/"
 
-            test_file = 'test_features_output2.txt'
+            test_file = 'test_features_output.txt'
             if os.path.exists(test_file):
                 os.remove(test_file)
                 os.remove('megam_test.dat')
@@ -370,7 +370,7 @@ def main():
                             break
             with open("output.txt", "r") as f:
                 type_ = [x.strip() for x in f.readlines()]
-            with open("test_features_output2.txt", "r") as f:
+            with open("test_features_output.txt", "r") as f:
                 lines = f.readlines()
             for i, line in enumerate(lines):
                 x = line.split('\t')

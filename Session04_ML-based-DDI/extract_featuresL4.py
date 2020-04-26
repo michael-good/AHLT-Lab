@@ -104,51 +104,96 @@ def extract_features(tree, entities, e1, e2):
             # j+=1
         # print('path e2', path_e2)
 
+
+        # (2) check who is under who (direct child case) and the distance
+        direct_child=False
+        dist_e1=0
+        for nod in path_e1:
+            if nod == number_node_e2:
+                features.append('1under2-d'+str(dist_e1))
+                direct_child=True
+                break
+            dist_e1+=1
+
+        dist_e2=0
+        for nod in path_e2:
+            if nod == number_node_e1:
+                features.append('2under1-d'+str(dist_e2))
+                direct_child=True
+                break
+            dist_e2+=1
+
+        # (3) check the common point (same parent case) and the distance
+        if direct_child == False:
+            dist_e1=0
+            for ind in range(len(path_e1)):
+                if not indexin(path_e1[ind], path_e2):
+                    dist_e1+=1
+                else:
+                    features.append('common_word='+tree.nodes[path_e1[ind]]["lemma"])
+                    features.append('common_word_type='+tree.nodes[path_e1[ind]]["tag"])
+                    break
+            features.append('common_point_e1:d'+str(dist_e1))
+
+            dist_e2=0
+            for ind in range(len(path_e2)):
+                if not indexin(path_e2[ind], path_e1):
+                    dist_e2+=1
+                else:
+                    break
+            features.append('common_point_e2:d'+str(dist_e2))
+
         # (5) return the relations between the e1/e2 and the path until the common element between them
         rel_e1 = []  # path with the relations
+        words_e1 = [tree.nodes[number_node_e1]["lemma"]]
         for ind in range(len(path_e1)):
             if not indexin(path_e1[ind], path_e2):
                 actual_node = tree.nodes[path_e1[ind]]
                 rel_e1.append(actual_node["rel"])
+                words_e1.append(tree.nodes[actual_node["head"]]["lemma"])
             else:
                 break
         # print('rel e1', rel_e1)
         if len(rel_e1) > 0:
-            sentence = 'rel_e1=' + rel_e1[0]
+            sentence_rel = 'rel_e1=' + rel_e1[0]
             if len(rel_e1) > 1:
                 for i in range(1, len(rel_e1)):
-                    sentence = sentence + '-' + rel_e1[i]
+                    sentence_rel = sentence_rel + '<' + rel_e1[i]
             # print('output', sentence)
-            features.append(sentence)
+            features.append(sentence_rel)
+        if len(words_e1) > 0:
+            sentence_words = 'words_e1=' + words_e1[0]
+            if len(words_e1) > 1:
+                for i in range(1, len(words_e1)):
+                    sentence_words = sentence_words + '<' + words_e1[i]
+            # print('output', sentence)
+            features.append(sentence_words)
 
         rel_e2 = []  # path with the relations
+        words_e2 = [tree.nodes[number_node_e2]["lemma"]]
         for ind in range(len(path_e2)):
             if not indexin(path_e2[ind], path_e1):
                 actual_node = tree.nodes[path_e2[ind]]
                 rel_e2.append(actual_node["rel"])
+                words_e2.append(tree.nodes[actual_node["head"]]["lemma"])
             else:
                 break
         # print('rel e2', rel_e2)
         if len(rel_e2) > 0:
-            sentence = 'rel_e2=' + rel_e2[0]
+            sentence_rel = 'rel_e2=' + rel_e2[0]
             if len(rel_e2) > 1:
                 for i in range(1, len(rel_e2)):
-                    sentence = sentence + '-' + rel_e2[i]
+                    sentence_rel = sentence_rel + '<' + rel_e2[i]
             # print('output', sentence)
-            features.append(sentence)
+            features.append(sentence_rel)
+        if len(words_e2) > 0:
+            sentence_words = 'words_e2=' + words_e2[0]
+            if len(words_e2) > 1:
+                for i in range(1, len(words_e2)):
+                    sentence_words = sentence_words + '<' + words_e2[i]
+            # print('output', sentence)
+            features.append(sentence_words)
 
-        # (2) check who is under who (direct child case)
-        # look if in the dependencies of one of the entities appears the other
-        if node_e1["head"] == number_node_e2:
-            features.append('1under2')
-
-        elif node_e2["head"] == number_node_e1:
-            features.append('2under1')
-
-        # (3) check who is under who (same parent case)
-        # look if in the dependencies of the actual element appear both entities as childs
-        elif node_e1["head"] == node_e2["head"]:
-            features.append('same_father')
 
         all_heads = []
         for i in range(1, len(tree.nodes)):
@@ -163,7 +208,7 @@ def extract_features(tree, entities, e1, e2):
                     offset_end = node["end"]
                     # it's not one of the entities we are featuring
                     if i != number_node_e1 and i != number_node_e2:
-                        # (1) get the position relative to the entities of each word
+                        # (1) get the position relative to the entities of each word, not if it's a punctuation
                         # lb1 = lemma before 1
                         # la2 = lemma after 2
                         # lib = lemma in between
