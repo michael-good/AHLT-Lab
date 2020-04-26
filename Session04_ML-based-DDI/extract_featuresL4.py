@@ -226,6 +226,11 @@ def extract_features(tree, entities, e1, e2):
                 all_heads.append(node["head"])
                 # print(node)
                 # it's not a bracket
+
+                # (9) indicates if there is an interact in the sentence
+                if 'interact' in node["lemma"]:
+                    features.append('interact_appear')
+
                 if 'start' in node:
                     offset_start = node["start"]
                     offset_end = node["end"]
@@ -255,7 +260,8 @@ def extract_features(tree, entities, e1, e2):
                             found=True
                         else:
                             sentence = sentence +'<'+ node["lemma"]
-        features.append(sentence)
+        if found:
+            features.append(sentence)
         # print(all_heads)
     else:
         features.append('multiple_length')

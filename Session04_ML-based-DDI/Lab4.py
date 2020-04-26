@@ -194,9 +194,10 @@ def predict(feat_test, classifier):
 
 
 def main():
-    mode = 'train_feat' # train_feat, train_model or eval
+    mode = 'eval' # train_feat, train_model or eval
     os_version = 'windows'  # windows or linux
     megam_v = 'exe'  # nltk or exe
+    print_int = False
 
     start_time = time.time()
     if mode == 'train_feat':
@@ -204,6 +205,7 @@ def main():
         ###          TRAIN          ###
         ###############################
         train_dir = './data/Train'
+        check_file = open('check_int_train.txt', 'w')
 
         train_file = 'train_features_output.txt'
         if os.path.exists(train_file):
@@ -253,11 +255,13 @@ def main():
                         else:
                             type_ = "null"
 
-                        # output_features(sid, id_e1, id_e2, type_, features, foutput, foutput2)
-                        print_output(sid, id_e1, id_e2, '', features, foutput, foutput2)
+                        output_features(sid, id_e1, id_e2, type_, features, foutput, foutput2)
+                        if print_int:
+                            print_output(stext, type_, check_file)
             print('{:2.2f}'.format(number_files / len(os.listdir(train_dir)) * 100))
         foutput.close()
         foutput2.close()
+        check_file.close()
         print('MEGAM Train...')
         #if mode == 'train_model' and megam_v == 'exe':
         if os_version == 'windows':
@@ -300,6 +304,8 @@ def main():
         ###############################
 
         output = 'task9.6_lluis_2'
+
+        check_file = open('check_int_test.txt', 'w')
 
         # for test in ["Devel", "Test-NER", "Test-DDI"]:
         for test in ["Devel"]:
@@ -348,12 +354,23 @@ def main():
                             features = extract_features(analysis, entities, id_e1, id_e2)
                             output_features(sid, id_e1, id_e2, '', features, foutput, foutput2)
 
+                            # get ground truth
+                            is_ddi = p.attributes["ddi"].value
+                            if is_ddi == "true" and 'type' in p.attributes:
+                                type_ = p.attributes["type"].value
+                            else:
+                                type_ = "null"
+
                             if megam_v == 'nltk':
                                 prediction = predict(features, classifier)
                                 output_ddi(sid, id_e1, id_e2, prediction, outf)
+                            if print_int:
+                                print_output(stext, type_, check_file)
                 print('{:2.2f}'.format(number_files / len(os.listdir(test_dir)) * 100))
         foutput.close()
         foutput2.close()
+
+        check_file.close()
 
         print('MEGAM Test...')
         if megam_v == 'exe':
