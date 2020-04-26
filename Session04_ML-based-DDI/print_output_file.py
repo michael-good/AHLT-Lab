@@ -48,6 +48,6 @@ def indexin(el, list):
     return False
 
 
-def print_output(sentence, ground, outf):
-    if ground == 'int':
+def print_output(sentence, ground, outf, type):
+    if ground == type:
         outf.write(sentence+'\n')

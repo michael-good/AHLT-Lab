@@ -222,6 +222,10 @@ def extract_features(tree, entities, e1, e2):
         for i in range(1, len(tree.nodes)):
             node = tree.nodes[i]
 
+            # (10) verb connected to the root
+            if node["head"] == 0:
+                features.append('root='+node["lemma"])
+
             if node["rel"] != 'punct':  # if it's not a punctuation
                 all_heads.append(node["head"])
                 # print(node)

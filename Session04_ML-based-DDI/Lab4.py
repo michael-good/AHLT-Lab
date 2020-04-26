@@ -205,7 +205,6 @@ def main():
         ###          TRAIN          ###
         ###############################
         train_dir = './data/Train'
-        check_file = open('check_int_train.txt', 'w')
 
         train_file = 'train_features_output.txt'
         if os.path.exists(train_file):
@@ -257,11 +256,24 @@ def main():
 
                         output_features(sid, id_e1, id_e2, type_, features, foutput, foutput2)
                         if print_int:
-                            print_output(stext, type_, check_file)
+                            check_file = open('check_effect_train.txt', 'a')
+                            print_output(stext, type_, check_file, 'effect')
+                            check_file.close()
+                            check_file = open('check_mecha_train.txt', 'a')
+                            print_output(stext, type_, check_file, 'mechanism')
+                            check_file.close()
+                            check_file = open('check_adv_train.txt', 'a')
+                            print_output(stext, type_, check_file, 'advise')
+                            check_file.close()
+                            check_file = open('check_int_train.txt', 'a')
+                            print_output(stext, type_, check_file, 'int')
+                            check_file.close()
+                            check_file = open('check_null_train.txt', 'a')
+                            print_output(stext, type_, check_file, 'null')
+                            check_file.close()
             print('{:2.2f}'.format(number_files / len(os.listdir(train_dir)) * 100))
         foutput.close()
         foutput2.close()
-        check_file.close()
         print('MEGAM Train...')
         #if mode == 'train_model' and megam_v == 'exe':
         if os_version == 'windows':
@@ -365,12 +377,25 @@ def main():
                                 prediction = predict(features, classifier)
                                 output_ddi(sid, id_e1, id_e2, prediction, outf)
                             if print_int:
-                                print_output(stext, type_, check_file)
+                                check_file = open('check_effect_test.txt', 'a')
+                                print_output(stext, type_, check_file, 'effect')
+                                check_file.close()
+                                check_file = open('check_mecha_test.txt', 'a')
+                                print_output(stext, type_, check_file, 'mechanism')
+                                check_file.close()
+                                check_file = open('check_adv_test.txt', 'a')
+                                print_output(stext, type_, check_file, 'advise')
+                                check_file.close()
+                                check_file = open('check_int_test.txt', 'a')
+                                print_output(stext, type_, check_file, 'int')
+                                check_file.close()
+                                check_file = open('check_null_test.txt', 'a')
+                                print_output(stext, type_, check_file, 'null')
+                                check_file.close()
                 print('{:2.2f}'.format(number_files / len(os.listdir(test_dir)) * 100))
         foutput.close()
         foutput2.close()
 
-        check_file.close()
 
         print('MEGAM Test...')
         if megam_v == 'exe':
