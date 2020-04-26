@@ -9,7 +9,7 @@ from nltk.parse.corenlp import CoreNLPDependencyParser
 # connect to your CoreNLP server (just once)
 my_parser = CoreNLPDependencyParser(url="http://localhost:9000")
 
-# nltk.config_megam('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe')
+nltk.config_megam('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe')
 
 
 def parse_xml(file):
@@ -194,7 +194,7 @@ def predict(feat_test, classifier):
 
 def main():
     mode = 'eval' # train_feat, train_model or eval
-    os_version = 'linux'  # windows or linux
+    os_version = 'windows'  # windows or linux
     megam_v = 'exe'  # nltk or exe
 
     start_time = time.time()
@@ -209,8 +209,12 @@ def main():
             os.remove(train_file)
         if os.path.exists('megam.dat'):
             os.remove('megam.dat')
-        if os.path.exists('me_model.dat'):
-            os.remove('me_model.dat')
+        if os_version=='windows':
+            if os.path.exists('me_model_w.dat'):
+                os.remove('me_model_w.dat')
+        elif os_version=='linux':
+            if os.path.exists('me_model.dat'):
+                os.remove('me_model.dat')
         foutput = open(train_file, "a")
         foutput2 = open('megam.dat', "a")
 
@@ -255,9 +259,9 @@ def main():
         print('MEGAM Train...')
         #if mode == 'train_model' and megam_v == 'exe':
         if os_version == 'windows':
-            os.system('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -quiet -nc -nobias multiclass megam.dat > me_model.dat')
+            os.system('C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -quiet -nc -nobias multiclass megam.dat > me_model_w.dat')
         elif os_version == 'linux':
-            os.system('./megam_i686.opt -quiet -nc -nobias multiclass megam.dat > me_model.dat')
+            os.system('./megam_i686.opt -quiet -nc -nobias multiclass megam.dat > me_model_l.dat')
 
         print("--- %s seconds ---" % (time.time() - start_time))
 
@@ -302,7 +306,7 @@ def main():
             outf = open(output_file, "w")
             test_dir = "./data/" + test + "/"
 
-            test_file = 'test_features_output.txt'
+            test_file = 'test_features_output2.txt'
             if os.path.exists(test_file):
                 os.remove(test_file)
                 os.remove('megam_test.dat')
@@ -347,35 +351,37 @@ def main():
                 print('{:2.2f}'.format(number_files / len(os.listdir(test_dir)) * 100))
         foutput.close()
         foutput2.close()
+
         print('MEGAM Test...')
         if megam_v == 'exe':
             if os_version == 'windows':
                 os.system(
-                    'C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -nc -nobias -predict me_model.dat multiclass  megam_test.dat')
+                    'C:/Users/Lluis/Desktop/MATT/AHLT/AHLT-Lab/Session04_ML-based-DDI/megam_0.92/megam.exe -nc -nobias -predict me_model_w.dat multiclass  megam_test.dat > output.txt')
             elif os_version == 'linux':
-                os.system('./megam_i686.opt -nc -nobias -predict me_model.dat multiclass  megam_test.dat > output.txt')
-        with open("output.txt", "r") as f:
-            lines = f.readlines()
-        with open("output.txt", "w") as f:
-            for line in lines:
-                for i, char in enumerate(line):
-                    if char == '\t':
-                        f.write(line[:i] + '\n')
-                        break
-        with open("output.txt", "r") as f:
-            type_ = [x.strip() for x in f.readlines()]
-        with open("test_features_output.txt", "r") as f:
-            lines = f.readlines()
-        for i, line in enumerate(lines):
-            x = line.split('\t')
-            sentence = x[0]
-            e1 = x[1]
-            e2 = x[2]
-            if len(x) == 3:
-                type_ddi = 'null'
-            else:
-                type_ddi = type_[i]
-            output_ddi(sentence, e1, e2, type_ddi, outf)
+                os.system('./megam_i686.opt -nc -nobias -predict me_model_l.dat multiclass  megam_test.dat > output.txt')
+
+            with open("output.txt", "r") as f:
+                lines = f.readlines()
+            with open("output.txt", "w") as f:
+                for line in lines:
+                    for i, char in enumerate(line):
+                        if char == '\t':
+                            f.write(line[:i] + '\n')
+                            break
+            with open("output.txt", "r") as f:
+                type_ = [x.strip() for x in f.readlines()]
+            with open("test_features_output2.txt", "r") as f:
+                lines = f.readlines()
+            for i, line in enumerate(lines):
+                x = line.split('\t')
+                sentence = x[0]
+                e1 = x[1]
+                e2 = x[2]
+                if len(x) == 3:
+                    type_ddi = 'null'
+                else:
+                    type_ddi = type_[i]
+                output_ddi(sentence, e1, e2, type_ddi, outf)
         outf.close()
         # get performance score
         evaluate(test_dir, output_file)
